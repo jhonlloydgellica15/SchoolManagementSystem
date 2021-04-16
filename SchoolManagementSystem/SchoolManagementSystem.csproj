@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EonBotzLibrary">
+      <HintPath>..\..\EonBotzLibrary\EonBotzLibrary\bin\Debug\netcoreapp3.1\EonBotzLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
