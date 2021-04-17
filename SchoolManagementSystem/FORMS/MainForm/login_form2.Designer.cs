@@ -51,7 +51,6 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.label1 = new System.Windows.Forms.Label();
             this.user_combobox = new System.Windows.Forms.ComboBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -300,25 +299,12 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.iconPictureBox3.TabIndex = 25;
             this.iconPictureBox3.TabStop = false;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(293, 346);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 26;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // login_form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 411);
-            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.user_combobox);
             this.Controls.Add(this.label1);
@@ -380,6 +366,5 @@ namespace SchoolManagementSystem.FORMS.MainForm
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox user_combobox;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
