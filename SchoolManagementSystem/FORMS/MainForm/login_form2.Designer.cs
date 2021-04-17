@@ -50,6 +50,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.user_combobox = new System.Windows.Forms.ComboBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -60,6 +61,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -283,12 +285,27 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.user_combobox.TabIndex = 24;
             this.user_combobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
+            this.iconPictureBox3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 15;
+            this.iconPictureBox3.Location = new System.Drawing.Point(627, 12);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.iconPictureBox3.TabIndex = 25;
+            this.iconPictureBox3.TabStop = false;
+            // 
             // login_form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.user_combobox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -320,6 +337,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +365,6 @@ namespace SchoolManagementSystem.FORMS.MainForm
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox user_combobox;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }
