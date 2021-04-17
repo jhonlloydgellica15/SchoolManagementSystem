@@ -12,12 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="EonBotzLibrary">
-      <HintPath>..\..\EonBotzLibrary\EonBotzLibrary\bin\Debug\netcoreapp3.1\EonBotzLibrary.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
