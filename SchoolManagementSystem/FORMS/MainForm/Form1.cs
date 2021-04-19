@@ -90,8 +90,10 @@ namespace SchoolManagementSystem
 
         private void hideSubMenu()
         {
+            pnlSubFees.Visible = false;
             pnlSubmenu.Visible = false;
             pnlInideSubSettings.Visible = false;
+          
         }
 
         private void showSubMenu(Panel subMenu)
@@ -244,6 +246,36 @@ namespace SchoolManagementSystem
         private void btnScheduling_Click(object sender, EventArgs e)
         {
             var myForm = new Sched();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void btnFeesManagement_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubFees);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+         
+        }
+
+        private void btnFeeCategory_Click(object sender, EventArgs e)
+        {
+            var myForm = new FeeManagement();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void btnFeeStructure_Click(object sender, EventArgs e)
+        {
+            var myForm = new FeeStructure();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = true;
