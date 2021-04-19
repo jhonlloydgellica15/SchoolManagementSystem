@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
@@ -22,27 +23,43 @@ namespace SchoolManagementSystem
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-
-            if (btnAddRoom.Text == "   Save Data")
+            if(btnAddRoom.Text.Equals("Update Data"))
             {
-                room.description = txtDescription.Text;
+                //int insert = DBContext.GetContext().Query("rooms").Insert(new
+                //{
+                //    description = txtDescription.Text,
+                //    roomId = lblIDD.Text
+                //});
 
-                room.CREATE_DATA();
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
-                this.Close();
+                DBContext.GetContext().Query("rooms").Where("roomId", lblIDD.Text).Update(new
+                {
+                    description = txtDescription.Text,
+                });
+
+                MessageBox.Show("Hello");
             }
-            else if (btnAddRoom.Text == "Update Data")
-            {
-                room.id = lblIDD.Text;
-                room.description = txtDescription.Text;
+           
 
-                room.UPDATE_DATA();
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
+            //if (btnAddRoom.Text == "   Save Data")
+            //{
+            //    room.description = txtDescription.Text;
 
-                this.Close();
-            }
+            //    room.CREATE_DATA();
+            //    MessageBox.Show("Inserted");
+            //    reloadDatagrid.displayData();
+            //    this.Close();
+            //}
+            //else if (btnAddRoom.Text == "Update Data")
+            //{
+            //    room.id = lblIDD.Text;
+            //    room.description = txtDescription.Text;
+
+            //    room.UPDATE_DATA();
+            //    MessageBox.Show("Updated");
+            //    reloadDatagrid.displayData();
+
+            //    this.Close();
+            //}
         }
 
         private void btnExit_Click(object sender, EventArgs e)

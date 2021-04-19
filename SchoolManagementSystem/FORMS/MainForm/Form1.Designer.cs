@@ -31,6 +31,11 @@ namespace SchoolManagementSystem
         {
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.pnlInsideMenu = new System.Windows.Forms.Panel();
+            this.pnlSubFees = new System.Windows.Forms.Panel();
+            this.btnFeeStructure = new FontAwesome.Sharp.IconButton();
+            this.btnFeeCategory = new FontAwesome.Sharp.IconButton();
+            this.btnFeesManagement = new FontAwesome.Sharp.IconButton();
+            this.btnScheduling = new FontAwesome.Sharp.IconButton();
             this.pnlInideSubSettings = new System.Windows.Forms.Panel();
             this.btnSmsSetiing = new FontAwesome.Sharp.IconButton();
             this.btnSubject = new FontAwesome.Sharp.IconButton();
@@ -53,9 +58,9 @@ namespace SchoolManagementSystem
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlShow = new System.Windows.Forms.Panel();
-            this.btnScheduling = new FontAwesome.Sharp.IconButton();
             this.pnlSideMenu.SuspendLayout();
             this.pnlInsideMenu.SuspendLayout();
+            this.pnlSubFees.SuspendLayout();
             this.pnlInideSubSettings.SuspendLayout();
             this.pnlSubmenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,6 +79,8 @@ namespace SchoolManagementSystem
             // 
             // pnlInsideMenu
             // 
+            this.pnlInsideMenu.Controls.Add(this.pnlSubFees);
+            this.pnlInsideMenu.Controls.Add(this.btnFeesManagement);
             this.pnlInsideMenu.Controls.Add(this.btnScheduling);
             this.pnlInsideMenu.Controls.Add(this.pnlInideSubSettings);
             this.pnlInsideMenu.Controls.Add(this.btnSettings);
@@ -92,9 +99,117 @@ namespace SchoolManagementSystem
             this.pnlInsideMenu.Size = new System.Drawing.Size(284, 922);
             this.pnlInsideMenu.TabIndex = 1;
             // 
+            // pnlSubFees
+            // 
+            this.pnlSubFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.pnlSubFees.Controls.Add(this.btnFeeStructure);
+            this.pnlSubFees.Controls.Add(this.btnFeeCategory);
+            this.pnlSubFees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubFees.Location = new System.Drawing.Point(0, 679);
+            this.pnlSubFees.Name = "pnlSubFees";
+            this.pnlSubFees.Size = new System.Drawing.Size(284, 92);
+            this.pnlSubFees.TabIndex = 13;
+            this.pnlSubFees.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btnFeeStructure
+            // 
+            this.btnFeeStructure.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeeStructure.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeeStructure.FlatAppearance.BorderSize = 0;
+            this.btnFeeStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeeStructure.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFeeStructure.ForeColor = System.Drawing.Color.Gray;
+            this.btnFeeStructure.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnFeeStructure.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFeeStructure.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFeeStructure.IconSize = 10;
+            this.btnFeeStructure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeStructure.Location = new System.Drawing.Point(0, 45);
+            this.btnFeeStructure.Name = "btnFeeStructure";
+            this.btnFeeStructure.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnFeeStructure.Size = new System.Drawing.Size(284, 45);
+            this.btnFeeStructure.TabIndex = 3;
+            this.btnFeeStructure.Text = "Fee Structure";
+            this.btnFeeStructure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeStructure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFeeStructure.UseVisualStyleBackColor = true;
+            this.btnFeeStructure.Click += new System.EventHandler(this.btnFeeStructure_Click);
+            // 
+            // btnFeeCategory
+            // 
+            this.btnFeeCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeeCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeeCategory.FlatAppearance.BorderSize = 0;
+            this.btnFeeCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeeCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFeeCategory.ForeColor = System.Drawing.Color.Gray;
+            this.btnFeeCategory.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnFeeCategory.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFeeCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFeeCategory.IconSize = 10;
+            this.btnFeeCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeCategory.Location = new System.Drawing.Point(0, 0);
+            this.btnFeeCategory.Name = "btnFeeCategory";
+            this.btnFeeCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnFeeCategory.Size = new System.Drawing.Size(284, 45);
+            this.btnFeeCategory.TabIndex = 2;
+            this.btnFeeCategory.Text = "Fee Category";
+            this.btnFeeCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFeeCategory.UseVisualStyleBackColor = true;
+            this.btnFeeCategory.Click += new System.EventHandler(this.btnFeeCategory_Click);
+            // 
+            // btnFeesManagement
+            // 
+            this.btnFeesManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeesManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeesManagement.FlatAppearance.BorderSize = 0;
+            this.btnFeesManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeesManagement.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFeesManagement.ForeColor = System.Drawing.Color.Gray;
+            this.btnFeesManagement.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnFeesManagement.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFeesManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFeesManagement.IconSize = 20;
+            this.btnFeesManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeesManagement.Location = new System.Drawing.Point(0, 634);
+            this.btnFeesManagement.Name = "btnFeesManagement";
+            this.btnFeesManagement.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnFeesManagement.Size = new System.Drawing.Size(284, 45);
+            this.btnFeesManagement.TabIndex = 12;
+            this.btnFeesManagement.Text = "Fees Management";
+            this.btnFeesManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeesManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFeesManagement.UseVisualStyleBackColor = true;
+            this.btnFeesManagement.Click += new System.EventHandler(this.btnFeesManagement_Click);
+            // 
+            // btnScheduling
+            // 
+            this.btnScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnScheduling.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnScheduling.FlatAppearance.BorderSize = 0;
+            this.btnScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScheduling.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnScheduling.ForeColor = System.Drawing.Color.Gray;
+            this.btnScheduling.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnScheduling.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnScheduling.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScheduling.IconSize = 20;
+            this.btnScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScheduling.Location = new System.Drawing.Point(0, 589);
+            this.btnScheduling.Name = "btnScheduling";
+            this.btnScheduling.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnScheduling.Size = new System.Drawing.Size(284, 45);
+            this.btnScheduling.TabIndex = 11;
+            this.btnScheduling.Text = "Scheduling";
+            this.btnScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScheduling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnScheduling.UseVisualStyleBackColor = true;
+            this.btnScheduling.Click += new System.EventHandler(this.btnScheduling_Click);
+            // 
             // pnlInideSubSettings
             // 
-            this.pnlInideSubSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pnlInideSubSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.pnlInideSubSettings.Controls.Add(this.btnSmsSetiing);
             this.pnlInideSubSettings.Controls.Add(this.btnSubject);
             this.pnlInideSubSettings.Dock = System.Windows.Forms.DockStyle.Top;
@@ -517,30 +632,6 @@ namespace SchoolManagementSystem
             this.pnlShow.Size = new System.Drawing.Size(1614, 945);
             this.pnlShow.TabIndex = 3;
             // 
-            // btnScheduling
-            // 
-            this.btnScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScheduling.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnScheduling.FlatAppearance.BorderSize = 0;
-            this.btnScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScheduling.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnScheduling.ForeColor = System.Drawing.Color.Gray;
-            this.btnScheduling.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnScheduling.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnScheduling.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScheduling.IconSize = 20;
-            this.btnScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScheduling.Location = new System.Drawing.Point(0, 589);
-            this.btnScheduling.Name = "btnScheduling";
-            this.btnScheduling.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnScheduling.Size = new System.Drawing.Size(284, 45);
-            this.btnScheduling.TabIndex = 11;
-            this.btnScheduling.Text = "Scheduling";
-            this.btnScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScheduling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnScheduling.UseVisualStyleBackColor = true;
-            this.btnScheduling.Click += new System.EventHandler(this.btnScheduling_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -557,6 +648,7 @@ namespace SchoolManagementSystem
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlInsideMenu.ResumeLayout(false);
+            this.pnlSubFees.ResumeLayout(false);
             this.pnlInideSubSettings.ResumeLayout(false);
             this.pnlSubmenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -594,6 +686,10 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlShow;
         private FontAwesome.Sharp.IconButton btnScheduling;
+        private System.Windows.Forms.Panel pnlSubFees;
+        private FontAwesome.Sharp.IconButton btnFeeStructure;
+        private FontAwesome.Sharp.IconButton btnFeeCategory;
+        private FontAwesome.Sharp.IconButton btnFeesManagement;
     }
 }
 

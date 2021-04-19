@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
+
+
 
 namespace SchoolManagementSystem
 {
     public partial class room : Form
     {
-        Room rom = new Room();
         public room()
         {
             InitializeComponent();
@@ -30,30 +32,31 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
-            rom.VIEW_DATA();
-
-            dgvRooms.Rows.Clear();
-            foreach (DataRow Drow in rom.dt.Rows)
+            var rooms = DBContext.GetContext().Query("rooms").Get();
+            foreach(var room in rooms)
             {
-                int num = dgvRooms.Rows.Add();
-
-                dgvRooms.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvRooms.Rows[num].Cells[1].Value = Drow["Description"].ToString();
+                dgvRooms.Rows.Add(room.roomId,room.description);
             }
         }
 
         private void dgvRooms_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddRoom(this);
+            int id = Convert.ToInt32(dgvRooms.Rows[dgvRooms.CurrentRow.Index].Cells[0].Value);
+            var rooms = DBContext.GetContext().Query("rooms").Where("roomId", id).First();
 
-
-            rom.id = dgvRooms.Rows[e.RowIndex].Cells[0].Value.ToString();
-            rom.PassData();
-            myfrm.lblIDD.Text = rom.id;
-            myfrm.txtDescription.Text = rom.description;
+            myfrm.lblIDD.Text = id.ToString();
+            myfrm.txtDescription.Text = rooms.description;
             myfrm.btnAddRoom.Text = "Update Data";
-
             myfrm.ShowDialog();
+
+            //rom.id = dgvRooms.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //rom.PassData();
+            //myfrm.lblIDD.Text = rom.id;
+            //myfrm.txtDescription.Text = rom.description;
+            //myfrm.btnAddRoom.Text = "Update Data";
+
+            //myfrm.ShowDialog();
         }
     }
 }

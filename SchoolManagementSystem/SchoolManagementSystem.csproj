@@ -9,6 +9,14 @@
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
     <PackageReference Include="MySql.Data" Version="8.0.23" />
+    <PackageReference Include="SqlKata" Version="2.3.2" />
+    <PackageReference Include="SqlKata.Execution" Version="2.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EonBotzLibrary">
+      <HintPath>..\..\EonBotzLibrary\EonBotzLibrary\bin\Debug\netcoreapp3.1\EonBotzLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
