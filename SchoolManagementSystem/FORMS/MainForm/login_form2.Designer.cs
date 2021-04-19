@@ -51,7 +51,6 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.label1 = new System.Windows.Forms.Label();
             this.user_combobox = new System.Windows.Forms.ComboBox();
             this.minimize_button = new FontAwesome.Sharp.IconPictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -300,22 +299,12 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.minimize_button.TabIndex = 25;
             this.minimize_button.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(299, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // login_form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 411);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.minimize_button);
             this.Controls.Add(this.user_combobox);
             this.Controls.Add(this.label1);
@@ -377,6 +366,5 @@ namespace SchoolManagementSystem.FORMS.MainForm
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox user_combobox;
         private FontAwesome.Sharp.IconPictureBox minimize_button;
-        private System.Windows.Forms.Button button1;
     }
 }
