@@ -237,7 +237,8 @@ namespace SchoolManagementSystem.FORMS.MainForm
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::SchoolManagementSystem.Properties.Resources.drpRotatingLogo;
             this.pictureBox2.Location = new System.Drawing.Point(54, 36);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(315, 260);
@@ -303,7 +304,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(684, 411);
             this.Controls.Add(this.minimize_button);
             this.Controls.Add(this.user_combobox);
