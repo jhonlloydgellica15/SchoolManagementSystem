@@ -11,7 +11,7 @@ namespace SchoolManagementSystem
 {
     public partial class AddCourse : Form
     {
-        Course course = new Course();
+            Course course = new Course();
         CourseInformation reloadDatagrid;
         public AddCourse(CourseInformation reloadDatagrid)
         {
