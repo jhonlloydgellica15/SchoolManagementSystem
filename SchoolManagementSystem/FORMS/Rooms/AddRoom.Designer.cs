@@ -43,6 +43,7 @@ namespace SchoolManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -51,6 +52,7 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.txtDescription);
             this.panel6.Controls.Add(this.btnAddRoom);
             this.panel6.Controls.Add(this.label6);
@@ -228,6 +230,15 @@ namespace SchoolManagementSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "School Management System";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(432, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "label2";
+            // 
             // AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -268,5 +279,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
