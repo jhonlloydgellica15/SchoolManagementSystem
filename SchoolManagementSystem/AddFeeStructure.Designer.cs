@@ -30,11 +30,9 @@ namespace SchoolManagementSystem
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtAbbreviation = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnAddCourse = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -55,11 +53,9 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.txtAbbreviation);
-            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.btnAddCourse);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.panel8);
@@ -68,8 +64,27 @@ namespace SchoolManagementSystem
             this.panel6.Location = new System.Drawing.Point(15, 105);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(761, 352);
+            this.panel6.Size = new System.Drawing.Size(761, 372);
             this.panel6.TabIndex = 25;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(182, 133);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(512, 30);
+            this.comboBox2.TabIndex = 37;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(43, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 21);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Status";
             // 
             // comboBox1
             // 
@@ -79,44 +94,6 @@ namespace SchoolManagementSystem
             this.comboBox1.Size = new System.Drawing.Size(512, 30);
             this.comboBox1.TabIndex = 35;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(182, 216);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(507, 34);
-            this.textBox2.TabIndex = 32;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(43, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Amount";
-            // 
-            // txtAbbreviation
-            // 
-            this.txtAbbreviation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAbbreviation.Location = new System.Drawing.Point(182, 153);
-            this.txtAbbreviation.Multiline = true;
-            this.txtAbbreviation.Name = "txtAbbreviation";
-            this.txtAbbreviation.Size = new System.Drawing.Size(512, 34);
-            this.txtAbbreviation.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(43, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 21);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Charges";
             // 
             // btnAddCourse
             // 
@@ -129,7 +106,7 @@ namespace SchoolManagementSystem
             this.btnAddCourse.IconColor = System.Drawing.Color.White;
             this.btnAddCourse.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCourse.IconSize = 30;
-            this.btnAddCourse.Location = new System.Drawing.Point(281, 288);
+            this.btnAddCourse.Location = new System.Drawing.Point(320, 313);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(203, 38);
             this.btnAddCourse.TabIndex = 26;
@@ -211,7 +188,7 @@ namespace SchoolManagementSystem
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 394);
+            this.panel2.Size = new System.Drawing.Size(7, 412);
             this.panel2.TabIndex = 22;
             // 
             // panel1
@@ -248,7 +225,7 @@ namespace SchoolManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(257, 14);
+            this.label1.Location = new System.Drawing.Point(277, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 24);
             this.label1.TabIndex = 0;
@@ -259,7 +236,7 @@ namespace SchoolManagementSystem
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 472);
+            this.panel4.Location = new System.Drawing.Point(0, 490);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(784, 7);
@@ -272,14 +249,14 @@ namespace SchoolManagementSystem
             this.panel3.Location = new System.Drawing.Point(784, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 479);
+            this.panel3.Size = new System.Drawing.Size(7, 497);
             this.panel3.TabIndex = 23;
             // 
             // AddFeeStructure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 479);
+            this.ClientSize = new System.Drawing.Size(791, 497);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -303,10 +280,6 @@ namespace SchoolManagementSystem
 
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtAbbreviation;
-        private System.Windows.Forms.Label label2;
         public FontAwesome.Sharp.IconButton btnAddCourse;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
@@ -319,5 +292,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -30,8 +30,8 @@ namespace SchoolManagementSystem
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.btnAddCourse = new FontAwesome.Sharp.IconButton();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.btnAddCategory = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -51,8 +51,8 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.txtDescription);
-            this.panel6.Controls.Add(this.btnAddCourse);
+            this.panel6.Controls.Add(this.txtCategory);
+            this.panel6.Controls.Add(this.btnAddCategory);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
@@ -63,33 +63,34 @@ namespace SchoolManagementSystem
             this.panel6.Size = new System.Drawing.Size(761, 222);
             this.panel6.TabIndex = 25;
             // 
-            // txtDescription
+            // txtCategory
             // 
-            this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescription.Location = new System.Drawing.Point(186, 93);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(524, 34);
-            this.txtDescription.TabIndex = 28;
+            this.txtCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCategory.Location = new System.Drawing.Point(186, 93);
+            this.txtCategory.Multiline = true;
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(524, 34);
+            this.txtCategory.TabIndex = 28;
             // 
-            // btnAddCourse
+            // btnAddCategory
             // 
-            this.btnAddCourse.BackColor = System.Drawing.Color.Green;
-            this.btnAddCourse.FlatAppearance.BorderSize = 0;
-            this.btnAddCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
-            this.btnAddCourse.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddCourse.IconColor = System.Drawing.Color.White;
-            this.btnAddCourse.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddCourse.IconSize = 30;
-            this.btnAddCourse.Location = new System.Drawing.Point(299, 162);
-            this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(203, 38);
-            this.btnAddCourse.TabIndex = 26;
-            this.btnAddCourse.Text = "   Save Data";
-            this.btnAddCourse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddCourse.UseVisualStyleBackColor = false;
+            this.btnAddCategory.BackColor = System.Drawing.Color.Green;
+            this.btnAddCategory.FlatAppearance.BorderSize = 0;
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
+            this.btnAddCategory.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddCategory.IconColor = System.Drawing.Color.White;
+            this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddCategory.IconSize = 30;
+            this.btnAddCategory.Location = new System.Drawing.Point(299, 162);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(203, 38);
+            this.btnAddCategory.TabIndex = 26;
+            this.btnAddCategory.Text = "   Save Data";
+            this.btnAddCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // label6
             // 
@@ -254,8 +255,8 @@ namespace SchoolManagementSystem
         #endregion
 
         private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.TextBox txtDescription;
-        public FontAwesome.Sharp.IconButton btnAddCourse;
+        public System.Windows.Forms.TextBox txtCategory;
+        public FontAwesome.Sharp.IconButton btnAddCategory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;

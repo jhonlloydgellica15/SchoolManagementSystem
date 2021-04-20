@@ -23,43 +23,28 @@ namespace SchoolManagementSystem
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            if(btnAddRoom.Text.Equals("Update Data"))
+            if (btnAddRoom.Text.Equals("Update Data"))
             {
-                //int insert = DBContext.GetContext().Query("rooms").Insert(new
-                //{
-                //    description = txtDescription.Text,
-                //    roomId = lblIDD.Text
-                //});
-
                 DBContext.GetContext().Query("rooms").Where("roomId", lblIDD.Text).Update(new
                 {
                     description = txtDescription.Text,
                 });
 
-                MessageBox.Show("Hello");
+                MessageBox.Show("Updated");
+                reloadDatagrid.displayData();
+                this.Close();
+
             }
-           
-
-            //if (btnAddRoom.Text == "   Save Data")
-            //{
-            //    room.description = txtDescription.Text;
-
-            //    room.CREATE_DATA();
-            //    MessageBox.Show("Inserted");
-            //    reloadDatagrid.displayData();
-            //    this.Close();
-            //}
-            //else if (btnAddRoom.Text == "Update Data")
-            //{
-            //    room.id = lblIDD.Text;
-            //    room.description = txtDescription.Text;
-
-            //    room.UPDATE_DATA();
-            //    MessageBox.Show("Updated");
-            //    reloadDatagrid.displayData();
-
-            //    this.Close();
-            //}
+            else if (btnAddRoom.Text.Equals("   Save Data"))
+            {
+                DBContext.GetContext().Query("rooms").Insert(new
+                {
+                    description = txtDescription.Text
+                }); 
+                MessageBox.Show("Inserted");
+                reloadDatagrid.displayData();
+                this.Close();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@ namespace SchoolManagementSystem
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnAddRoom = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace SchoolManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +64,15 @@ namespace SchoolManagementSystem
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(761, 289);
             this.panel6.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(432, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "label2";
             // 
             // txtDescription
             // 
@@ -156,7 +165,7 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdmissionForm.Size = new System.Drawing.Size(170, 37);
             this.btnAdmissionForm.TabIndex = 5;
-            this.btnAdmissionForm.Text = "Admission Form";
+            this.btnAdmissionForm.Text = "Room Form";
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
             // 
@@ -229,15 +238,6 @@ namespace SchoolManagementSystem
             this.label1.Size = new System.Drawing.Size(306, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "School Management System";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(432, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 22);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "label2";
             // 
             // AddRoom
             // 

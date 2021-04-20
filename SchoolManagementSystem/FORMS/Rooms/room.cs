@@ -32,10 +32,12 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
+            dgvRooms.Rows.Clear();
             var rooms = DBContext.GetContext().Query("rooms").Get();
-            foreach(var room in rooms)
+            
+            foreach (var room in rooms)
             {
-                dgvRooms.Rows.Add(room.roomId,room.description);
+                dgvRooms.Rows.Add(room.roomId, room.description);         
             }
         }
 
@@ -49,14 +51,6 @@ namespace SchoolManagementSystem
             myfrm.txtDescription.Text = rooms.description;
             myfrm.btnAddRoom.Text = "Update Data";
             myfrm.ShowDialog();
-
-            //rom.id = dgvRooms.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //rom.PassData();
-            //myfrm.lblIDD.Text = rom.id;
-            //myfrm.txtDescription.Text = rom.description;
-            //myfrm.btnAddRoom.Text = "Update Data";
-
-            //myfrm.ShowDialog();
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class CourseInformation : Form
     {
-
         Course course = new Course();
         public CourseInformation()
         {
@@ -31,16 +31,25 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
-            course.VIEW_DATA();
 
             dgvCourse.Rows.Clear();
-            foreach (DataRow Drow in course.dt.Rows)
-            {
-                int num = dgvCourse.Rows.Add();
+            var course = DBContext.GetContext().Query("course").Get();
 
-                dgvCourse.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvCourse.Rows[num].Cells[1].Value = Drow["Course"].ToString();
+            foreach (var courses in course)
+            {
+                dgvCourse.Rows.Add(courses.courseId , $"{courses.description}({courses.abbreviation}) ");
+                //dgvCourse.Rows.Add(courses.courseId,  courses.description + "(" + courses.abbreviation + ")");
             }
+            //course.VIEW_DATA();
+
+            //dgvCourse.Rows.Clear();
+            //foreach (DataRow Drow in course.dt.Rows)
+            //{
+            //    int num = dgvCourse.Rows.Add();
+
+            //    dgvCourse.Rows[num].Cells[0].Value = Drow["ID"].ToString();
+            //    dgvCourse.Rows[num].Cells[1].Value = Drow["Course"].ToString();
+            //}
         }
 
         private void dgvCourse_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

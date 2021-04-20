@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
@@ -22,26 +23,26 @@ namespace SchoolManagementSystem
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
 
-            if (btnAddCourse.Text == "   Save Data")
+            if (btnAddCourse.Text.Equals("   Save Data"))
             {
-                course.description = txtDescription.Text;
-                course.abbreviation = txtAbbreviation.Text;
-
-                course.CREATE_DATA();
+                DBContext.GetContext().Query("course").Insert(new
+                {
+                    description = txtDescription.Text,
+                    abbreviation = txtAbbreviation.Text
+                });
                 MessageBox.Show("Inserted");
-                this.Close();
                 reloadDatagrid.displayData();
+                this.Close();
             }
-            else if (btnAddCourse.Text == "Update Data")
+            else if (btnAddCourse.Text.Equals("Update Data"))
             {
-                course.id = lblIDD.Text;
-                course.description = txtDescription.Text;
-                course.abbreviation = txtAbbreviation.Text;
-
-                course.UPDATE_DATA();
+                DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
+                {
+                    description = txtDescription.Text,
+                    abbreviation = txtAbbreviation.Text,
+                });
                 MessageBox.Show("Updated");
                 reloadDatagrid.displayData();
-
                 this.Close();
             }
         }
