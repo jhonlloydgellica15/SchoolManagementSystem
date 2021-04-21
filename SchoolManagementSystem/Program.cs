@@ -1,4 +1,4 @@
-using SchoolManagementSystem.FORMS.MainForm;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace SchoolManagementSystem
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login_form2());
+            Application.Run(new Form1());
         }
     }
 }

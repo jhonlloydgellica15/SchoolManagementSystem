@@ -21,32 +21,48 @@ namespace SchoolManagementSystem
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
-        {
+        {     
+            TextBox[] inputs = { txtDescription, txtAbbreviation};
 
-            if (btnAddCourse.Text.Equals("   Save Data"))
+            if (btnAddCourse.Text.Equals("Update Data"))
             {
-                DBContext.GetContext().Query("course").Insert(new
+                if (!Validator.isEmpty(inputs))
                 {
-                    description = txtDescription.Text,
-                    abbreviation = txtAbbreviation.Text
-                });
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
-                this.Close();
+                    if (Validator.UpdateConfirmation())
+                    {
+                        if (!Validator.TextMin(inputs[0], null, 3) && !Validator.TextMin(inputs[1], null, 1))
+                        {
+                            DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
+                            {
+                                description = txtDescription.Text,
+                                abbreviation = txtAbbreviation.Text,
+                            });
+                            reloadDatagrid.displayData();
+                            this.Close();
+                        }
+                    }
+                }
             }
-            else if (btnAddCourse.Text.Equals("Update Data"))
+            else if (btnAddCourse.Text.Equals("   Save Data"))
             {
-                DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
+                if (!Validator.isEmpty(inputs))
                 {
-                    description = txtDescription.Text,
-                    abbreviation = txtAbbreviation.Text,
-                });
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
-                this.Close();
+                    if (Validator.AddConfirmation())
+                    {
+                        if (!Validator.TextMin(inputs[0], null, 3) && !Validator.TextMin(inputs[1], null, 1))
+                        {
+                            DBContext.GetContext().Query("course").Insert(new
+                            {
+                                description = txtDescription.Text,
+                                abbreviation = txtAbbreviation.Text,
+                            });
+                            reloadDatagrid.displayData();
+                            this.Close();
+                        }
+                    }
+                }
             }
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
                 this.Close();

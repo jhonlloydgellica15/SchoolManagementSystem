@@ -29,7 +29,7 @@ namespace SchoolManagementSystem
         {
             displayData();
         }
-
+                
         public void displayData()
         {
             dgvRooms.Rows.Clear();
