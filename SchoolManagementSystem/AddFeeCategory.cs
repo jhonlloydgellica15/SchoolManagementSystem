@@ -27,26 +27,29 @@ namespace SchoolManagementSystem
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
-            if (btnAddCategory.Text.Equals("Update Data"))
+            TextBox[] inputs = { txtCategory };
+
+            if (btnAddCategory.Text.Equals("   Save Data"))
             {
-                DBContext.GetContext().Query("feecategories").Where("feeID", lblIDD.Text).Update(new
+                if (!Validator.isEmpty(inputs))
                 {
-                    category = txtCategory.Text,
-                });
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
-                this.Close();
-            }
-            else if (btnAddCategory.Text.Equals("   Save Data"))
-            {
-                DBContext.GetContext().Query("feecategories").Insert(new
-                {
-                    category = txtCategory.Text
-                }); ;
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
-                this.Close();
+                    if (Validator.AddConfirmation())
+                    {
+                        if (!Validator.TextMin(inputs[0], null, 0) && !Validator.TextMin(inputs[0], null, 2))
+                        {
+                            DBContext.GetContext().Query("categoryfee").Insert(new
+                            {
+                                category = txtCategory.Text
+                            });
+                            Validator.AlertSuccess("successfully added");
+                            reloadDatagrid.displayData();
+                            this.Close();
+                        }
+                    }
+                }
             }
         }
+
     }
 }
+    
