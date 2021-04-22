@@ -21,8 +21,8 @@ namespace SchoolManagementSystem
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
-        {     
-            TextBox[] inputs = { txtDescription, txtAbbreviation};
+        {
+            TextBox[] inputs = { txtDescription, txtAbbreviation };
 
             if (btnAddCourse.Text.Equals("Update Data"))
             {
@@ -30,16 +30,13 @@ namespace SchoolManagementSystem
                 {
                     if (Validator.UpdateConfirmation())
                     {
-                        if (!Validator.TextMin(inputs[0], null, 3) && !Validator.TextMin(inputs[1], null, 1))
+                        DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
                         {
-                            DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
-                            {
-                                description = txtDescription.Text,
-                                abbreviation = txtAbbreviation.Text,
-                            });
-                            reloadDatagrid.displayData();
-                            this.Close();
-                        }
+                            description = txtDescription.Text,
+                            abbreviation = txtAbbreviation.Text,
+                        });
+                        reloadDatagrid.displayData();
+                        this.Close();
                     }
                 }
             }
@@ -49,23 +46,20 @@ namespace SchoolManagementSystem
                 {
                     if (Validator.AddConfirmation())
                     {
-                        if (!Validator.TextMin(inputs[0], null, 3) && !Validator.TextMin(inputs[1], null, 1))
+                        DBContext.GetContext().Query("course").Insert(new
                         {
-                            DBContext.GetContext().Query("course").Insert(new
-                            {
-                                description = txtDescription.Text,
-                                abbreviation = txtAbbreviation.Text,
-                            });
-                            reloadDatagrid.displayData();
-                            this.Close();
-                        }
+                            description = txtDescription.Text,
+                            abbreviation = txtAbbreviation.Text,
+                        });
+                        reloadDatagrid.displayData();
+                        this.Close();
                     }
                 }
             }
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
         }
     }
 }

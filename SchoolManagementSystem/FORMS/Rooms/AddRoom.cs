@@ -46,7 +46,7 @@ namespace SchoolManagementSystem
                 {
                    if(Validator.AddConfirmation())
                     {
-                        if (!Validator.TextMin(inputs[0], null, 3) && !Validator.TextMin(inputs[1], null, 2))
+                        if (!Validator.TextMin(inputs[0], 3) && !Validator.TextMin(inputs[0], 2))
                         {
                             DBContext.GetContext().Query("rooms").Insert(new
                             {
