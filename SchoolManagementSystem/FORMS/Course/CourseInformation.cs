@@ -12,7 +12,6 @@ namespace SchoolManagementSystem
 {
     public partial class CourseInformation : Form
     {
-        Course course = new Course();
         public CourseInformation()
         {
             InitializeComponent();
@@ -31,39 +30,25 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
-
             dgvCourse.Rows.Clear();
             var course = DBContext.GetContext().Query("course").Get();
 
             foreach (var courses in course)
             {
-                dgvCourse.Rows.Add(courses.courseId , $"{courses.description}({courses.abbreviation}) ");
-                //dgvCourse.Rows.Add(courses.courseId,  courses.description + "(" + courses.abbreviation + ")");
+                dgvCourse.Rows.Add(courses.courseId , $"{courses.description}({courses.abbreviation})");
             }
-            //course.VIEW_DATA();
-
-            //dgvCourse.Rows.Clear();
-            //foreach (DataRow Drow in course.dt.Rows)
-            //{
-            //    int num = dgvCourse.Rows.Add();
-
-            //    dgvCourse.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-            //    dgvCourse.Rows[num].Cells[1].Value = Drow["Course"].ToString();
-            //}
         }
 
         private void dgvCourse_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddCourse(this);
+            int id = Convert.ToInt32(dgvCourse.Rows[dgvCourse.CurrentRow.Index].Cells[0].Value);
+            var value = DBContext.GetContext().Query("course").Where("courseId", id).First();
 
-
-            course.id = dgvCourse.Rows[e.RowIndex].Cells[0].Value.ToString();
-            course.PassData();
-            myfrm.lblIDD.Text = course.id;
-            myfrm.txtDescription.Text = course.description;
-            myfrm.txtAbbreviation.Text = course.abbreviation;
-            myfrm.btnAddCourse.Text = "Update Data";
-
+            myfrm.lblIDD.Text = id.ToString();
+            myfrm.txtDescription.Text = value.description;
+            myfrm.txtAbbreviation.Text = value.abbreviation;
+            myfrm.btnAddCourse.Text = "Update";
             myfrm.ShowDialog();
         }
     }

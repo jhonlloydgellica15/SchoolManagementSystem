@@ -49,7 +49,7 @@ namespace SchoolManagementSystem
 
             myfrm.lblIDD.Text = id.ToString();
             myfrm.txtDescription.Text = rooms.description;
-            myfrm.btnAddRoom.Text = "Update Data";
+            myfrm.btnAddRoom.Text = "Update";
             myfrm.ShowDialog();
         }
     }

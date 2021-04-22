@@ -6,13 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class AccountantInformation : Form
     {
-
-        Accountants acc = new Accountants();
         public AccountantInformation()
         {
             InitializeComponent();
@@ -29,54 +28,38 @@ namespace SchoolManagementSystem
             displayData();
         }
 
-
         public void displayData()
         {
-            acc.VIEW_DATA();
-
             dgvAccountant.Rows.Clear();
-            foreach (DataRow Drow in acc.dt.Rows)
-            {
-                int num = dgvAccountant.Rows.Add();
+            var values = DBContext.GetContext().Query("accountants").Get();
 
-                dgvAccountant.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvAccountant.Rows[num].Cells[1].Value = Drow["Lastname"].ToString();
-                dgvAccountant.Rows[num].Cells[2].Value = Drow["Firstname"].ToString();
-                dgvAccountant.Rows[num].Cells[3].Value = Drow["Middlename"].ToString();
-                dgvAccountant.Rows[num].Cells[4].Value = Drow["Age"].ToString();
-                dgvAccountant.Rows[num].Cells[5].Value = Drow["DateOfBirth"].ToString();
-                dgvAccountant.Rows[num].Cells[6].Value = Drow["PlaceOfBirth"].ToString();
-                dgvAccountant.Rows[num].Cells[7].Value = Drow["ContactNo"].ToString();
-                dgvAccountant.Rows[num].Cells[8].Value = Drow["Gender"].ToString();
-                dgvAccountant.Rows[num].Cells[9].Value = Drow["MaritalStatus"].ToString();
-                dgvAccountant.Rows[num].Cells[10].Value = Drow["Citizen"].ToString();
-                dgvAccountant.Rows[num].Cells[11].Value = Drow["Religion"].ToString();
-                dgvAccountant.Rows[num].Cells[12].Value = Drow["Address"].ToString();
+            foreach (var value in values)
+            {
+                dgvAccountant.Rows.Add(value.accountantId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.Dateofbirth, value.Placeofbirth, value.ContactNo,
+                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
             }
         }
 
         private void dgvAccountant_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddAccountant(this);
+            int id = Convert.ToInt32(dgvAccountant.Rows[dgvAccountant.CurrentRow.Index].Cells[0].Value);
+            var value = DBContext.GetContext().Query("accountants").Where("accountantId", id).First();
 
-
-            acc.id = dgvAccountant.Rows[e.RowIndex].Cells[0].Value.ToString();
-            acc.PassData();
-            myfrm.lblID.Text = acc.id;
-            myfrm.txtLastname.Text = acc.lastname;
-            myfrm.txtFirstname.Text = acc.firstname;
-            myfrm.txtMiddlename.Text = acc.middlename;
-            myfrm.txtAge.Text = acc.age;
-            myfrm.dtpDateofbirth.Text = acc.dateofbirth;
-            myfrm.txtPlaceofbirth.Text = acc.placeofbirth;
-            myfrm.txtContactNo.Text = acc.contactno;
-            myfrm.cmbGender.Text = acc.gender;
-            myfrm.cmbMaritalStatus.Text = acc.maritalstatus;
-            myfrm.txtCitizen.Text = acc.citizenship;
-            myfrm.txtReligion.Text = acc.religion;
-            myfrm.txtAddress.Text = acc.address;
-            myfrm.btnAddAccountant.Text = "Update Data";
-
+            myfrm.lblID.Text = id.ToString();
+            myfrm.txtLastname.Text = value.Lastname;
+            myfrm.txtFirstname.Text = value.Firstname;
+            myfrm.txtMiddlename.Text = value.Middlename;
+            myfrm.txtAge.Text =  Convert.ToString(value.Age);
+            myfrm.dtpDateofbirth.Text = value.Dateofbirth;
+            myfrm.txtPlaceofbirth.Text = value.Placeofbirth;
+            myfrm.txtContactNo.Text = Convert.ToString(value.ContactNo);
+            myfrm.cmbGender.Text = value.Gender;
+            myfrm.cmbMaritalStatus.Text = value.MaritalStatus;
+            myfrm.txtCitizen.Text = value.Citizenship;
+            myfrm.txtReligion.Text = value.Religion;
+            myfrm.txtAddress.Text = value.Address;
+            myfrm.btnAddAccountant.Text = "Update";
             myfrm.ShowDialog();
         }
     }

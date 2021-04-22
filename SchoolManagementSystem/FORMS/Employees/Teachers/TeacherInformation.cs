@@ -6,13 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class TeacherInformation : Form
     {
-
-        Teachers teach = new Teachers();
         public TeacherInformation()
         {
             InitializeComponent();
@@ -22,31 +21,17 @@ namespace SchoolManagementSystem
         {
             displayData();
 
-
         }
 
         public void displayData()
         {
-            teach.VIEW_DATA();
-
             dgvTeachers.Rows.Clear();
-            foreach (DataRow Drow in teach.dt.Rows)
-            {
-                int num = dgvTeachers.Rows.Add();
+            var values = DBContext.GetContext().Query("teachers").Get();
 
-                dgvTeachers.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvTeachers.Rows[num].Cells[1].Value = Drow["Lastname"].ToString();
-                dgvTeachers.Rows[num].Cells[2].Value = Drow["Firstname"].ToString();
-                dgvTeachers.Rows[num].Cells[3].Value = Drow["Middlename"].ToString();
-                dgvTeachers.Rows[num].Cells[4].Value = Drow["Age"].ToString();
-                dgvTeachers.Rows[num].Cells[5].Value = Drow["DateOfBirth"].ToString();
-                dgvTeachers.Rows[num].Cells[6].Value = Drow["PlaceOfBirth"].ToString();
-                dgvTeachers.Rows[num].Cells[7].Value = Drow["ContactNo"].ToString();
-                dgvTeachers.Rows[num].Cells[8].Value = Drow["Gender"].ToString();
-                dgvTeachers.Rows[num].Cells[9].Value = Drow["MaritalStatus"].ToString();
-                dgvTeachers.Rows[num].Cells[10].Value = Drow["Citizen"].ToString();
-                dgvTeachers.Rows[num].Cells[11].Value = Drow["Religion"].ToString();
-                dgvTeachers.Rows[num].Cells[12].Value = Drow["Address"].ToString();
+            foreach (var value in values)
+            {
+                dgvTeachers.Rows.Add(value.teacherId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.DateOfBirth, value.PlaceOfBirth, value.ContactNo,
+                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
             }
         }
         private void btnAddTeacher_Click(object sender, EventArgs e)
@@ -58,24 +43,23 @@ namespace SchoolManagementSystem
         private void dgvTeachers_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddTeacher(this);
+            int id = Convert.ToInt32(dgvTeachers.Rows[dgvTeachers.CurrentRow.Index].Cells[0].Value);
+            var value = DBContext.GetContext().Query("teachers").Where("teacherId", id).First();
 
-
-            teach.id = dgvTeachers.Rows[e.RowIndex].Cells[0].Value.ToString();
-            teach.PassData();
-            myfrm.lblID.Text = teach.id;
-            myfrm.txtLastname.Text = teach.lastname;
-            myfrm.txtFirstname.Text = teach.firstname;
-            myfrm.txtMiddlename.Text = teach.middlename;
-            myfrm.txtAge.Text = teach.age;
-            myfrm.dtpDateofbirth.Text = teach.dateofbirth;
-            myfrm.txtPlaceofbirth.Text = teach.placeofbirth;
-            myfrm.txtContactNo.Text = teach.contactno;
-            myfrm.cmbGender.Text = teach.gender;
-            myfrm.cmbMaritalStatus.Text = teach.maritalstatus;
-            myfrm.txtCitizen.Text = teach.citizenship;
-            myfrm.txtReligion.Text = teach.religion;
-            myfrm.txtAddress.Text = teach.address;
-            myfrm.btnAddTeachers.Text = "Update Data";
+            myfrm.lblID.Text = value.id;
+            myfrm.txtLastname.Text = value.Lastname;
+            myfrm.txtFirstname.Text = value.Firstname;
+            myfrm.txtMiddlename.Text = value.Middlename;
+            myfrm.txtAge.Text = Convert.ToString(value.Age);
+            myfrm.dtpDateofbirth.Text = value.DateOfBirth;
+            myfrm.txtPlaceofbirth.Text = value.PlaceOfBirth;
+            myfrm.txtContactNo.Text = Convert.ToString(value.ContactNo);
+            myfrm.cmbGender.Text = value.Gender;
+            myfrm.cmbMaritalStatus.Text = value.MaritalStatus;
+            myfrm.txtCitizen.Text = value.Citizenship;
+            myfrm.txtReligion.Text = value.Religion;
+            myfrm.txtAddress.Text = value.Address;
+            myfrm.btnAddTeachers.Text = "Update";
 
             myfrm.ShowDialog();
         }

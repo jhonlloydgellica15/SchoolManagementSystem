@@ -70,12 +70,6 @@ namespace SchoolManagementSystem
         {
              checkboxcontrol = new CheckBox[] { cbmon, cbtues, cbwed, cbthu, cbfri, cbsat };
 
-
-
-
-
-
-
             foreach (CheckBox chk in checkboxcontrol)
             {
 

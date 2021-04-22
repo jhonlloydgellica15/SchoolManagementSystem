@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
@@ -28,52 +29,70 @@ namespace SchoolManagementSystem
         {
 
         }
-
         private void btnAddSession_Click(object sender, EventArgs e)
         {
-            if (btnAddLibrarian.Text == "Save Librarian")
+            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtAge, txtPlaceofbirth, txtContactNo, txtCitizen, txtReligion, txtAddress };
+            if (btnAddLibrarian.Text.Equals("Update"))
             {
-                lib.lastname = txtLastname.Text;
-                lib.firstname = txtFirstname.Text;
-                lib.middlename = txtMiddlename.Text;
-                lib.age = txtAge.Text;
-                lib.dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy");
-                lib.placeofbirth = txtPlaceofbirth.Text;
-                lib.contactno = txtContactNo.Text;
-                lib.gender = cmbGender.Text;
-                lib.maritalstatus = cmbMaritalStatus.Text;
-                lib.citizenship = txtCitizen.Text;
-                lib.religion = txtReligion.Text;
-                lib.address = txtAddress.Text;
-
-                lib.CREATE_DATA();
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
-
-                this.Close();
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                {
+                    DBContext.GetContext().Query("librarians").Where("librarianId", lblID.Text).Update(new
+                    {
+                        Lastname = txtLastname.Text,
+                        Firstname = txtFirstname.Text,
+                        Middlename = txtMiddlename.Text,
+                        Age = txtAge.Text,
+                        Dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
+                        Placeofbirth = txtPlaceofbirth.Text,
+                        ContactNo = txtContactNo.Text,
+                        Gender = cmbGender.Text,
+                        MaritalStatus = cmbMaritalStatus.Text,
+                        Citizenship = txtCitizen.Text,
+                        Religion = txtReligion.Text,
+                        Address = txtAddress.Text,
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+                }
             }
-            else if (btnAddLibrarian.Text == "Update Data")
+            else if (btnAddLibrarian.Text.Equals("Save"))
             {
-                lib.id = lblID.Text;
-                lib.lastname = txtLastname.Text;
-                lib.firstname = txtFirstname.Text;
-                lib.middlename = txtMiddlename.Text;
-                lib.age = txtAge.Text;
-                lib.dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy");
-                lib.placeofbirth = txtPlaceofbirth.Text;
-                lib.contactno = txtContactNo.Text;
-                lib.gender = cmbGender.Text;
-                lib.maritalstatus = cmbMaritalStatus.Text;
-                lib.citizenship = txtCitizen.Text;
-                lib.religion = txtReligion.Text;
-                lib.address = txtAddress.Text;
-
-                lib.UPDATE_DATA();
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
-
-                this.Close();
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                {
+                    DBContext.GetContext().Query("librarians").Insert(new
+                    {
+                        Lastname = txtLastname.Text,
+                        Firstname = txtFirstname.Text,
+                        Middlename = txtMiddlename.Text,
+                        Age = txtAge.Text,
+                        Dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
+                        Placeofbirth = txtPlaceofbirth.Text,
+                        ContactNo = txtContactNo.Text,
+                        Gender = cmbGender.Text,
+                        MaritalStatus = cmbMaritalStatus.Text,
+                        Citizenship = txtCitizen.Text,
+                        Religion = txtReligion.Text,
+                        Address = txtAddress.Text,
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+                }
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

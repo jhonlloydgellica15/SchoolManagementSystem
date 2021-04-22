@@ -24,40 +24,41 @@ namespace SchoolManagementSystem
         {
             TextBox[] inputs = { txtDescription, txtAbbreviation };
 
-            if (btnAddCourse.Text.Equals("Update Data"))
+            if (btnAddCourse.Text.Equals("Update"))
             {
-                if (!Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
                 {
-                    if (Validator.UpdateConfirmation())
+                    DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
                     {
-                        DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
-                        {
-                            description = txtDescription.Text,
-                            abbreviation = txtAbbreviation.Text,
-                        });
-                        reloadDatagrid.displayData();
-                        this.Close();
-                    }
+                        description = txtDescription.Text,
+                        abbreviation = txtAbbreviation.Text,
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
                 }
             }
-            else if (btnAddCourse.Text.Equals("   Save Data"))
+            else if (btnAddCourse.Text.Equals("Save"))
             {
-                if (!Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-                    if (Validator.AddConfirmation())
+
+                    DBContext.GetContext().Query("course").Insert(new
                     {
-                        DBContext.GetContext().Query("course").Insert(new
-                        {
-                            description = txtDescription.Text,
-                            abbreviation = txtAbbreviation.Text,
-                        });
-                        reloadDatagrid.displayData();
-                        this.Close();
-                    }
+                        description = txtDescription.Text,
+                        abbreviation = txtAbbreviation.Text,
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+
                 }
             }
         }
         private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class LibrarianInformation : Form
     {
-        Librarians lib = new Librarians();
         public LibrarianInformation()
         {
             InitializeComponent();
@@ -30,50 +30,36 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
-            lib.VIEW_DATA();
-
             dgvLibrarians.Rows.Clear();
-            foreach (DataRow Drow in lib.dt.Rows)
-            {
-                int num = dgvLibrarians.Rows.Add();
+            var values = DBContext.GetContext().Query("librarians").Get();
 
-                dgvLibrarians.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvLibrarians.Rows[num].Cells[1].Value = Drow["Lastname"].ToString();
-                dgvLibrarians.Rows[num].Cells[2].Value = Drow["Firstname"].ToString();
-                dgvLibrarians.Rows[num].Cells[3].Value = Drow["Middlename"].ToString();
-                dgvLibrarians.Rows[num].Cells[4].Value = Drow["Age"].ToString();
-                dgvLibrarians.Rows[num].Cells[5].Value = Drow["DateOfBirth"].ToString();
-                dgvLibrarians.Rows[num].Cells[6].Value = Drow["PlaceOfBirth"].ToString();
-                dgvLibrarians.Rows[num].Cells[7].Value = Drow["ContactNo"].ToString();
-                dgvLibrarians.Rows[num].Cells[8].Value = Drow["Gender"].ToString();
-                dgvLibrarians.Rows[num].Cells[9].Value = Drow["MaritalStatus"].ToString();
-                dgvLibrarians.Rows[num].Cells[10].Value = Drow["Citizen"].ToString();
-                dgvLibrarians.Rows[num].Cells[11].Value = Drow["Religion"].ToString();
-                dgvLibrarians.Rows[num].Cells[12].Value = Drow["Address"].ToString();
+            foreach (var value in values)
+            {
+                dgvLibrarians.Rows.Add(value.librarianId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.DateofBirth, value.PlaceofBirth, value.ContactNo,
+                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
             }
         }
 
         private void dgvLibrarians_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddLibrarian(this);
+            int id = Convert.ToInt32(dgvLibrarians.Rows[dgvLibrarians.CurrentRow.Index].Cells[0].Value);
+            var value = DBContext.GetContext().Query("librarians").Where("librarianId", id).First();
 
-
-            lib.id = dgvLibrarians.Rows[e.RowIndex].Cells[0].Value.ToString();
-            lib.PassData();
-            myfrm.lblID.Text = lib.id;
-            myfrm.txtLastname.Text = lib.lastname;
-            myfrm.txtFirstname.Text = lib.firstname;
-            myfrm.txtMiddlename.Text = lib.middlename;
-            myfrm.txtAge.Text = lib.age;
-            myfrm.dtpDateofbirth.Text = lib.dateofbirth;
-            myfrm.txtPlaceofbirth.Text = lib.placeofbirth;
-            myfrm.txtContactNo.Text = lib.contactno;
-            myfrm.cmbGender.Text = lib.gender;
-            myfrm.cmbMaritalStatus.Text = lib.maritalstatus;
-            myfrm.txtCitizen.Text = lib.citizenship;
-            myfrm.txtReligion.Text = lib.religion;
-            myfrm.txtAddress.Text = lib.address;
-            myfrm.btnAddLibrarian.Text = "Update Data";
+            myfrm.lblID.Text = value.id;
+            myfrm.txtLastname.Text = value.Lastname;
+            myfrm.txtFirstname.Text = value.Firstname;
+            myfrm.txtMiddlename.Text = value.Middlename;
+            myfrm.txtAge.Text = Convert.ToString(value.Age);
+            myfrm.dtpDateofbirth.Text = value.DateofBirth;
+            myfrm.txtPlaceofbirth.Text = value.PlaceofBirth;
+            myfrm.txtContactNo.Text = Convert.ToString(value.ContactNo);
+            myfrm.cmbGender.Text = value.Gender;
+            myfrm.cmbMaritalStatus.Text = value.MaritalStatus;
+            myfrm.txtCitizen.Text = value.Citizenship;
+            myfrm.txtReligion.Text = value.Religion;
+            myfrm.txtAddress.Text = value.Address;
+            myfrm.btnAddLibrarian.Text = "Update";
 
             myfrm.ShowDialog();
         }

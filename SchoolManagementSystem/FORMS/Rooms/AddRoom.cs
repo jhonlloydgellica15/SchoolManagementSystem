@@ -22,41 +22,34 @@ namespace SchoolManagementSystem
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
-        {   
-            TextBox[] inputs = { txtDescription, txtDummy1, txtDummy2 };
+        {
+            TextBox[] inputs = { txtDescription };
 
-            if (!Validator.isEmpty(inputs))
+            if (btnAddRoom.Text.Equals("Update"))
             {
-                if (btnAddRoom.Text.Equals("Update Data"))
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
                 {
-                    if (Validator.UpdateConfirmation())
+                    DBContext.GetContext().Query("rooms").Where("roomId", lblIDD.Text).Update(new
                     {
-                        DBContext.GetContext().Query("rooms").Where("roomId", lblIDD.Text).Update(new
-                        {
-                            description = txtDescription.Text,
-                        });
-                    }
+                        description = txtDescription.Text,
+                    });
                     reloadDatagrid.displayData();
                     this.Close();
                 }
             }
-            else if (btnAddRoom.Text.Equals("   Save Data"))
+            else if (btnAddRoom.Text.Equals("Save"))
             {
-               if(!Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-                   if(Validator.AddConfirmation())
+
+                    DBContext.GetContext().Query("rooms").Insert(new
                     {
-                        if (!Validator.TextMin(inputs[0], 3) && !Validator.TextMin(inputs[0], 2))
-                        {
-                            DBContext.GetContext().Query("rooms").Insert(new
-                            {
-                                description = txtDescription.Text
-                            });
-                            reloadDatagrid.displayData();
-                            this.Close();
-                        }
-                    }
-                }           
+                        description = txtDescription.Text,
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+
+                }
             }
         }
 
@@ -68,6 +61,11 @@ namespace SchoolManagementSystem
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
