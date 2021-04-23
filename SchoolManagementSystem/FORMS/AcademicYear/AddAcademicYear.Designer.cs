@@ -64,10 +64,10 @@ namespace SchoolManagementSystem
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(594, 392);
+            this.iconButton1.Location = new System.Drawing.Point(582, 366);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(116, 38);
-            this.iconButton1.TabIndex = 34;
+            this.iconButton1.TabIndex = 5;
             this.iconButton1.Text = "Cancel";
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -76,7 +76,7 @@ namespace SchoolManagementSystem
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(7, 450);
+            this.panel4.Location = new System.Drawing.Point(7, 420);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(752, 7);
@@ -95,6 +95,7 @@ namespace SchoolManagementSystem
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 36);
             this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +117,7 @@ namespace SchoolManagementSystem
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 379);
+            this.panel2.Size = new System.Drawing.Size(7, 349);
             this.panel2.TabIndex = 29;
             // 
             // panel1
@@ -142,10 +143,10 @@ namespace SchoolManagementSystem
             this.btnAddAcademicYear.IconColor = System.Drawing.Color.White;
             this.btnAddAcademicYear.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddAcademicYear.IconSize = 30;
-            this.btnAddAcademicYear.Location = new System.Drawing.Point(461, 392);
+            this.btnAddAcademicYear.Location = new System.Drawing.Point(457, 366);
             this.btnAddAcademicYear.Name = "btnAddAcademicYear";
             this.btnAddAcademicYear.Size = new System.Drawing.Size(116, 38);
-            this.btnAddAcademicYear.TabIndex = 33;
+            this.btnAddAcademicYear.TabIndex = 4;
             this.btnAddAcademicYear.Text = "Save";
             this.btnAddAcademicYear.UseVisualStyleBackColor = false;
             this.btnAddAcademicYear.Click += new System.EventHandler(this.btnAddAcademicYear_Click);
@@ -180,6 +181,7 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdmissionForm.Size = new System.Drawing.Size(251, 37);
             this.btnAdmissionForm.TabIndex = 5;
+            this.btnAdmissionForm.TabStop = false;
             this.btnAdmissionForm.Text = "Academic Year Form";
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
@@ -191,7 +193,7 @@ namespace SchoolManagementSystem
             this.txtYear2.Multiline = true;
             this.txtYear2.Name = "txtYear2";
             this.txtYear2.Size = new System.Drawing.Size(534, 34);
-            this.txtYear2.TabIndex = 30;
+            this.txtYear2.TabIndex = 2;
             // 
             // label2
             // 
@@ -210,7 +212,7 @@ namespace SchoolManagementSystem
             this.txtYear1.Multiline = true;
             this.txtYear1.Name = "txtYear1";
             this.txtYear1.Size = new System.Drawing.Size(534, 34);
-            this.txtYear1.TabIndex = 28;
+            this.txtYear1.TabIndex = 1;
             // 
             // label6
             // 
@@ -229,7 +231,7 @@ namespace SchoolManagementSystem
             this.panel8.Location = new System.Drawing.Point(0, 56);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(722, 1);
+            this.panel8.Size = new System.Drawing.Size(748, 1);
             this.panel8.TabIndex = 1;
             // 
             // panel7
@@ -241,7 +243,7 @@ namespace SchoolManagementSystem
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(722, 56);
+            this.panel7.Size = new System.Drawing.Size(748, 56);
             this.panel7.TabIndex = 0;
             // 
             // panel6
@@ -256,10 +258,10 @@ namespace SchoolManagementSystem
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel6.Location = new System.Drawing.Point(19, 105);
+            this.panel6.Location = new System.Drawing.Point(7, 78);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(726, 275);
+            this.panel6.Size = new System.Drawing.Size(752, 281);
             this.panel6.TabIndex = 32;
             // 
             // cmbTerm
@@ -272,7 +274,7 @@ namespace SchoolManagementSystem
             this.cmbTerm.Location = new System.Drawing.Point(155, 207);
             this.cmbTerm.Name = "cmbTerm";
             this.cmbTerm.Size = new System.Drawing.Size(534, 32);
-            this.cmbTerm.TabIndex = 32;
+            this.cmbTerm.TabIndex = 3;
             // 
             // label3
             // 
@@ -291,14 +293,14 @@ namespace SchoolManagementSystem
             this.panel3.Location = new System.Drawing.Point(759, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 457);
+            this.panel3.Size = new System.Drawing.Size(7, 427);
             this.panel3.TabIndex = 30;
             // 
             // AddAcademicYear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 457);
+            this.ClientSize = new System.Drawing.Size(766, 427);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

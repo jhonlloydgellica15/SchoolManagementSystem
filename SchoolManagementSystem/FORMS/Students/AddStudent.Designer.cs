@@ -1055,11 +1055,12 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmissionForm.IconSize = 20;
             this.btnAdmissionForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmissionForm.Location = new System.Drawing.Point(0, 16);
+            this.btnAdmissionForm.Location = new System.Drawing.Point(0, 10);
             this.btnAdmissionForm.Name = "btnAdmissionForm";
             this.btnAdmissionForm.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdmissionForm.Size = new System.Drawing.Size(208, 37);
             this.btnAdmissionForm.TabIndex = 5;
+            this.btnAdmissionForm.TabStop = false;
             this.btnAdmissionForm.Text = "Admission Form";
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
@@ -1151,6 +1152,7 @@ namespace SchoolManagementSystem
             this.Name = "AddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Student";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);

@@ -33,7 +33,6 @@ namespace SchoolManagementSystem
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtTotalUnits = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.btnAddSubjects = new FontAwesome.Sharp.IconButton();
             this.cmbPreReq = new System.Windows.Forms.ComboBox();
             this.txtLab = new System.Windows.Forms.TextBox();
             this.txtLec = new System.Windows.Forms.TextBox();
@@ -49,12 +48,14 @@ namespace SchoolManagementSystem
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblIDD = new System.Windows.Forms.Label();
             this.btnAdmissionForm = new FontAwesome.Sharp.IconButton();
+            this.btnAddSubjects = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +67,6 @@ namespace SchoolManagementSystem
             this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.txtTotalUnits);
             this.panel6.Controls.Add(this.lblID);
-            this.panel6.Controls.Add(this.btnAddSubjects);
             this.panel6.Controls.Add(this.cmbPreReq);
             this.panel6.Controls.Add(this.txtLab);
             this.panel6.Controls.Add(this.txtLec);
@@ -80,11 +80,12 @@ namespace SchoolManagementSystem
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel6.Location = new System.Drawing.Point(15, 105);
+            this.panel6.Location = new System.Drawing.Point(7, 78);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(761, 529);
+            this.panel6.Size = new System.Drawing.Size(752, 471);
             this.panel6.TabIndex = 10;
             // 
             // comboBox1
@@ -117,26 +118,6 @@ namespace SchoolManagementSystem
             this.lblID.Size = new System.Drawing.Size(108, 21);
             this.lblID.TabIndex = 27;
             this.lblID.Text = "Department";
-            // 
-            // btnAddSubjects
-            // 
-            this.btnAddSubjects.BackColor = System.Drawing.Color.Green;
-            this.btnAddSubjects.FlatAppearance.BorderSize = 0;
-            this.btnAddSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSubjects.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddSubjects.ForeColor = System.Drawing.Color.White;
-            this.btnAddSubjects.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddSubjects.IconColor = System.Drawing.Color.White;
-            this.btnAddSubjects.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddSubjects.IconSize = 30;
-            this.btnAddSubjects.Location = new System.Drawing.Point(299, 468);
-            this.btnAddSubjects.Name = "btnAddSubjects";
-            this.btnAddSubjects.Size = new System.Drawing.Size(203, 38);
-            this.btnAddSubjects.TabIndex = 26;
-            this.btnAddSubjects.Text = "   Save Data";
-            this.btnAddSubjects.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddSubjects.UseVisualStyleBackColor = false;
-            this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
             // 
             // cmbPreReq
             // 
@@ -258,7 +239,7 @@ namespace SchoolManagementSystem
             this.panel8.Location = new System.Drawing.Point(0, 56);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(757, 1);
+            this.panel8.Size = new System.Drawing.Size(748, 1);
             this.panel8.TabIndex = 1;
             // 
             // panel7
@@ -270,7 +251,7 @@ namespace SchoolManagementSystem
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(757, 56);
+            this.panel7.Size = new System.Drawing.Size(748, 56);
             this.panel7.TabIndex = 0;
             // 
             // lblIDD
@@ -307,46 +288,65 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
             // 
+            // btnAddSubjects
+            // 
+            this.btnAddSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnAddSubjects.FlatAppearance.BorderSize = 0;
+            this.btnAddSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSubjects.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSubjects.ForeColor = System.Drawing.Color.White;
+            this.btnAddSubjects.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddSubjects.IconColor = System.Drawing.Color.White;
+            this.btnAddSubjects.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddSubjects.IconSize = 30;
+            this.btnAddSubjects.Location = new System.Drawing.Point(430, 567);
+            this.btnAddSubjects.Name = "btnAddSubjects";
+            this.btnAddSubjects.Size = new System.Drawing.Size(116, 38);
+            this.btnAddSubjects.TabIndex = 26;
+            this.btnAddSubjects.Text = "Save";
+            this.btnAddSubjects.UseVisualStyleBackColor = false;
+            this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
+            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(7, 646);
+            this.panel4.Location = new System.Drawing.Point(7, 631);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(777, 7);
+            this.panel4.Size = new System.Drawing.Size(752, 7);
             this.panel4.TabIndex = 9;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(784, 78);
+            this.panel3.Location = new System.Drawing.Point(759, 78);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 575);
+            this.panel3.Size = new System.Drawing.Size(7, 560);
             this.panel3.TabIndex = 8;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 575);
+            this.panel2.Size = new System.Drawing.Size(7, 560);
             this.panel2.TabIndex = 7;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 78);
+            this.panel1.Size = new System.Drawing.Size(766, 78);
             this.panel1.TabIndex = 6;
             // 
             // btnExit
@@ -358,7 +358,7 @@ namespace SchoolManagementSystem
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 30;
-            this.btnExit.Location = new System.Drawing.Point(741, 11);
+            this.btnExit.Location = new System.Drawing.Point(713, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 36);
             this.btnExit.TabIndex = 3;
@@ -377,14 +377,34 @@ namespace SchoolManagementSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "School Management System";
             // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Tomato;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(559, 567);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(116, 38);
+            this.iconButton1.TabIndex = 27;
+            this.iconButton1.Text = "Cancel";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
             // AddSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 653);
+            this.ClientSize = new System.Drawing.Size(766, 638);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnAddSubjects);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -430,5 +450,6 @@ namespace SchoolManagementSystem
         public System.Windows.Forms.TextBox txtTotalUnits;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label lblIDD;
+        public FontAwesome.Sharp.IconButton iconButton1;
     }
 }

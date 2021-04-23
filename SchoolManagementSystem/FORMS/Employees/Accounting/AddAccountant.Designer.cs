@@ -75,7 +75,7 @@ namespace SchoolManagementSystem
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(7, 896);
+            this.panel4.Location = new System.Drawing.Point(7, 856);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(752, 7);
@@ -88,7 +88,7 @@ namespace SchoolManagementSystem
             this.panel3.Location = new System.Drawing.Point(759, 78);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 825);
+            this.panel3.Size = new System.Drawing.Size(7, 785);
             this.panel3.TabIndex = 13;
             // 
             // panel2
@@ -98,7 +98,7 @@ namespace SchoolManagementSystem
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 825);
+            this.panel2.Size = new System.Drawing.Size(7, 785);
             this.panel2.TabIndex = 12;
             // 
             // panel1
@@ -175,7 +175,7 @@ namespace SchoolManagementSystem
             this.panel6.Location = new System.Drawing.Point(7, 78);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(752, 741);
+            this.panel6.Size = new System.Drawing.Size(752, 706);
             this.panel6.TabIndex = 15;
             // 
             // txtAddress
@@ -484,7 +484,7 @@ namespace SchoolManagementSystem
             this.btnAddAccountant.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddAccountant.IconSize = 30;
             this.btnAddAccountant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAccountant.Location = new System.Drawing.Point(435, 839);
+            this.btnAddAccountant.Location = new System.Drawing.Point(400, 798);
             this.btnAddAccountant.Name = "btnAddAccountant";
             this.btnAddAccountant.Size = new System.Drawing.Size(116, 38);
             this.btnAddAccountant.TabIndex = 26;
@@ -504,7 +504,7 @@ namespace SchoolManagementSystem
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(564, 839);
+            this.iconButton1.Location = new System.Drawing.Point(540, 798);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(116, 38);
             this.iconButton1.TabIndex = 27;
@@ -516,7 +516,7 @@ namespace SchoolManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 903);
+            this.ClientSize = new System.Drawing.Size(766, 863);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btnAddAccountant);
             this.Controls.Add(this.panel6);

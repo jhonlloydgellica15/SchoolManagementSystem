@@ -118,5 +118,10 @@ namespace SchoolManagementSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
         }
+
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+            txtLastname.Focus();
+        }
     }
 }
