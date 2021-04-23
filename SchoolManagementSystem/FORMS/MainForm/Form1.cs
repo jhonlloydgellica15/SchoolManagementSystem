@@ -134,7 +134,7 @@ namespace SchoolManagementSystem
         private void btnManageSession_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            var myForm = new ManageSession();
+            var myForm = new AcademicYear();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = true;
