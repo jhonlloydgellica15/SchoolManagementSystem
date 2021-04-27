@@ -27,7 +27,7 @@ namespace SchoolManagementSystem
             TextBox[] inputs = { txtDescrip, txtStruct };
             if (btnAddCourse.Text.Equals("   Save Data"))
             {
-                if (!Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs))
                 {
                     if (Validator.AddConfirmation())
                     {
@@ -71,6 +71,11 @@ namespace SchoolManagementSystem
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

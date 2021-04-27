@@ -29,8 +29,8 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,17 +38,18 @@ namespace SchoolManagementSystem
             this.btnAddFeeStruc = new FontAwesome.Sharp.IconButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvCourse = new System.Windows.Forms.DataGridView();
+            this.dgvFee = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFee)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +137,7 @@ namespace SchoolManagementSystem
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvCourse);
+            this.tabPage1.Controls.Add(this.dgvFee);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -145,45 +146,47 @@ namespace SchoolManagementSystem
             this.tabPage1.Text = "Fee Structure";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvCourse
+            // dgvFee
             // 
-            this.dgvCourse.AllowUserToAddRows = false;
-            this.dgvCourse.AllowUserToResizeColumns = false;
-            this.dgvCourse.AllowUserToResizeRows = false;
-            this.dgvCourse.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCourse.ColumnHeadersHeight = 45;
-            this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFee.AllowUserToAddRows = false;
+            this.dgvFee.AllowUserToResizeColumns = false;
+            this.dgvFee.AllowUserToResizeRows = false;
+            this.dgvFee.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFee.ColumnHeadersHeight = 45;
+            this.dgvFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column13,
             this.Column2,
             this.Column3,
-            this.Column4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCourse.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCourse.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvCourse.EnableHeadersVisualStyles = false;
-            this.dgvCourse.Location = new System.Drawing.Point(3, 51);
-            this.dgvCourse.Name = "dgvCourse";
-            this.dgvCourse.ReadOnly = true;
-            this.dgvCourse.RowHeadersVisible = false;
-            this.dgvCourse.RowTemplate.Height = 25;
-            this.dgvCourse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCourse.Size = new System.Drawing.Size(1596, 693);
-            this.dgvCourse.TabIndex = 1;
+            this.Column4,
+            this.Column1});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFee.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFee.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvFee.EnableHeadersVisualStyles = false;
+            this.dgvFee.Location = new System.Drawing.Point(3, 51);
+            this.dgvFee.Name = "dgvFee";
+            this.dgvFee.ReadOnly = true;
+            this.dgvFee.RowHeadersVisible = false;
+            this.dgvFee.RowTemplate.Height = 25;
+            this.dgvFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFee.Size = new System.Drawing.Size(1596, 693);
+            this.dgvFee.TabIndex = 1;
+            this.dgvFee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFee_CellDoubleClick);
             // 
             // Column13
             // 
@@ -194,25 +197,31 @@ namespace SchoolManagementSystem
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Category Name";
+            this.Column2.HeaderText = "Structure Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "Charges";
+            this.Column3.HeaderText = "Description";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 92;
+            this.Column3.Width = 114;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Amount";
+            this.Column4.HeaderText = "category count";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 91;
+            this.Column4.Width = 138;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "TOTAL";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // panel3
             // 
@@ -246,10 +255,11 @@ namespace SchoolManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FeeStructure";
             this.Text = "FeeStructure";
+            this.Load += new System.EventHandler(this.FeeStructure_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFee)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -265,7 +275,7 @@ namespace SchoolManagementSystem
         private FontAwesome.Sharp.IconButton btnAddCourse;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        public System.Windows.Forms.DataGridView dgvCourse;
+        public System.Windows.Forms.DataGridView dgvFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -273,5 +283,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnAddFeeStruc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

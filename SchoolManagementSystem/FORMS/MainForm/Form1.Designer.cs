@@ -225,6 +225,7 @@ namespace SchoolManagementSystem
             this.btnFeeStructure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFeeStructure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFeeStructure.UseVisualStyleBackColor = true;
+            this.btnFeeStructure.Click += new System.EventHandler(this.btnFeeStructure_Click);
             // 
             // btnFeeCategory
             // 
@@ -248,6 +249,7 @@ namespace SchoolManagementSystem
             this.btnFeeCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFeeCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFeeCategory.UseVisualStyleBackColor = true;
+            this.btnFeeCategory.Click += new System.EventHandler(this.btnFeeCategory_Click);
             // 
             // btnFeesManagement
             // 

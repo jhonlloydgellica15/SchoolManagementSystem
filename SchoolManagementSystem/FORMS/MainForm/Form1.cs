@@ -186,6 +186,26 @@ namespace SchoolManagementSystem
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
+        
+        private void displayFeeManagement()
+        {
+            var myForm = new FeeManagement();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayFeeStructure()
+        {
+            var myForm = new FeeStructure();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -278,6 +298,20 @@ namespace SchoolManagementSystem
             hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             displaySubjects();
+        }
+
+        private void btnFeeCategory_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayFeeManagement();
+        }
+
+        private void btnFeeStructure_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayFeeStructure();
         }
     }
 }
