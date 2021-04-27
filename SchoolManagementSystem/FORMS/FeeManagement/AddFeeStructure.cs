@@ -31,8 +31,6 @@ namespace SchoolManagementSystem
                 {
                     if (Validator.AddConfirmation())
                     {
-                        if (!Validator.TextMin(inputs[0], 3) && !Validator.TextMin(inputs[1], 2))
-                        {
                             DBContext.GetContext().Query("feestructure").Insert(new
                             {
                                 structurename = txtStruct.Text,
@@ -51,7 +49,7 @@ namespace SchoolManagementSystem
 
                             });
                             this.Close();
-                        }
+                        
                     }
                 }
             }

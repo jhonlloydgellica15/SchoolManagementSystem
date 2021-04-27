@@ -44,7 +44,8 @@ namespace SchoolManagementSystem
 
         private void dgvFee_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var add = new addfees();
+            var add = new addfees(dgvFee.SelectedRows[0].Cells[0].Value.ToString(), dgvFee.SelectedRows[0].Cells[1].Value.ToString());
+            add.Show();
         }
     }
 }

@@ -30,8 +30,14 @@ namespace SchoolManagementSystem
         
         public void displayData()
         {
+            dgvCategories.Rows.Clear();
+            var values = DBContext.GetContext().Query("categoryFee").Get();
 
-          
+            foreach (var value in values)
+            {
+                dgvCategories.Rows.Add(value.categoryID, value.category);
+            }
+
         }
 
         private void dgvCategories_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

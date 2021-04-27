@@ -31,20 +31,19 @@ namespace SchoolManagementSystem
 
             if (btnAddCategory.Text.Equals("   Save Data"))
             {
-                if (!Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs))
                 {
                     if (Validator.AddConfirmation())
                     {
-                        if (!Validator.TextMin(inputs[0], 0) && !Validator.TextMin(inputs[0], 2))
+
+                        DBContext.GetContext().Query("categoryfee").Insert(new
                         {
-                            DBContext.GetContext().Query("categoryfee").Insert(new
-                            {
-                                category = txtCategory.Text
-                            });
-                            Validator.AlertSuccess("successfully added");
-                            reloadDatagrid.displayData();
-                            this.Close();
-                        }
+                            category = txtCategory.Text,
+                        });
+                        Validator.AlertSuccess("successfully added");
+                        reloadDatagrid.displayData();
+                        this.Close();
+
                     }
                 }
             }
@@ -52,4 +51,4 @@ namespace SchoolManagementSystem
 
     }
 }
-    
+
