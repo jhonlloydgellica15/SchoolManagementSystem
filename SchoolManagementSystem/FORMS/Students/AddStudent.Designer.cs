@@ -625,6 +625,7 @@ namespace SchoolManagementSystem
             this.checkBox1.TabIndex = 16;
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtEmailAddress
             // 

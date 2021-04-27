@@ -37,10 +37,10 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.password_label = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.sign_in_button = new FontAwesome.Sharp.IconButton();
+            this.btnSignin = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.username_txt_box = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.password_panel = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
@@ -154,25 +154,25 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.iconPictureBox2.TabIndex = 6;
             this.iconPictureBox2.TabStop = false;
             // 
-            // sign_in_button
+            // btnSignin
             // 
-            this.sign_in_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
-            this.sign_in_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sign_in_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.sign_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.sign_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.sign_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sign_in_button.ForeColor = System.Drawing.Color.White;
-            this.sign_in_button.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.sign_in_button.IconColor = System.Drawing.Color.Black;
-            this.sign_in_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sign_in_button.Location = new System.Drawing.Point(523, 344);
-            this.sign_in_button.Name = "sign_in_button";
-            this.sign_in_button.Size = new System.Drawing.Size(68, 26);
-            this.sign_in_button.TabIndex = 7;
-            this.sign_in_button.Text = "Sign in";
-            this.sign_in_button.UseVisualStyleBackColor = false;
-            this.sign_in_button.Click += new System.EventHandler(this.sign_in_button_Click);
+            this.btnSignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
+            this.btnSignin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.btnSignin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSignin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignin.ForeColor = System.Drawing.Color.White;
+            this.btnSignin.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSignin.IconColor = System.Drawing.Color.Black;
+            this.btnSignin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignin.Location = new System.Drawing.Point(523, 344);
+            this.btnSignin.Name = "btnSignin";
+            this.btnSignin.Size = new System.Drawing.Size(68, 26);
+            this.btnSignin.TabIndex = 7;
+            this.btnSignin.Text = "Sign in";
+            this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignin.Click += new System.EventHandler(this.sign_in_button_Click);
             // 
             // panel3
             // 
@@ -183,29 +183,31 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.panel3.Size = new System.Drawing.Size(200, 1);
             this.panel3.TabIndex = 15;
             // 
-            // username_txt_box
+            // txtUsername
             // 
-            this.username_txt_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
-            this.username_txt_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username_txt_box.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.username_txt_box.Location = new System.Drawing.Point(456, 176);
-            this.username_txt_box.Name = "username_txt_box";
-            this.username_txt_box.Size = new System.Drawing.Size(200, 16);
-            this.username_txt_box.TabIndex = 16;
-            this.username_txt_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.username_txt_box.TextChanged += new System.EventHandler(this.username_txt_box_TextChanged);
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtUsername.Location = new System.Drawing.Point(456, 176);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(200, 20);
+            this.txtUsername.TabIndex = 16;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.TextChanged += new System.EventHandler(this.username_txt_box_TextChanged);
             // 
-            // textBox3
+            // txtPassword
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox3.Location = new System.Drawing.Point(456, 265);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(200, 16);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtPassword.Location = new System.Drawing.Point(456, 265);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(200, 20);
+            this.txtPassword.TabIndex = 19;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // password_panel
             // 
@@ -312,10 +314,10 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.password_panel);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.username_txt_box);
-            this.Controls.Add(this.sign_in_button);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.password_label);
@@ -353,10 +355,10 @@ namespace SchoolManagementSystem.FORMS.MainForm
         private System.Windows.Forms.Label password_label;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private FontAwesome.Sharp.IconButton sign_in_button;
+        private FontAwesome.Sharp.IconButton btnSignin;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox username_txt_box;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel password_panel;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.IO.FileSystemWatcher fileSystemWatcher2;

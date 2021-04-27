@@ -136,6 +136,7 @@ namespace SchoolManagementSystem
             this.lblIDD.Size = new System.Drawing.Size(117, 21);
             this.lblIDD.TabIndex = 30;
             this.lblIDD.Text = "Subject Code";
+            this.lblIDD.Visible = false;
             // 
             // btnAdmissionForm
             // 

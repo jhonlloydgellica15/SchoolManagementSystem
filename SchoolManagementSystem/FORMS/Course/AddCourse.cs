@@ -41,7 +41,6 @@ namespace SchoolManagementSystem
             {
                 if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-
                     DBContext.GetContext().Query("course").Insert(new
                     {
                         description = txtDescription.Text,

@@ -325,5 +325,10 @@ namespace SchoolManagementSystem
             scheds.times();
             MessageBox.Show(scheds.timediff);
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

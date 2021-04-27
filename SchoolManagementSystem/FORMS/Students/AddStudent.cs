@@ -6,13 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class AddStudent : Form
     {
-
-        Students stud = new Students();
 
         StudentInformation reloadDatagrid; // reload datagrid 
         public AddStudent(StudentInformation reloadDatagrid)
@@ -34,50 +33,64 @@ namespace SchoolManagementSystem
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
 
-            if(btnAddStudent.Text == "   Save Student")
+            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtAge, txtPlaceofbirth, txtReligion,
+            txtCitizen, txtContactNo, txtEmailAddress, txtAddress, txtHomeAddress, txtFatherLname, txtFatherFname,
+            txtFatherMname, txtFatherOccupation, txtMotherLname, txtMotherFname, txtMotherMname, txtMotherOccupation,
+            txtSchooLast};
+
+            if (btnAddStudent.Text.Equals("Update"))
             {
-                stud.lastname = txtLastname.Text;
-                stud.firstname = txtFirstname.Text;
-                stud.middlename = txtMiddlename.Text;
-                stud.age = txtAge.Text;
-                stud.dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy");
-                stud.placeofbirth = txtPlaceofbirth.Text;
-                stud.contactno = txtContactNo.Text;
-                stud.gender = cmbGender.Text;
-                stud.maritalstatus = cmbMaritalStatus.Text;
-                stud.citizenship = txtCitizen.Text;
-                stud.religion = txtReligion.Text;
-                stud.address = txtAddress.Text;
-
-                stud.CREATE_DATA();
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
-
-                this.Close();
+                //if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
+                //{
+                //    DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
+                //    {
+                //        description = txtDescription.Text,
+                //        abbreviation = txtAbbreviation.Text,
+                //    });
+                //    reloadDatagrid.displayData();
+                //    this.Close();
+                //}
             }
-            else if(btnAddStudent.Text == "Update Student")
+            else if (btnAddStudent.Text.Equals("Save"))
             {
-                stud.id = lblID.Text;
-                stud.lastname = txtLastname.Text;
-                stud.firstname = txtFirstname.Text;
-                stud.middlename = txtMiddlename.Text;
-                stud.age = txtAge.Text;
-                stud.dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy");
-                stud.placeofbirth = txtPlaceofbirth.Text;
-                stud.contactno = txtContactNo.Text;
-                stud.gender = cmbGender.Text;
-                stud.maritalstatus = cmbMaritalStatus.Text;
-                stud.citizenship = txtCitizen.Text;
-                stud.religion = txtReligion.Text;
-                stud.address = txtAddress.Text;
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
+                {
+                    DBContext.GetContext().Query("student").Insert(new
+                    {
+                        lastname = txtLastname.Text,
+                        firstname = txtFirstname.Text,
+                        middlename = txtMiddlename.Text,
+                        suffix = cmbSuffix.Text,
+                        dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
+                        age = txtAge.Text,
+                        placeofbirth = txtPlaceofbirth.Text,
+                        religion = txtReligion.Text,
+                        gender = cmbGender.Text,
+                        maritalstatus = cmbMaritalStatus.Text,
+                        citizenship = txtCitizen.Text,
+                        contactno = txtContactNo.Text,
+                        emailAddress = txtEmailAddress.Text,
+                        course = cmbCourse.Text,
+                        presentAddress = txtAddress.Text,
+                        homeAddress = txtHomeAddress.Text,
+                        fatherLastname = txtFatherLname.Text,
+                        fatherFirstname = txtFatherFname.Text,
+                        fatherMiddlename = txtFatherMname.Text,
+                        fatherOccupation = txtFatherOccupation.Text,
+                        motherLastname = txtMotherLname.Text,
+                        motherFirstname = txtMotherFname.Text,
+                        motherMiddlename = txtMotherMname.Text,
+                        motherOccupation = txtMotherOccupation.Text,
+                        schoolLastAttended = txtSchooLast.Text,
+                        dateLastAttended = dtpLast.Value.ToString("MM/dd/yyyy"),
 
-                stud.UPDATE_DATA();
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
+                    });
 
-                this.Close();
+                    Validator.AlertSuccess("Success");
+                    this.Close();
+
+                }
             }
-            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -122,6 +135,11 @@ namespace SchoolManagementSystem
         private void AddStudent_Load(object sender, EventArgs e)
         {
             txtLastname.Focus();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            var result =  (checkBox1.Checked) ? txtHomeAddress.Text = txtAddress.Text :  txtHomeAddress.Text = "";
         }
     }
 }

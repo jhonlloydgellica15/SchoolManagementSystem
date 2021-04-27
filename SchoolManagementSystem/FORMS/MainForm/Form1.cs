@@ -15,17 +15,31 @@ namespace SchoolManagementSystem
     {
 
         private IconButton currentBtn;
-        private Panel leftBorderBtn;
         public Form1()
         {
             InitializeComponent();
             hideSubMenu();
-
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 45);
-            pnlInsideMenu.Controls.Add(leftBorderBtn);
         }
 
+        private void hideSubMenu()
+        {
+            pnlStudentMenu.Visible = false;
+            pnlAcademicMenu.Visible = false;
+            pnlFeeMenu.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+        //Side panel colored buttons
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -62,15 +76,7 @@ namespace SchoolManagementSystem
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(45, 50, 61);
                 currentBtn.ForeColor = Color.White;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = Color.FromArgb(235, 89, 110);
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
-                leftBorderBtn.BackColor = Color.FromArgb(235, 89, 110);
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
             }
         }
         private void DisableButton()
@@ -79,50 +85,12 @@ namespace SchoolManagementSystem
             {
                 currentBtn.BackColor = Color.FromArgb(25, 34, 49);
                 currentBtn.ForeColor = Color.Gray;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.White;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
 
-
-
-        private void hideSubMenu()
+        private void displayDashboard()
         {
-            pnlSubFees.Visible = false;
-            pnlSubmenu.Visible = false;
-            pnlInideSubSettings.Visible = false;
-          
-        }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
-
-        private void btnStudents_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(pnlSubmenu);
-            ActivateButton(sender, RGBColors.color1);
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            showSubMenu(pnlInideSubSettings);
-            ActivateButton(sender, RGBColors.color1);
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-
             var myForm = new Dashboard();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
@@ -130,10 +98,8 @@ namespace SchoolManagementSystem
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
-
-        private void btnManageSession_Click(object sender, EventArgs e)
+        private void displayAcademicYear()
         {
-            ActivateButton(sender, RGBColors.color1);
             var myForm = new AcademicYear();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
@@ -142,84 +108,8 @@ namespace SchoolManagementSystem
             myForm.Show();
         }
 
-        private void btnTeachers_Click(object sender, EventArgs e)
+        private void displayStudent()
         {
-            ActivateButton(sender, RGBColors.color1);
-            var myForm = new TeacherInformation();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void btnLibrarians_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            var myForm = new LibrarianInformation();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void btnAccountants_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            var myForm = new AccountantInformation();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void btnRooms_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            var myForm = new room();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void btnSubjects_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-
-            var myForm = new CourseInformation();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton1(sender, RGBColors.color1);
-
-            var myForm = new Subject();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ActivateButton1(sender, RGBColors.color1);
-        }
-
-        private void btnAdmitStudent_Click(object sender, EventArgs e)
-        {
-            ActivateButton1(sender, RGBColors.color1);
-
             var myForm = new StudentInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
@@ -228,14 +118,9 @@ namespace SchoolManagementSystem
             myForm.Show();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void displayTeachers()
         {
-            ActivateButton1(sender, RGBColors.color1);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            var myForm = new Dashboard();
+            var myForm = new TeacherInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = true;
@@ -243,7 +128,56 @@ namespace SchoolManagementSystem
             myForm.Show();
         }
 
-        private void btnScheduling_Click(object sender, EventArgs e)
+        private void displayLibrarians()
+        {
+            var myForm = new LibrarianInformation();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayAccountants()
+        {
+            var myForm = new AccountantInformation();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayRooms()
+        {
+            var myForm = new room();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayCourse()
+        {
+            var myForm = new CourseInformation();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displaySubjects()
+        {
+            var myForm = new Subject();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = true;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+        private void displayScheduling()
         {
             var myForm = new Sched();
             pnlShow.Controls.Clear();
@@ -253,34 +187,97 @@ namespace SchoolManagementSystem
             myForm.Show();
         }
 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            displayDashboard();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayDashboard();
+        }
+
+        private void btnManageSession_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayAcademicYear();
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlStudentMenu);
+        }
+
+        private void btnAdmitStudent_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            displayStudent();
+        }
+
+        private void btnTeachers_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayTeachers();
+        }
+
+        private void btnLibrarians_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayLibrarians();
+        }
+
+        private void btnAccountants_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayAccountants();
+        }
+
+        private void btnRooms_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayRooms();
+        }
+
+        private void btnCourse_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayCourse();
+        }
+
+        private void btnAcademic_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlAcademicMenu);
+        }
+
+        private void btnScheduling_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displayScheduling();
+        }
+
         private void btnFeesManagement_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlSubFees);
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlFeeMenu);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void btnSubject_Click(object sender, EventArgs e)
         {
-         
-        }
-
-        private void btnFeeCategory_Click(object sender, EventArgs e)
-        {
-            var myForm = new FeeManagement();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
-        }
-
-        private void btnFeeStructure_Click(object sender, EventArgs e)
-        {
-            var myForm = new FeeStructure();
-            pnlShow.Controls.Clear();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            pnlShow.Controls.Add(myForm);
-            myForm.Show();
+            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
+            displaySubjects();
         }
     }
 }
