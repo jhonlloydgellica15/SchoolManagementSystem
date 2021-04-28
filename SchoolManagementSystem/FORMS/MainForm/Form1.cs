@@ -291,26 +291,25 @@ namespace SchoolManagementSystem
         {
             ActivateButton(sender, RGBColors.color1);
             showSubMenu(pnlFeeMenu);
+
         }
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            ActivateButton(sender, RGBColors.color1);
             displaySubjects();
         }
 
         private void btnFeeCategory_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            ActivateButton(sender, RGBColors.color1);
             displayFeeManagement();
+
         }
 
         private void btnFeeStructure_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            ActivateButton(sender, RGBColors.color1);
             displayFeeStructure();
         }
     }

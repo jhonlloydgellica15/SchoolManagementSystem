@@ -79,9 +79,11 @@ namespace SchoolManagementSystem.FORMS.MainForm
                 }).FirstOrDefault();
 
 
-                if (query.userrole == 1)
+                if (query.userrole.Equals(1))
                 {
-                    MessageBox.Show("Welcome Admin");
+                    this.Dispose();
+                    var myfrm = new Form1();
+                    myfrm.Show();
                 }
                 else if (query.userrole == 2)
                 {

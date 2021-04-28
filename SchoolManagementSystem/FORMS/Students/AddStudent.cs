@@ -40,16 +40,40 @@ namespace SchoolManagementSystem
 
             if (btnAddStudent.Text.Equals("Update"))
             {
-                //if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
-                //{
-                //    DBContext.GetContext().Query("course").Where("courseId", lblIDD.Text).Update(new
-                //    {
-                //        description = txtDescription.Text,
-                //        abbreviation = txtAbbreviation.Text,
-                //    });
-                //    reloadDatagrid.displayData();
-                //    this.Close();
-                //}
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
+                {
+                    DBContext.GetContext().Query("student").Where("studentId", lblID.Text).Update(new
+                    {
+                        lastname = txtLastname.Text,
+                        firstname = txtFirstname.Text,
+                        middlename = txtMiddlename.Text,
+                        suffix = cmbSuffix.Text,
+                        dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
+                        age = txtAge.Text,
+                        placeofbirth = txtPlaceofbirth.Text,
+                        religion = txtReligion.Text,
+                        gender = cmbGender.Text,
+                        maritalstatus = cmbMaritalStatus.Text,
+                        citizenship = txtCitizen.Text,
+                        contactno = txtContactNo.Text,
+                        emailAddress = txtEmailAddress.Text,
+                        course = cmbCourse.Text,
+                        presentAddress = txtAddress.Text,
+                        homeAddress = txtHomeAddress.Text,
+                        fatherLastname = txtFatherLname.Text,
+                        fatherFirstname = txtFatherFname.Text,
+                        fatherMiddlename = txtFatherMname.Text,
+                        fatherOccupation = txtFatherOccupation.Text,
+                        motherLastname = txtMotherLname.Text,
+                        motherFirstname = txtMotherFname.Text,
+                        motherMiddlename = txtMotherMname.Text,
+                        motherOccupation = txtMotherOccupation.Text,
+                        schoolLastAttended = txtSchooLast.Text,
+                        dateLastAttended = dtpLast.Value.ToString("MM/dd/yyyy"),
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+                }
             }
             else if (btnAddStudent.Text.Equals("Save"))
             {

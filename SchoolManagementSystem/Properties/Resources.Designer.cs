@@ -63,6 +63,26 @@ namespace SchoolManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap basicEducation_min {
+            get {
+                object obj = ResourceManager.GetObject("basicEducation-min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap college_min {
+            get {
+                object obj = ResourceManager.GetObject("college-min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap drpRotatingLogo {
             get {
                 object obj = ResourceManager.GetObject("drpRotatingLogo", resourceCulture);
