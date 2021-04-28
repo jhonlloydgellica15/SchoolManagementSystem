@@ -38,6 +38,12 @@ namespace SchoolManagementSystem
             txtFatherMname, txtFatherOccupation, txtMotherLname, txtMotherFname, txtMotherMname, txtMotherOccupation,
             txtSchooLast};
 
+
+            var birth = (chkPsa.Checked) ? 1 : 0;
+            var card = (chkReportCard.Checked) ? 1 : 0;
+            var honorable = (chkHonorable.Checked) ? 1 : 0;
+
+
             if (btnAddStudent.Text.Equals("Update"))
             {
                 //if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
@@ -83,10 +89,13 @@ namespace SchoolManagementSystem
                         motherOccupation = txtMotherOccupation.Text,
                         schoolLastAttended = txtSchooLast.Text,
                         dateLastAttended = dtpLast.Value.ToString("MM/dd/yyyy"),
+                        psa = birth,
+                        reportCard = card,
+                        honorableDismissal = honorable,
 
                     });
-
                     Validator.AlertSuccess("Success");
+                    reloadDatagrid.displayData();
                     this.Close();
 
                 }
