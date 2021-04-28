@@ -886,6 +886,7 @@ namespace SchoolManagementSystem
             // 
             // txtAge
             // 
+            this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtAge.Location = new System.Drawing.Point(204, 315);
             this.txtAge.Multiline = true;
@@ -931,6 +932,7 @@ namespace SchoolManagementSystem
             this.dtpDateofbirth.Name = "dtpDateofbirth";
             this.dtpDateofbirth.Size = new System.Drawing.Size(441, 33);
             this.dtpDateofbirth.TabIndex = 5;
+            this.dtpDateofbirth.ValueChanged += new System.EventHandler(this.dtpDateofbirth_ValueChanged);
             // 
             // cmbMaritalStatus
             // 

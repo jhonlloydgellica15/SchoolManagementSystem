@@ -27,22 +27,19 @@ namespace SchoolManagementSystem
 
         private void btnAddAcademicYear_Click(object sender, EventArgs e)
         {
-
-            TextBox[] inputs = {txtYear1, txtYear2};
+            TextBox[] inputs = { txtYear1, txtYear2 };
             if (btnAddAcademicYear.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-                    if (Validator.AddConfirmation())
+                    DBContext.GetContext().Query("academicyear").Insert(new
                     {
-                        DBContext.GetContext().Query("academicyear").Insert(new{
-                            year1 = txtYear1.Text,
-                            year2 = txtYear2.Text,
-                            term = cmbTerm.Text
-                        });
-                        Validator.AlertSuccess("inserted");
-                        reloadDatagrid.displayData();
-                    }
+                        year1 = txtYear1.Text,
+                        year2 = txtYear2.Text,
+                        term = cmbTerm.Text
+                    });
+                    Validator.AlertSuccess("inserted");
+                    reloadDatagrid.displayData();
                 }
             }
         }

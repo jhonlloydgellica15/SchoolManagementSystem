@@ -83,7 +83,7 @@ namespace SchoolManagementSystem
             }
             else if (btnAddStudent.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.ValidateDate(dtpDateofbirth))
                 {
                     DBContext.GetContext().Query("student").Insert(new
                     {
@@ -172,7 +172,13 @@ namespace SchoolManagementSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            var result =  (checkBox1.Checked) ? txtHomeAddress.Text = txtAddress.Text :  txtHomeAddress.Text = "";
+            var result = (checkBox1.Checked) ? txtHomeAddress.Text = txtAddress.Text : txtHomeAddress.Text = "";
+        }
+
+        private void dtpDateofbirth_ValueChanged(object sender, EventArgs e)
+        {
+            int Age = DateTime.Today.Year - dtpDateofbirth.Value.Year; // CurrentYear - BirthDate
+            txtAge.Text = Age.ToString();
         }
     }
 }

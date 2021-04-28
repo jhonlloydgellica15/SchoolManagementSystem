@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
     public partial class Subject : Form
     {
-        Subjects subj = new Subjects();
         public Subject()
         {
             InitializeComponent();
@@ -26,19 +26,18 @@ namespace SchoolManagementSystem
         private void dgvSubjects_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddSubject(this);
+            int id = Convert.ToInt32(dgvSubjects.Rows[dgvSubjects.CurrentRow.Index].Cells[0].Value);
+            var value = DBContext.GetContext().Query("subjects").Where("subjectId", id).First();
 
+            myfrm.lblIDD.Text = id.ToString();
+            myfrm.txtSubjectCode.Text = value.subjectCode;
+            myfrm.txtDescriptiveTitle.Text = value.subjectTitle;
+            myfrm.txtLec.Text = Convert.ToString(value.lec);
+            myfrm.txtLab.Text = Convert.ToString(value.lab);
+            myfrm.txtTotalUnits.Text = Convert.ToString(value.unit);
+            myfrm.cmbPreReq.Text = value.prereq;
 
-            subj.id = dgvSubjects.Rows[e.RowIndex].Cells[0].Value.ToString();
-            subj.PassData();
-            myfrm.lblIDD.Text = subj.id;
-            myfrm.txtSubjectCode.Text = subj.subjCode;
-            myfrm.txtDescriptiveTitle.Text = subj.subjTitle;
-            myfrm.txtLec.Text = subj.lec;
-            myfrm.txtLab.Text = subj.lab;
-            myfrm.txtTotalUnits.Text = subj.unit;
-            myfrm.cmbPreReq.Text = subj.prereq;
-            myfrm.btnAddSubjects.Text = "Update Data";
-
+            myfrm.btnAddSubjects.Text = "Update";
             myfrm.ShowDialog();
         }
 
@@ -46,23 +45,17 @@ namespace SchoolManagementSystem
         {
             displayData();
         }
+
         public void displayData()
         {
-            subj.VIEW_DATA();
-
             dgvSubjects.Rows.Clear();
-            foreach (DataRow Drow in subj.dt.Rows)
-            {
-                int num = dgvSubjects.Rows.Add();
+            var values = DBContext.GetContext().Query("subjects").Get();
 
-                dgvSubjects.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dgvSubjects.Rows[num].Cells[1].Value = Drow["SubjectCode"].ToString();
-                dgvSubjects.Rows[num].Cells[2].Value = Drow["SubjectTitle"].ToString();
-                dgvSubjects.Rows[num].Cells[3].Value = Drow["Lec"].ToString();
-                dgvSubjects.Rows[num].Cells[4].Value = Drow["Lab"].ToString();
-                dgvSubjects.Rows[num].Cells[5].Value = Drow["TotalUnits"].ToString();
-                dgvSubjects.Rows[num].Cells[6].Value = Drow["PreReq"].ToString();
+            foreach (var value in values)
+            {
+                dgvSubjects.Rows.Add(value.subjectId, value.subjectCode, value.subjectTitle, value.lec, value.lab, value.unit, value.prereq);
             }
         }
+
     }
 }

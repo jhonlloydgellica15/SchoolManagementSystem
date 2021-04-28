@@ -266,15 +266,17 @@ namespace SchoolManagementSystem
             // 
             // dtpDateofbirth
             // 
-            this.dtpDateofbirth.Location = new System.Drawing.Point(223, 309);
+            this.dtpDateofbirth.Location = new System.Drawing.Point(223, 259);
             this.dtpDateofbirth.Name = "dtpDateofbirth";
             this.dtpDateofbirth.Size = new System.Drawing.Size(441, 31);
             this.dtpDateofbirth.TabIndex = 18;
+            this.dtpDateofbirth.ValueChanged += new System.EventHandler(this.dtpDateofbirth_ValueChanged);
             // 
             // txtAge
             // 
+            this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAge.Location = new System.Drawing.Point(223, 259);
+            this.txtAge.Location = new System.Drawing.Point(223, 306);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(441, 34);
@@ -382,7 +384,7 @@ namespace SchoolManagementSystem
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(63, 319);
+            this.label6.Location = new System.Drawing.Point(63, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 21);
             this.label6.TabIndex = 6;
@@ -392,7 +394,7 @@ namespace SchoolManagementSystem
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(63, 272);
+            this.label5.Location = new System.Drawing.Point(63, 319);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 21);
             this.label5.TabIndex = 5;

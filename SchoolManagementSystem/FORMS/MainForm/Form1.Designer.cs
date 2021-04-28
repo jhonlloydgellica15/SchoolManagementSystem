@@ -187,9 +187,9 @@ namespace SchoolManagementSystem
             this.pnlMenu.Controls.Add(this.btnManageSession);
             this.pnlMenu.Controls.Add(this.btnDashboard);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 152);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 206);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(284, 917);
+            this.pnlMenu.Size = new System.Drawing.Size(284, 778);
             this.pnlMenu.TabIndex = 1;
             // 
             // pnlFeeMenu
@@ -636,7 +636,7 @@ namespace SchoolManagementSystem
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 152);
+            this.panel3.Size = new System.Drawing.Size(284, 206);
             this.panel3.TabIndex = 0;
             // 
             // Form1
@@ -651,6 +651,7 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.pnlSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

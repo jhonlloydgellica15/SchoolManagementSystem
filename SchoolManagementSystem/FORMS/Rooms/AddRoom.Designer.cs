@@ -74,7 +74,7 @@ namespace SchoolManagementSystem
             this.txtDescription.Location = new System.Drawing.Point(130, 119);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(534, 34);
+            this.txtDescription.Size = new System.Drawing.Size(579, 34);
             this.txtDescription.TabIndex = 28;
             // 
             // label6
@@ -157,7 +157,7 @@ namespace SchoolManagementSystem
             this.btnAddRoom.IconColor = System.Drawing.Color.White;
             this.btnAddRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddRoom.IconSize = 30;
-            this.btnAddRoom.Location = new System.Drawing.Point(426, 296);
+            this.btnAddRoom.Location = new System.Drawing.Point(467, 296);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(116, 38);
             this.btnAddRoom.TabIndex = 26;
@@ -246,7 +246,7 @@ namespace SchoolManagementSystem
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(557, 296);
+            this.iconButton1.Location = new System.Drawing.Point(602, 296);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(116, 38);
             this.iconButton1.TabIndex = 27;

@@ -29,22 +29,17 @@ namespace SchoolManagementSystem
         {
             TextBox[] inputs = { txtCategory };
 
-            if (btnAddCategory.Text.Equals("   Save Data"))
+            if (btnAddCategory.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-                    if (Validator.AddConfirmation())
+                    DBContext.GetContext().Query("categoryfee").Insert(new
                     {
-
-                        DBContext.GetContext().Query("categoryfee").Insert(new
-                        {
-                            category = txtCategory.Text,
-                        });
-                        Validator.AlertSuccess("successfully added");
-                        reloadDatagrid.displayData();
-                        this.Close();
-
-                    }
+                        category = txtCategory.Text,
+                    });
+                    Validator.AlertSuccess("successfully added");
+                    reloadDatagrid.displayData();
+                    this.Close();
                 }
             }
         }

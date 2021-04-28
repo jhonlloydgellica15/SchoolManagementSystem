@@ -38,7 +38,6 @@ namespace SchoolManagementSystem
                 dgvFee.Rows[num].Cells[2].Value = Drow["Description"].ToString();
                 dgvFee.Rows[num].Cells[3].Value = Drow["count"].ToString();
                 dgvFee.Rows[num].Cells[4].Value = Drow["total"].ToString();
-              
             }
         }
 

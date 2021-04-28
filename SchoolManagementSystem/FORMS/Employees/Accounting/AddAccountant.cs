@@ -95,5 +95,11 @@ namespace SchoolManagementSystem
         {
             this.Close();
         }
+
+        private void dtpDateofbirth_ValueChanged(object sender, EventArgs e)
+        {
+            int Age = DateTime.Today.Year - dtpDateofbirth.Value.Year; // CurrentYear - BirthDate
+            txtAge.Text = Age.ToString();
+        }
     }
 }

@@ -25,32 +25,25 @@ namespace SchoolManagementSystem
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
             TextBox[] inputs = { txtDescrip, txtStruct };
-            if (btnAddCourse.Text.Equals("   Save Data"))
+            if (btnAddCourse.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-                    if (Validator.AddConfirmation())
+                    DBContext.GetContext().Query("feestructure").Insert(new
                     {
-                            DBContext.GetContext().Query("feestructure").Insert(new
-                            {
-                                structurename = txtStruct.Text,
-                                description = txtDescrip.Text,
+                        structurename = txtStruct.Text,
+                        description = txtDescrip.Text,
 
-                            });
+                    });
+                    var rooms = DBContext.GetContext().Query("feestructure").Where("structureName", txtStruct.Text).First();
 
-                            //var result = DBContext.GetContext().Query("feestructure").Where("structureName", txtStruct.Text).First();
-                            var rooms = DBContext.GetContext().Query("feestructure").Where("structureName", txtStruct.Text).First();
+                    aa = rooms.structureID;
 
-                            aa = rooms.structureID;
-
-                            DBContext.GetContext().Query("totalfee").Insert(new
-                            {
-                                structureID = aa,
-
-                            });
-                            this.Close();
-                        
-                    }
+                    DBContext.GetContext().Query("totalfee").Insert(new
+                    {
+                        structureID = aa,
+                    });
+                    this.Close();
                 }
             }
 

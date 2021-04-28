@@ -26,10 +26,6 @@ namespace SchoolManagementSystem
         }
         private void StudentInformation_Load(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = null;
-            //stud.VIEW_DATA();
-            //dataGridView1.DataSource = stud.dt;
-
             displayData();
         }
 
@@ -44,7 +40,6 @@ namespace SchoolManagementSystem
                 dgvStudents.Rows.Add(value.studentId, $"{value.lastname}, {value.firstname} {value.middlename}", value.gender, value.presentAddress, value.course);
             }
         }
-
 
         private void dgvStudents_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {

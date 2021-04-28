@@ -30,9 +30,7 @@ namespace SchoolManagementSystem
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtTotalUnits = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
             this.cmbPreReq = new System.Windows.Forms.ComboBox();
             this.txtLab = new System.Windows.Forms.TextBox();
             this.txtLec = new System.Windows.Forms.TextBox();
@@ -64,9 +62,7 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.txtTotalUnits);
-            this.panel6.Controls.Add(this.lblID);
             this.panel6.Controls.Add(this.cmbPreReq);
             this.panel6.Controls.Add(this.txtLab);
             this.panel6.Controls.Add(this.txtLec);
@@ -88,36 +84,15 @@ namespace SchoolManagementSystem
             this.panel6.Size = new System.Drawing.Size(752, 471);
             this.panel6.TabIndex = 10;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(225, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(441, 30);
-            this.comboBox1.TabIndex = 29;
-            // 
             // txtTotalUnits
             // 
+            this.txtTotalUnits.Enabled = false;
             this.txtTotalUnits.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTotalUnits.Location = new System.Drawing.Point(225, 348);
             this.txtTotalUnits.Multiline = true;
             this.txtTotalUnits.Name = "txtTotalUnits";
             this.txtTotalUnits.Size = new System.Drawing.Size(441, 34);
-            this.txtTotalUnits.TabIndex = 28;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(65, 91);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(108, 21);
-            this.lblID.TabIndex = 27;
-            this.lblID.Text = "Department";
+            this.txtTotalUnits.TabIndex = 5;
             // 
             // cmbPreReq
             // 
@@ -129,7 +104,7 @@ namespace SchoolManagementSystem
             this.cmbPreReq.Location = new System.Drawing.Point(225, 402);
             this.cmbPreReq.Name = "cmbPreReq";
             this.cmbPreReq.Size = new System.Drawing.Size(441, 30);
-            this.cmbPreReq.TabIndex = 21;
+            this.cmbPreReq.TabIndex = 6;
             // 
             // txtLab
             // 
@@ -138,8 +113,9 @@ namespace SchoolManagementSystem
             this.txtLab.Multiline = true;
             this.txtLab.Name = "txtLab";
             this.txtLab.Size = new System.Drawing.Size(441, 34);
-            this.txtLab.TabIndex = 17;
+            this.txtLab.TabIndex = 4;
             this.txtLab.TextChanged += new System.EventHandler(this.txtLab_TextChanged);
+            this.txtLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLab_KeyPress);
             this.txtLab.MouseLeave += new System.EventHandler(this.txtLab_MouseLeave);
             // 
             // txtLec
@@ -149,8 +125,9 @@ namespace SchoolManagementSystem
             this.txtLec.Multiline = true;
             this.txtLec.Name = "txtLec";
             this.txtLec.Size = new System.Drawing.Size(441, 34);
-            this.txtLec.TabIndex = 16;
+            this.txtLec.TabIndex = 3;
             this.txtLec.TextChanged += new System.EventHandler(this.txtLec_TextChanged);
+            this.txtLec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLec_KeyPress);
             this.txtLec.Leave += new System.EventHandler(this.txtLec_Leave);
             this.txtLec.MouseLeave += new System.EventHandler(this.txtLec_MouseLeave);
             // 
@@ -161,7 +138,7 @@ namespace SchoolManagementSystem
             this.txtDescriptiveTitle.Multiline = true;
             this.txtDescriptiveTitle.Name = "txtDescriptiveTitle";
             this.txtDescriptiveTitle.Size = new System.Drawing.Size(441, 34);
-            this.txtDescriptiveTitle.TabIndex = 15;
+            this.txtDescriptiveTitle.TabIndex = 2;
             // 
             // txtSubjectCode
             // 
@@ -170,7 +147,7 @@ namespace SchoolManagementSystem
             this.txtSubjectCode.Multiline = true;
             this.txtSubjectCode.Name = "txtSubjectCode";
             this.txtSubjectCode.Size = new System.Drawing.Size(441, 34);
-            this.txtSubjectCode.TabIndex = 14;
+            this.txtSubjectCode.TabIndex = 1;
             // 
             // label7
             // 
@@ -284,6 +261,7 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdmissionForm.Size = new System.Drawing.Size(170, 37);
             this.btnAdmissionForm.TabIndex = 5;
+            this.btnAdmissionForm.TabStop = false;
             this.btnAdmissionForm.Text = "Admission Form";
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
@@ -302,7 +280,7 @@ namespace SchoolManagementSystem
             this.btnAddSubjects.Location = new System.Drawing.Point(430, 567);
             this.btnAddSubjects.Name = "btnAddSubjects";
             this.btnAddSubjects.Size = new System.Drawing.Size(116, 38);
-            this.btnAddSubjects.TabIndex = 26;
+            this.btnAddSubjects.TabIndex = 7;
             this.btnAddSubjects.Text = "Save";
             this.btnAddSubjects.UseVisualStyleBackColor = false;
             this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
@@ -362,6 +340,7 @@ namespace SchoolManagementSystem
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 36);
             this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -391,7 +370,7 @@ namespace SchoolManagementSystem
             this.iconButton1.Location = new System.Drawing.Point(559, 567);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(116, 38);
-            this.iconButton1.TabIndex = 27;
+            this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Cancel";
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
@@ -425,7 +404,6 @@ namespace SchoolManagementSystem
         #endregion
 
         private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Label lblID;
         public FontAwesome.Sharp.IconButton btnAddSubjects;
         public System.Windows.Forms.TextBox txtLab;
         public System.Windows.Forms.TextBox txtLec;
@@ -448,7 +426,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox cmbPreReq;
         public System.Windows.Forms.TextBox txtTotalUnits;
-        public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label lblIDD;
         public FontAwesome.Sharp.IconButton iconButton1;
     }

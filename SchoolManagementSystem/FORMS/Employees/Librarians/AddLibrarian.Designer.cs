@@ -144,7 +144,6 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.lblID);
             this.panel6.Controls.Add(this.txtAddress);
             this.panel6.Controls.Add(this.txtReligion);
             this.panel6.Controls.Add(this.txtCitizen);
@@ -183,7 +182,7 @@ namespace SchoolManagementSystem
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(321, 71);
+            this.lblID.Location = new System.Drawing.Point(326, 19);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(87, 21);
             this.lblID.TabIndex = 27;
@@ -265,15 +264,17 @@ namespace SchoolManagementSystem
             // 
             // dtpDateofbirth
             // 
-            this.dtpDateofbirth.Location = new System.Drawing.Point(223, 309);
+            this.dtpDateofbirth.Location = new System.Drawing.Point(223, 259);
             this.dtpDateofbirth.Name = "dtpDateofbirth";
             this.dtpDateofbirth.Size = new System.Drawing.Size(441, 31);
             this.dtpDateofbirth.TabIndex = 18;
+            this.dtpDateofbirth.ValueChanged += new System.EventHandler(this.dtpDateofbirth_ValueChanged);
             // 
             // txtAge
             // 
+            this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAge.Location = new System.Drawing.Point(223, 259);
+            this.txtAge.Location = new System.Drawing.Point(223, 306);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(441, 34);
@@ -381,7 +382,7 @@ namespace SchoolManagementSystem
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(63, 319);
+            this.label6.Location = new System.Drawing.Point(63, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 21);
             this.label6.TabIndex = 6;
@@ -391,7 +392,7 @@ namespace SchoolManagementSystem
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(63, 272);
+            this.label5.Location = new System.Drawing.Point(63, 319);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 21);
             this.label5.TabIndex = 5;
@@ -440,6 +441,7 @@ namespace SchoolManagementSystem
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.panel7.Controls.Add(this.lblID);
             this.panel7.Controls.Add(this.btnAdmissionForm);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
@@ -534,6 +536,7 @@ namespace SchoolManagementSystem
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
@@ -22,38 +23,40 @@ namespace SchoolManagementSystem
 
         private void btnAddSubjects_Click(object sender, EventArgs e)
         {
-            
-            if (btnAddSubjects.Text == "   Save Data")
-            {
-                subj.subjCode = txtSubjectCode.Text;
-                subj.subjTitle = txtDescriptiveTitle.Text;
-                subj.lec = txtLec.Text;
-                subj.lab = txtLab.Text;
-                subj.unit = txtTotalUnits.Text;
-                subj.prereq = cmbPreReq.Text;
-               
-               
-                subj.CREATE_DATA();
-                MessageBox.Show("Inserted");
-                reloadDatagrid.displayData();
+            TextBox[] inputs = { txtSubjectCode , txtDescriptiveTitle, txtLec, txtLab, txtTotalUnits };
 
-                this.Close();
+            if (btnAddSubjects.Text.Equals("Update"))
+            {
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
+                {
+                    DBContext.GetContext().Query("subjects").Where("subjectId", lblIDD.Text).Update(new
+                    {
+                         subjectCode = txtSubjectCode.Text,
+                         subjectTitle = txtDescriptiveTitle.Text,
+
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
+                }
             }
-            else if (btnAddSubjects.Text == "Update Data")
+            else if (btnAddSubjects.Text.Equals("Save"))
             {
-                subj.id = lblIDD.Text;
-                subj.subjCode = txtSubjectCode.Text;
-                subj.subjTitle = txtDescriptiveTitle.Text;
-                subj.lec = txtLec.Text;
-                subj.lab = txtLab.Text;
-                subj.unit = txtTotalUnits.Text;
-                subj.prereq = cmbPreReq.Text;
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
+                {
 
-                subj.UPDATE_DATA();
-                MessageBox.Show("Updated");
-                reloadDatagrid.displayData();
+                    DBContext.GetContext().Query("subjects").Insert(new
+                    {
+                        subjectCode = txtSubjectCode.Text,
+                        subjectTitle = txtDescriptiveTitle.Text,
+                        lec = txtLec.Text,
+                        lab = txtLab.Text,
+                        unit = txtTotalUnits.Text,
+                        prereq = cmbPreReq.Text
+                    });
+                    reloadDatagrid.displayData();
+                    this.Close();
 
-                this.Close();
+                }
             }
         }
 
@@ -64,24 +67,19 @@ namespace SchoolManagementSystem
 
         private void txtLab_TextChanged(object sender, EventArgs e)
         {
-             
-            if (txtLab.Text == "")
-            {
-                txtTotalUnits.Text = txtLec.Text;
-            }
-
-            if (!string.IsNullOrEmpty(txtLec.Text) && !string.IsNullOrEmpty(txtLab.Text))
-                txtTotalUnits.Text = (Convert.ToInt32(txtLec.Text) + Convert.ToInt32(txtLab.Text)).ToString();
            
+                txtTotalUnits.Text = txtLab.Text;
+            
 
+            if (!string.IsNullOrEmpty(txtLab.Text) && !string.IsNullOrEmpty(txtLec.Text))
+                txtTotalUnits.Text = (Convert.ToInt32(txtLab.Text) + Convert.ToInt32(txtLec.Text)).ToString();
         }
 
         private void txtLec_TextChanged(object sender, EventArgs e)
         {
-            if (txtLec.Text == "")
-            {
-                txtTotalUnits.Text = txtLab.Text;
-            }
+            
+            txtTotalUnits.Text = txtLec.Text;
+            
 
             if (!string.IsNullOrEmpty(txtLec.Text) && !string.IsNullOrEmpty(txtLab.Text))
                 txtTotalUnits.Text = (Convert.ToInt32(txtLec.Text) + Convert.ToInt32(txtLab.Text)).ToString();
@@ -102,6 +100,16 @@ namespace SchoolManagementSystem
 
         private void txtLec_Leave(object sender, EventArgs e)
         {
+        }
+
+        private void txtLab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtLec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
