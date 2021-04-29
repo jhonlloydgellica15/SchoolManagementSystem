@@ -127,6 +127,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.password_label.Size = new System.Drawing.Size(55, 15);
             this.password_label.TabIndex = 4;
             this.password_label.Text = "Password";
+            this.password_label.Click += new System.EventHandler(this.password_label_Click);
             // 
             // iconPictureBox1
             // 
@@ -140,6 +141,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.iconPictureBox1.Size = new System.Drawing.Size(25, 25);
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // iconPictureBox2
             // 
@@ -153,6 +155,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.iconPictureBox2.Size = new System.Drawing.Size(25, 25);
             this.iconPictureBox2.TabIndex = 6;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // btnSignin
             // 
@@ -216,6 +219,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.password_panel.Name = "password_panel";
             this.password_panel.Size = new System.Drawing.Size(200, 1);
             this.password_panel.TabIndex = 20;
+            this.password_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.password_panel_Paint);
             // 
             // fileSystemWatcher1
             // 

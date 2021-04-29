@@ -65,39 +65,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
 
         private void sign_in_button_Click(object sender, EventArgs e)
         {
-            string holdvalue;
-            //SELECT id, username, password, role.roletype from smsdb.users
-            //inner join smsdb.role on users.userrole = role.roleid where username = 'lloyd' and password = '123';
-
-
-            try
-            {
-                var query = DBContext.GetContext().Query("users").Where(new
-                {
-                    username = txtUsername.Text,
-                    password = txtPassword.Text,
-                }).FirstOrDefault();
-
-
-                if (query.userrole.Equals(1))
-                {
-                    this.Dispose();
-                    var myfrm = new Form1();
-                    myfrm.Show();
-                }
-                else if (query.userrole == 2)
-                {
-                    MessageBox.Show("Welcome Registrar");
-                }
-                else if (query.userrole == 3)
-                {
-                    MessageBox.Show("Welcome Cashier");
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Invalid credentials");
-            }
+            
 
 
 
@@ -112,6 +80,26 @@ namespace SchoolManagementSystem.FORMS.MainForm
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

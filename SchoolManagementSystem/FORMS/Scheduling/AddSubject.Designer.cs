@@ -93,6 +93,7 @@ namespace SchoolManagementSystem
             this.txtTotalUnits.Name = "txtTotalUnits";
             this.txtTotalUnits.Size = new System.Drawing.Size(441, 34);
             this.txtTotalUnits.TabIndex = 5;
+            this.txtTotalUnits.TextChanged += new System.EventHandler(this.txtTotalUnits_TextChanged);
             // 
             // cmbPreReq
             // 

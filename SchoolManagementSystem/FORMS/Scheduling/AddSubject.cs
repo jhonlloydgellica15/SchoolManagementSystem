@@ -67,22 +67,49 @@ namespace SchoolManagementSystem
 
         private void txtLab_TextChanged(object sender, EventArgs e)
         {
-           
+           if (txtLab.Text =="")
+            {
+                txtTotalUnits.Text = txtLec.Text;
+     
+            }
+            else if(txtLec.Text == "")
+                        
+            {
                 txtTotalUnits.Text = txtLab.Text;
-            
+            }
+           else
+            {
+                int result = Convert.ToInt32(txtLab.Text) + Convert.ToInt32(txtLec.Text);
+                txtTotalUnits.Text = result.ToString();
 
-            if (!string.IsNullOrEmpty(txtLab.Text) && !string.IsNullOrEmpty(txtLec.Text))
-                txtTotalUnits.Text = (Convert.ToInt32(txtLab.Text) + Convert.ToInt32(txtLec.Text)).ToString();
+            }
         }
 
         private void txtLec_TextChanged(object sender, EventArgs e)
         {
-            
-            txtTotalUnits.Text = txtLec.Text;
-            
+            if (txtLab.Text == "")
+            {
+                txtTotalUnits.Text = txtLec.Text;
 
-            if (!string.IsNullOrEmpty(txtLec.Text) && !string.IsNullOrEmpty(txtLab.Text))
-                txtTotalUnits.Text = (Convert.ToInt32(txtLec.Text) + Convert.ToInt32(txtLab.Text)).ToString();
+            }
+            else if (txtLec.Text == "")
+
+            {
+                txtTotalUnits.Text = txtLab.Text;
+            }
+            else
+            {
+
+
+                int result = Convert.ToInt32(txtLab.Text) + Convert.ToInt32(txtLec.Text);
+                txtTotalUnits.Text = result.ToString();
+
+            }
+            //txtTotalUnits.Text = txtLec.Text;
+
+
+            //if (!string.IsNullOrEmpty(txtLec.Text) && !string.IsNullOrEmpty(txtLab.Text))
+            //    txtTotalUnits.Text = (Convert.ToInt32(txtLec.Text) + Convert.ToInt32(txtLab.Text)).ToString();
         }
 
         private void AddSubject_Load(object sender, EventArgs e)
@@ -110,6 +137,11 @@ namespace SchoolManagementSystem
         private void txtLec_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtTotalUnits_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using EonBotzLibrary;
+using SqlKata.Execution;
 
 namespace SchoolManagementSystem
 {
@@ -20,16 +22,9 @@ namespace SchoolManagementSystem
         bool isShow;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //    var myfrm = new login_form2();
-            //    myfrm.Show();
-            //    this.Hide();
-
-           
-                isShow = true;
-                pnlSlide2.Show();
-                timer.Start();
-            
-
+            isShow = true;
+            timer.Start();
+            pnlSlide2.Show();
         }
 
         private void SelectionForm_Load(object sender, EventArgs e)
@@ -43,7 +38,7 @@ namespace SchoolManagementSystem
             {
                 if (pnlSlide2.Width >= 1200)
                     timer.Stop();
-                pnlSlide2.Width += 100;
+                pnlSlide2.Width += 500;
             }
             else
             {
@@ -53,18 +48,58 @@ namespace SchoolManagementSystem
                     timer.Stop();
                 }
 
-                pnlSlide2.Width -= 100;
+                pnlSlide2.Width -= 500;
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
         {
             if (pnlSlide2.Visible)
             {
                 isShow = false;
                 timer.Start();
             }
+        }
+
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var query = DBContext.GetContext().Query("users").Where(new
+                {
+                    username = txtUsername.Text,
+                    password = txtPassword.Text,
+                }).FirstOrDefault();
+
+
+                if (query.userrole.Equals(1))
+                {
+                    this.Hide();
+                    var myfrm = new Form1();
+                    myfrm.Show();
+                }
+                else if (query.userrole == 2)
+                {
+                    MessageBox.Show("Welcome Registrar");
+                }
+                else if (query.userrole == 3)
+                {
+                    MessageBox.Show("Welcome Cashier");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid credentials");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

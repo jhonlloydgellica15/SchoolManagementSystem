@@ -98,11 +98,6 @@ namespace SchoolManagementSystem
             scheds.viewroomNum();
             scheds.times();
 
-
-            MessageBox.Show(scheds.date);
-            MessageBox.Show(scheds.timeStart);
-            MessageBox.Show(scheds.timediff);
-
             if (scheds.timediff == null || scheds.timediff == "")
             {
                 save();
