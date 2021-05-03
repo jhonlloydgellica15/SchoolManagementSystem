@@ -223,10 +223,10 @@ namespace SchoolManagementSystem
             this.btnLeft.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
             this.btnLeft.IconColor = System.Drawing.Color.Black;
             this.btnLeft.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLeft.IconSize = 70;
-            this.btnLeft.Location = new System.Drawing.Point(1129, 10);
+            this.btnLeft.IconSize = 40;
+            this.btnLeft.Location = new System.Drawing.Point(1169, 3);
             this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(97, 70);
+            this.btnLeft.Size = new System.Drawing.Size(60, 53);
             this.btnLeft.TabIndex = 34;
             this.btnLeft.TabStop = false;
             this.btnLeft.UseVisualStyleBackColor = true;
