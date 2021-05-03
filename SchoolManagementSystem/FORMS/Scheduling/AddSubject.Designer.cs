@@ -30,6 +30,13 @@ namespace SchoolManagementSystem
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblLectotal = new System.Windows.Forms.Label();
+            this.lblabTotal = new System.Windows.Forms.Label();
+            this.TotalPrice = new System.Windows.Forms.Label();
+            this.txtLabprice = new System.Windows.Forms.TextBox();
+            this.txtLecPrice = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtTotalUnits = new System.Windows.Forms.TextBox();
             this.cmbPreReq = new System.Windows.Forms.ComboBox();
             this.txtLab = new System.Windows.Forms.TextBox();
@@ -62,6 +69,13 @@ namespace SchoolManagementSystem
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.lblLectotal);
+            this.panel6.Controls.Add(this.lblabTotal);
+            this.panel6.Controls.Add(this.TotalPrice);
+            this.panel6.Controls.Add(this.txtLabprice);
+            this.panel6.Controls.Add(this.txtLecPrice);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.txtTotalUnits);
             this.panel6.Controls.Add(this.cmbPreReq);
             this.panel6.Controls.Add(this.txtLab);
@@ -83,6 +97,78 @@ namespace SchoolManagementSystem
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(752, 471);
             this.panel6.TabIndex = 10;
+            // 
+            // lblLectotal
+            // 
+            this.lblLectotal.AutoSize = true;
+            this.lblLectotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLectotal.Location = new System.Drawing.Point(565, 264);
+            this.lblLectotal.Name = "lblLectotal";
+            this.lblLectotal.Size = new System.Drawing.Size(19, 21);
+            this.lblLectotal.TabIndex = 17;
+            this.lblLectotal.Text = "0";
+            // 
+            // lblabTotal
+            // 
+            this.lblabTotal.AutoSize = true;
+            this.lblabTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblabTotal.Location = new System.Drawing.Point(565, 314);
+            this.lblabTotal.Name = "lblabTotal";
+            this.lblabTotal.Size = new System.Drawing.Size(19, 21);
+            this.lblabTotal.TabIndex = 16;
+            this.lblabTotal.Text = "0";
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.AutoSize = true;
+            this.TotalPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalPrice.Location = new System.Drawing.Point(472, 435);
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(91, 21);
+            this.TotalPrice.TabIndex = 14;
+            this.TotalPrice.Text = "total price";
+            // 
+            // txtLabprice
+            // 
+            this.txtLabprice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLabprice.Location = new System.Drawing.Point(472, 301);
+            this.txtLabprice.Multiline = true;
+            this.txtLabprice.Name = "txtLabprice";
+            this.txtLabprice.Size = new System.Drawing.Size(65, 34);
+            this.txtLabprice.TabIndex = 9;
+            this.txtLabprice.Text = "0";
+            this.txtLabprice.TextChanged += new System.EventHandler(this.txtLabprice_TextChanged);
+            // 
+            // txtLecPrice
+            // 
+            this.txtLecPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLecPrice.Location = new System.Drawing.Point(472, 251);
+            this.txtLecPrice.Multiline = true;
+            this.txtLecPrice.Name = "txtLecPrice";
+            this.txtLecPrice.Size = new System.Drawing.Size(65, 34);
+            this.txtLecPrice.TabIndex = 8;
+            this.txtLecPrice.Text = "0";
+            this.txtLecPrice.TextChanged += new System.EventHandler(this.txtLecPrice_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(366, 314);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 21);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Lab price";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(366, 264);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 21);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Lec price";
             // 
             // txtTotalUnits
             // 
@@ -113,8 +199,9 @@ namespace SchoolManagementSystem
             this.txtLab.Location = new System.Drawing.Point(225, 301);
             this.txtLab.Multiline = true;
             this.txtLab.Name = "txtLab";
-            this.txtLab.Size = new System.Drawing.Size(441, 34);
+            this.txtLab.Size = new System.Drawing.Size(65, 34);
             this.txtLab.TabIndex = 4;
+            this.txtLab.Text = "0";
             this.txtLab.TextChanged += new System.EventHandler(this.txtLab_TextChanged);
             this.txtLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLab_KeyPress);
             this.txtLab.MouseLeave += new System.EventHandler(this.txtLab_MouseLeave);
@@ -125,8 +212,9 @@ namespace SchoolManagementSystem
             this.txtLec.Location = new System.Drawing.Point(225, 251);
             this.txtLec.Multiline = true;
             this.txtLec.Name = "txtLec";
-            this.txtLec.Size = new System.Drawing.Size(441, 34);
+            this.txtLec.Size = new System.Drawing.Size(65, 34);
             this.txtLec.TabIndex = 3;
+            this.txtLec.Text = "0";
             this.txtLec.TextChanged += new System.EventHandler(this.txtLec_TextChanged);
             this.txtLec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLec_KeyPress);
             this.txtLec.Leave += new System.EventHandler(this.txtLec_Leave);
@@ -429,5 +517,12 @@ namespace SchoolManagementSystem
         public System.Windows.Forms.TextBox txtTotalUnits;
         public System.Windows.Forms.Label lblIDD;
         public FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label lblLectotal;
+        private System.Windows.Forms.Label lblabTotal;
+        private System.Windows.Forms.Label TotalPrice;
+        public System.Windows.Forms.TextBox txtLabprice;
+        public System.Windows.Forms.TextBox txtLecPrice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
