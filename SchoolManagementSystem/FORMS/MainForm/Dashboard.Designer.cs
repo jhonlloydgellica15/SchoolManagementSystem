@@ -91,9 +91,9 @@ namespace SchoolManagementSystem
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblStudent);
-            this.panel1.Location = new System.Drawing.Point(38, 128);
+            this.panel1.Location = new System.Drawing.Point(36, 117);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 176);
+            this.panel1.Size = new System.Drawing.Size(278, 157);
             this.panel1.TabIndex = 9;
             // 
             // label3
@@ -135,9 +135,9 @@ namespace SchoolManagementSystem
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblTeacher);
-            this.panel3.Location = new System.Drawing.Point(438, 128);
+            this.panel3.Location = new System.Drawing.Point(361, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(350, 176);
+            this.panel3.Size = new System.Drawing.Size(278, 157);
             this.panel3.TabIndex = 10;
             // 
             // label4
@@ -182,9 +182,9 @@ namespace SchoolManagementSystem
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.lblLibrarian);
-            this.panel4.Location = new System.Drawing.Point(839, 128);
+            this.panel4.Location = new System.Drawing.Point(713, 117);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(350, 176);
+            this.panel4.Size = new System.Drawing.Size(278, 157);
             this.panel4.TabIndex = 11;
             // 
             // label7
@@ -227,9 +227,9 @@ namespace SchoolManagementSystem
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lblAccountant);
-            this.panel5.Location = new System.Drawing.Point(1232, 128);
+            this.panel5.Location = new System.Drawing.Point(361, 310);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(350, 176);
+            this.panel5.Size = new System.Drawing.Size(278, 157);
             this.panel5.TabIndex = 12;
             // 
             // label10
@@ -270,7 +270,7 @@ namespace SchoolManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1614, 945);
+            this.ClientSize = new System.Drawing.Size(1070, 635);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

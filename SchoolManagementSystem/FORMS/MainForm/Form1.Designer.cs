@@ -76,7 +76,7 @@ namespace SchoolManagementSystem
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(284, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 125);
+            this.panel1.Size = new System.Drawing.Size(1082, 125);
             this.panel1.TabIndex = 1;
             // 
             // btnSignout
@@ -93,7 +93,7 @@ namespace SchoolManagementSystem
             this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSignout.IconSize = 20;
             this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSignout.Location = new System.Drawing.Point(1488, 74);
+            this.btnSignout.Location = new System.Drawing.Point(362, 66);
             this.btnSignout.Name = "btnSignout";
             this.btnSignout.Size = new System.Drawing.Size(190, 36);
             this.btnSignout.TabIndex = 4;
@@ -115,7 +115,7 @@ namespace SchoolManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(720, 9);
+            this.label2.Location = new System.Drawing.Point(143, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(325, 32);
             this.label2.TabIndex = 1;
@@ -153,9 +153,9 @@ namespace SchoolManagementSystem
             // 
             // pnlShow
             // 
-            this.pnlShow.Location = new System.Drawing.Point(294, 129);
+            this.pnlShow.Location = new System.Drawing.Point(291, 129);
             this.pnlShow.Name = "pnlShow";
-            this.pnlShow.Size = new System.Drawing.Size(1614, 945);
+            this.pnlShow.Size = new System.Drawing.Size(1075, 635);
             this.pnlShow.TabIndex = 3;
             // 
             // pnlSideMenu
@@ -167,7 +167,7 @@ namespace SchoolManagementSystem
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(284, 788);
+            this.pnlSideMenu.Size = new System.Drawing.Size(284, 766);
             this.pnlSideMenu.TabIndex = 0;
             // 
             // pnlMenu
@@ -644,7 +644,7 @@ namespace SchoolManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1366, 766);
             this.Controls.Add(this.pnlShow);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

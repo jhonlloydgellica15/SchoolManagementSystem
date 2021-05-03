@@ -90,9 +90,9 @@ namespace SchoolManagementSystem
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 95);
+            this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1614, 850);
+            this.panel1.Size = new System.Drawing.Size(1070, 560);
             this.panel1.TabIndex = 9;
             // 
             // panel4
@@ -102,7 +102,7 @@ namespace SchoolManagementSystem
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 46);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1610, 1);
+            this.panel4.Size = new System.Drawing.Size(1066, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnAddRoom
@@ -125,12 +125,11 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1610, 781);
+            this.tabControl1.Size = new System.Drawing.Size(1068, 493);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -139,7 +138,7 @@ namespace SchoolManagementSystem
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1602, 747);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 459);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Room List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -171,15 +170,15 @@ namespace SchoolManagementSystem
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvRooms.EnableHeadersVisualStyles = false;
-            this.dgvRooms.Location = new System.Drawing.Point(3, 51);
+            this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
             this.dgvRooms.RowHeadersVisible = false;
             this.dgvRooms.RowTemplate.Height = 25;
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRooms.Size = new System.Drawing.Size(1596, 693);
+            this.dgvRooms.Size = new System.Drawing.Size(1055, 453);
             this.dgvRooms.TabIndex = 0;
             this.dgvRooms.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRooms_CellMouseDoubleClick);
             // 
@@ -203,7 +202,7 @@ namespace SchoolManagementSystem
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1610, 46);
+            this.panel3.Size = new System.Drawing.Size(1066, 46);
             this.panel3.TabIndex = 0;
             // 
             // label1
@@ -221,7 +220,7 @@ namespace SchoolManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1614, 945);
+            this.ClientSize = new System.Drawing.Size(1070, 635);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.panel2);

@@ -20,6 +20,9 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.Close();
         }
 
-
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

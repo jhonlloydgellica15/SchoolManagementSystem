@@ -22,6 +22,8 @@ namespace SchoolManagementSystem
         bool isShow;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+            
             isShow = true;
             timer.Start();
             pnlSlide2.Show();
@@ -29,6 +31,7 @@ namespace SchoolManagementSystem
 
         private void SelectionForm_Load(object sender, EventArgs e)
         {
+
             pnlSlide2.Hide();
         }
 
@@ -100,6 +103,11 @@ namespace SchoolManagementSystem
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnlSlide2_Paint(object sender, PaintEventArgs e)
+        {
+            txtUsername.Focus();
         }
     }
 }

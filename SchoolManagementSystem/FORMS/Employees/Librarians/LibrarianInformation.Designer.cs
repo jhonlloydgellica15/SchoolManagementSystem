@@ -38,8 +38,6 @@ namespace SchoolManagementSystem
             this.btnAddLibrarian = new FontAwesome.Sharp.IconButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvLibrarians = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +52,13 @@ namespace SchoolManagementSystem
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarians)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdmin
@@ -101,9 +101,9 @@ namespace SchoolManagementSystem
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 95);
+            this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1614, 850);
+            this.panel1.Size = new System.Drawing.Size(1070, 560);
             this.panel1.TabIndex = 11;
             // 
             // panel4
@@ -113,7 +113,7 @@ namespace SchoolManagementSystem
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 46);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1610, 1);
+            this.panel4.Size = new System.Drawing.Size(1066, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnAddLibrarian
@@ -124,11 +124,11 @@ namespace SchoolManagementSystem
             this.btnAddLibrarian.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddLibrarian.IconSize = 25;
             this.btnAddLibrarian.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddLibrarian.Location = new System.Drawing.Point(104, 65);
+            this.btnAddLibrarian.Location = new System.Drawing.Point(110, 65);
             this.btnAddLibrarian.Name = "btnAddLibrarian";
             this.btnAddLibrarian.Size = new System.Drawing.Size(129, 28);
             this.btnAddLibrarian.TabIndex = 2;
-            this.btnAddLibrarian.Text = "Add Librarian";
+            this.btnAddLibrarian.Text = "Add New";
             this.btnAddLibrarian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddLibrarian.UseVisualStyleBackColor = true;
             this.btnAddLibrarian.Click += new System.EventHandler(this.btnAddLibrarian_Click);
@@ -136,12 +136,11 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1610, 781);
+            this.tabControl1.Size = new System.Drawing.Size(1068, 491);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -150,31 +149,10 @@ namespace SchoolManagementSystem
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1602, 747);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 457);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Librarian List";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1610, 46);
-            this.panel3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(10, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Librarian Information Page";
             // 
             // dgvLibrarians
             // 
@@ -214,15 +192,15 @@ namespace SchoolManagementSystem
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLibrarians.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLibrarians.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvLibrarians.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvLibrarians.EnableHeadersVisualStyles = false;
-            this.dgvLibrarians.Location = new System.Drawing.Point(3, 51);
+            this.dgvLibrarians.Location = new System.Drawing.Point(3, 3);
             this.dgvLibrarians.Name = "dgvLibrarians";
             this.dgvLibrarians.ReadOnly = true;
             this.dgvLibrarians.RowHeadersVisible = false;
             this.dgvLibrarians.RowTemplate.Height = 25;
             this.dgvLibrarians.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLibrarians.Size = new System.Drawing.Size(1596, 693);
+            this.dgvLibrarians.Size = new System.Drawing.Size(1057, 451);
             this.dgvLibrarians.TabIndex = 1;
             this.dgvLibrarians.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLibrarians_CellMouseDoubleClick);
             // 
@@ -326,11 +304,32 @@ namespace SchoolManagementSystem
             this.Column12.ReadOnly = true;
             this.Column12.Width = 91;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1066, 46);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Librarian Information Page";
+            // 
             // LibrarianInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1614, 945);
+            this.ClientSize = new System.Drawing.Size(1070, 635);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.panel2);
@@ -341,9 +340,9 @@ namespace SchoolManagementSystem
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarians)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarians)).EndInit();
             this.ResumeLayout(false);
 
         }

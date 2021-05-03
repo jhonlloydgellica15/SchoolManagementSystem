@@ -106,6 +106,7 @@ namespace SchoolManagementSystem.FORMS.MainForm
             this.login_button.TabIndex = 18;
             this.login_button.Text = "Log In";
             this.login_button.UseVisualStyleBackColor = false;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // password_txt_label
             // 
