@@ -20,10 +20,22 @@ namespace SchoolManagementSystem
             this.reloadDatagrid = reloadDatagrid;
         }
 
+
+        private void displayDepartments()
+        {
+            var values = DBContext.GetContext().Query("department").Get();
+
+            foreach (var value in values)
+            {
+                cmbDepartment.Items.Add(value.description);
+            }
+        }
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
             TextBox[] inputs = { txtDescription, txtAbbreviation };
 
+            var value = DBContext.GetContext().Query("department").Where("description", cmbDepartment.Text).First();
+            
             if (btnAddCourse.Text.Equals("Update"))
             {
                 if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
@@ -45,6 +57,7 @@ namespace SchoolManagementSystem
                     {
                         description = txtDescription.Text,
                         abbreviation = txtAbbreviation.Text,
+                        deptID = value.deptID,
                     });
                     reloadDatagrid.displayData();
                     this.Close();
@@ -60,6 +73,16 @@ namespace SchoolManagementSystem
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddCourse_Load(object sender, EventArgs e)
+        {
+            displayDepartments();
         }
     }
 }

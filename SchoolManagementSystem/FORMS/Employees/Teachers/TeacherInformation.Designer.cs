@@ -29,8 +29,8 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,16 +69,16 @@ namespace SchoolManagementSystem
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmin.IconSize = 40;
+            this.btnAdmin.IconSize = 30;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(-3, 8);
+            this.btnAdmin.Location = new System.Drawing.Point(-14, 17);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(391, 47);
+            this.btnAdmin.Size = new System.Drawing.Size(391, 31);
             this.btnAdmin.TabIndex = 8;
             this.btnAdmin.Text = "Teacher Information";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -118,17 +118,17 @@ namespace SchoolManagementSystem
             // 
             // btnAddTeacher
             // 
-            this.btnAddTeacher.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddTeacher.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddTeacher.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddTeacher.IconColor = System.Drawing.Color.Black;
             this.btnAddTeacher.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddTeacher.IconSize = 25;
+            this.btnAddTeacher.IconSize = 20;
             this.btnAddTeacher.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddTeacher.Location = new System.Drawing.Point(98, 65);
+            this.btnAddTeacher.Location = new System.Drawing.Point(91, 65);
             this.btnAddTeacher.Name = "btnAddTeacher";
-            this.btnAddTeacher.Size = new System.Drawing.Size(125, 28);
+            this.btnAddTeacher.Size = new System.Drawing.Size(95, 25);
             this.btnAddTeacher.TabIndex = 2;
-            this.btnAddTeacher.Text = "Add Teacher";
+            this.btnAddTeacher.Text = "Add New";
             this.btnAddTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddTeacher.UseVisualStyleBackColor = true;
             this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
@@ -136,7 +136,7 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -146,10 +146,10 @@ namespace SchoolManagementSystem
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvTeachers);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 457);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Teacher List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -160,14 +160,14 @@ namespace SchoolManagementSystem
             this.dgvTeachers.AllowUserToResizeColumns = false;
             this.dgvTeachers.AllowUserToResizeRows = false;
             this.dgvTeachers.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTeachers.ColumnHeadersHeight = 45;
             this.dgvTeachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTeachers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -184,14 +184,14 @@ namespace SchoolManagementSystem
             this.Column10,
             this.Column11,
             this.Column12});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTeachers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTeachers.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTeachers.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvTeachers.EnableHeadersVisualStyles = false;
             this.dgvTeachers.Location = new System.Drawing.Point(3, 3);
@@ -200,7 +200,7 @@ namespace SchoolManagementSystem
             this.dgvTeachers.RowHeadersVisible = false;
             this.dgvTeachers.RowTemplate.Height = 25;
             this.dgvTeachers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTeachers.Size = new System.Drawing.Size(1057, 451);
+            this.dgvTeachers.Size = new System.Drawing.Size(1057, 455);
             this.dgvTeachers.TabIndex = 1;
             this.dgvTeachers.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTeachers_CellMouseDoubleClick);
             // 
@@ -230,7 +230,7 @@ namespace SchoolManagementSystem
             this.Column3.HeaderText = "Middlename";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 122;
+            this.Column3.Width = 114;
             // 
             // Column4
             // 
@@ -238,7 +238,7 @@ namespace SchoolManagementSystem
             this.Column4.HeaderText = "Age";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 62;
+            this.Column4.Width = 59;
             // 
             // Column5
             // 
@@ -246,7 +246,7 @@ namespace SchoolManagementSystem
             this.Column5.HeaderText = "Date of Birth";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 122;
+            this.Column5.Width = 79;
             // 
             // Column6
             // 
@@ -254,7 +254,7 @@ namespace SchoolManagementSystem
             this.Column6.HeaderText = "Place Of Birth";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 129;
+            this.Column6.Width = 85;
             // 
             // Column7
             // 
@@ -262,7 +262,7 @@ namespace SchoolManagementSystem
             this.Column7.HeaderText = "Contact No";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 113;
+            this.Column7.Width = 102;
             // 
             // Column8
             // 
@@ -270,7 +270,7 @@ namespace SchoolManagementSystem
             this.Column8.HeaderText = "Gender";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 86;
+            this.Column8.Width = 81;
             // 
             // Column9
             // 
@@ -278,7 +278,7 @@ namespace SchoolManagementSystem
             this.Column9.HeaderText = "Marital Status";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 130;
+            this.Column9.Width = 109;
             // 
             // Column10
             // 
@@ -286,7 +286,7 @@ namespace SchoolManagementSystem
             this.Column10.HeaderText = "Citizenship";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 111;
+            this.Column10.Width = 102;
             // 
             // Column11
             // 
@@ -294,7 +294,7 @@ namespace SchoolManagementSystem
             this.Column11.HeaderText = "Religion";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 92;
+            this.Column11.Width = 84;
             // 
             // Column12
             // 
@@ -302,7 +302,7 @@ namespace SchoolManagementSystem
             this.Column12.HeaderText = "Address";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 91;
+            this.Column12.Width = 82;
             // 
             // panel3
             // 

@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
 using SqlKata.Execution;
+using System.Net.NetworkInformation;
+using EonBotzLibrary;
 
 namespace SchoolManagementSystem
 {
@@ -68,6 +70,20 @@ namespace SchoolManagementSystem
             }
         }
 
+        public string GetMacAddress()
+        {
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+            String sMacAddress = string.Empty;
+            foreach (NetworkInterface adapter in nics)
+            {
+                if (sMacAddress == String.Empty)// only return MAC Address from first card
+                {
+                    IPInterfaceProperties properties = adapter.GetIPProperties();
+                    sMacAddress = adapter.GetPhysicalAddress().ToString();
+                }
+            }
+            return sMacAddress;
+        }
         private void btnSignin_Click(object sender, EventArgs e)
         {
             try
@@ -79,7 +95,7 @@ namespace SchoolManagementSystem
                 }).FirstOrDefault();
 
 
-                if (query.userrole.Equals(1))
+                if (query.userrole.Equals(1) && query.macAddress.Equals(GetMacAddress()))
                 {
                     this.Hide();
                     var myfrm = new Form1();
@@ -92,6 +108,10 @@ namespace SchoolManagementSystem
                 else if (query.userrole == 3)
                 {
                     MessageBox.Show("Welcome Cashier");
+                }
+                else
+                {
+                    Validator.AlertDanger("You cant login other role to another pc");
                 }
             }
             catch (Exception)

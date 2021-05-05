@@ -26,6 +26,7 @@ namespace SchoolManagementSystem
             pnlStudentMenu.Visible = false;
             pnlAcademicMenu.Visible = false;
             pnlFeeMenu.Visible = false;
+            pnlDeptMenu.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -94,7 +95,7 @@ namespace SchoolManagementSystem
             var myForm = new Dashboard();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -103,7 +104,7 @@ namespace SchoolManagementSystem
             var myForm = new AcademicYear();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -113,7 +114,7 @@ namespace SchoolManagementSystem
             var myForm = new StudentInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -123,7 +124,7 @@ namespace SchoolManagementSystem
             var myForm = new TeacherInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -133,7 +134,7 @@ namespace SchoolManagementSystem
             var myForm = new LibrarianInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -143,7 +144,7 @@ namespace SchoolManagementSystem
             var myForm = new AccountantInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -153,7 +154,7 @@ namespace SchoolManagementSystem
             var myForm = new room();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -163,7 +164,7 @@ namespace SchoolManagementSystem
             var myForm = new CourseInformation();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -173,7 +174,7 @@ namespace SchoolManagementSystem
             var myForm = new Subject();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -182,7 +183,7 @@ namespace SchoolManagementSystem
             var myForm = new Sched();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -192,7 +193,7 @@ namespace SchoolManagementSystem
             var myForm = new FeeManagement();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -202,7 +203,16 @@ namespace SchoolManagementSystem
             var myForm = new FeeStructure();
             pnlShow.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+        private void displayDepartment()
+        {
+            var myForm = new Department();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
@@ -235,7 +245,7 @@ namespace SchoolManagementSystem
 
         private void btnAdmitStudent_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
             displayStudent();
         }
 
@@ -296,21 +306,39 @@ namespace SchoolManagementSystem
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
             displaySubjects();
         }
 
         private void btnFeeCategory_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
             displayFeeManagement();
 
         }
 
         private void btnFeeStructure_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            ActivateButton(sender, RGBColors.color1);
             displayFeeStructure();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlDeptMenu);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayCourse();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayDepartment();
         }
     }
 }

@@ -44,10 +44,16 @@ namespace SchoolManagementSystem
             var myfrm = new AddCourse(this);
             int id = Convert.ToInt32(dgvCourse.Rows[dgvCourse.CurrentRow.Index].Cells[0].Value);
             var value = DBContext.GetContext().Query("course").Where("courseId", id).First();
+            string getDescID = value.deptID;
+
+            var selDept = DBContext.GetContext().Query("department").Where("deptID", getDescID).First();
 
             myfrm.lblIDD.Text = id.ToString();
+
+            myfrm.cmbDepartment.Text = selDept.description;
             myfrm.txtDescription.Text = value.description;
             myfrm.txtAbbreviation.Text = value.abbreviation;
+         
             myfrm.btnAddCourse.Text = "Update";
             myfrm.ShowDialog();
         }

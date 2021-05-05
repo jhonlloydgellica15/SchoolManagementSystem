@@ -37,7 +37,7 @@ namespace SchoolManagementSystem
             
             foreach (var room in rooms)
             {
-                dgvRooms.Rows.Add(room.roomId, room.description);         
+                dgvRooms.Rows.Add(room.roomId,room.name, room.description);         
             }
         }
 
@@ -49,6 +49,7 @@ namespace SchoolManagementSystem
 
             myfrm.lblIDD.Text = id.ToString();
             myfrm.txtDescription.Text = rooms.description;
+            myfrm.txtName.Text = rooms.name;
             myfrm.btnAddRoom.Text = "Update";
             myfrm.ShowDialog();
         }

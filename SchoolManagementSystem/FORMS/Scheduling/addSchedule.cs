@@ -38,16 +38,10 @@ namespace SchoolManagementSystem
         {
 
             scheds.Schedule();
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            // Display the date as "Mon 27 Feb 2012".  
-            dateTimePicker1.CustomFormat = "hh:mm tt";
-            dateTimePicker2.CustomFormat = "hh:mm tt";
+
             cbSubjCode.DataSource = scheds.datafill;
             CbRoomNO.DataSource = scheds.datafillroom;
             cbCourse.DataSource = scheds.datafillcourse;
-
-         
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

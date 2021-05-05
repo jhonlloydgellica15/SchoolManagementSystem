@@ -24,19 +24,19 @@ namespace SchoolManagementSystem
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
-            TextBox[] inputs = { txtDescrip, txtStruct };
+            TextBox[] inputs = { txtStructure , txtDescription};
             if (btnAddCourse.Text.Equals("Save"))
             {
                 if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
                     DBContext.GetContext().Query("feestructure").Insert(new
                     {
-                        structurename = txtStruct.Text,
-                        description = txtDescrip.Text,
+                        structurename = txtStructure.Text,
+                        description = txtDescription.Text,
 
                     });
-                    var rooms = DBContext.GetContext().Query("feestructure").Where("structureName", txtStruct.Text).First();
-
+                    var rooms = DBContext.GetContext().Query("feestructure").Where("structureName", txtStructure.Text).First();
+                        
                     aa = rooms.structureID;
 
                     DBContext.GetContext().Query("totalfee").Insert(new

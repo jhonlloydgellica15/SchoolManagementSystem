@@ -43,16 +43,16 @@ namespace SchoolManagementSystem
             this.pnlSlide1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlSlide2 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnLeft = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlUsername = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnSignin = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.username_label = new System.Windows.Forms.Label();
+            this.btnLeft = new FontAwesome.Sharp.IconButton();
+            this.btnSignin = new FontAwesome.Sharp.IconButton();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,9 +180,9 @@ namespace SchoolManagementSystem
             this.pnlSlide1.Controls.Add(this.panel3);
             this.pnlSlide1.Controls.Add(this.panel2);
             this.pnlSlide1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSlide1.Location = new System.Drawing.Point(0, 96);
+            this.pnlSlide1.Location = new System.Drawing.Point(699, 59);
             this.pnlSlide1.Name = "pnlSlide1";
-            this.pnlSlide1.Size = new System.Drawing.Size(858, 358);
+            this.pnlSlide1.Size = new System.Drawing.Size(159, 395);
             this.pnlSlide1.TabIndex = 7;
             // 
             // panel5
@@ -190,7 +190,7 @@ namespace SchoolManagementSystem
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.pnlSlide1);
             this.panel5.Controls.Add(this.pnlSlide2);
-            this.panel5.Location = new System.Drawing.Point(250, 300);
+            this.panel5.Location = new System.Drawing.Point(250, 286);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(860, 456);
             this.panel5.TabIndex = 8;
@@ -199,29 +199,107 @@ namespace SchoolManagementSystem
             // 
             this.pnlSlide2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.pnlSlide2.Controls.Add(this.panel4);
-            this.pnlSlide2.Controls.Add(this.btnLeft);
             this.pnlSlide2.Controls.Add(this.label5);
             this.pnlSlide2.Controls.Add(this.pnlUsername);
-            this.pnlSlide2.Controls.Add(this.txtPassword);
-            this.pnlSlide2.Controls.Add(this.txtUsername);
-            this.pnlSlide2.Controls.Add(this.btnSignin);
             this.pnlSlide2.Controls.Add(this.iconPictureBox2);
             this.pnlSlide2.Controls.Add(this.iconPictureBox1);
             this.pnlSlide2.Controls.Add(this.username_label);
+            this.pnlSlide2.Controls.Add(this.btnLeft);
+            this.pnlSlide2.Controls.Add(this.btnSignin);
+            this.pnlSlide2.Controls.Add(this.txtUsername);
+            this.pnlSlide2.Controls.Add(this.txtPassword);
             this.pnlSlide2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSlide2.Location = new System.Drawing.Point(0, 0);
             this.pnlSlide2.Name = "pnlSlide2";
-            this.pnlSlide2.Size = new System.Drawing.Size(0, 454);
+            this.pnlSlide2.Size = new System.Drawing.Size(699, 454);
             this.pnlSlide2.TabIndex = 0;
             this.pnlSlide2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSlide2_Paint);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtPassword.Location = new System.Drawing.Point(277, 272);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(315, 31);
+            this.txtPassword.TabIndex = 36;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(277, 353);
+            this.panel4.Location = new System.Drawing.Point(277, 299);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 1);
-            this.panel4.TabIndex = 32;
+            this.panel4.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(397, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 21);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Password";
+            // 
+            // pnlUsername
+            // 
+            this.pnlUsername.BackColor = System.Drawing.Color.Black;
+            this.pnlUsername.Location = new System.Drawing.Point(277, 177);
+            this.pnlUsername.Name = "pnlUsername";
+            this.pnlUsername.Size = new System.Drawing.Size(315, 1);
+            this.pnlUsername.TabIndex = 41;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 37;
+            this.iconPictureBox2.Location = new System.Drawing.Point(418, 198);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(41, 37);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox2.TabIndex = 39;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 38;
+            this.iconPictureBox1.Location = new System.Drawing.Point(418, 72);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconPictureBox1.Size = new System.Drawing.Size(41, 38);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox1.TabIndex = 38;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // username_label
+            // 
+            this.username_label.AutoSize = true;
+            this.username_label.BackColor = System.Drawing.Color.Transparent;
+            this.username_label.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.username_label.ForeColor = System.Drawing.Color.DimGray;
+            this.username_label.Location = new System.Drawing.Point(394, 112);
+            this.username_label.Name = "username_label";
+            this.username_label.Size = new System.Drawing.Size(88, 21);
+            this.username_label.TabIndex = 37;
+            this.username_label.Text = "Username";
             // 
             // btnLeft
             // 
@@ -241,55 +319,6 @@ namespace SchoolManagementSystem
             this.btnLeft.UseVisualStyleBackColor = true;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(397, 292);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 21);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Password";
-            // 
-            // pnlUsername
-            // 
-            this.pnlUsername.BackColor = System.Drawing.Color.Black;
-            this.pnlUsername.Location = new System.Drawing.Point(277, 231);
-            this.pnlUsername.Name = "pnlUsername";
-            this.pnlUsername.Size = new System.Drawing.Size(315, 1);
-            this.pnlUsername.TabIndex = 32;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtPassword.Location = new System.Drawing.Point(277, 323);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(315, 31);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtUsername.Location = new System.Drawing.Point(277, 197);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(315, 31);
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnSignin
             // 
             this.btnSignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
@@ -299,61 +328,32 @@ namespace SchoolManagementSystem
             this.btnSignin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(7)))), ((int)(((byte)(66)))));
             this.btnSignin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(66)))));
             this.btnSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSignin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSignin.ForeColor = System.Drawing.Color.White;
             this.btnSignin.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSignin.IconColor = System.Drawing.Color.Black;
             this.btnSignin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSignin.Location = new System.Drawing.Point(361, 402);
+            this.btnSignin.Location = new System.Drawing.Point(378, 326);
             this.btnSignin.Name = "btnSignin";
-            this.btnSignin.Size = new System.Drawing.Size(155, 43);
-            this.btnSignin.TabIndex = 3;
+            this.btnSignin.Size = new System.Drawing.Size(127, 32);
+            this.btnSignin.TabIndex = 37;
             this.btnSignin.Text = "Sign in";
             this.btnSignin.UseVisualStyleBackColor = false;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
-            // iconPictureBox2
+            // txtUsername
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 37;
-            this.iconPictureBox2.Location = new System.Drawing.Point(418, 252);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(41, 37);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconPictureBox2.TabIndex = 28;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(418, 126);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(41, 38);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconPictureBox1.TabIndex = 27;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // username_label
-            // 
-            this.username_label.AutoSize = true;
-            this.username_label.BackColor = System.Drawing.Color.Transparent;
-            this.username_label.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.username_label.ForeColor = System.Drawing.Color.DimGray;
-            this.username_label.Location = new System.Drawing.Point(394, 166);
-            this.username_label.Name = "username_label";
-            this.username_label.Size = new System.Drawing.Size(88, 21);
-            this.username_label.TabIndex = 25;
-            this.username_label.Text = "Username";
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtUsername.Location = new System.Drawing.Point(277, 152);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(315, 31);
+            this.txtUsername.TabIndex = 35;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer
             // 
@@ -414,16 +414,16 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Panel pnlSlide2;
-        private System.Windows.Forms.TextBox txtUsername;
         private FontAwesome.Sharp.IconButton btnSignin;
+        private FontAwesome.Sharp.IconButton btnLeft;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnlUsername;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label username_label;
-        private System.Windows.Forms.Panel pnlUsername;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtPassword;
-        private FontAwesome.Sharp.IconButton btnLeft;
-        private System.Windows.Forms.Timer timer1;
     }
 }

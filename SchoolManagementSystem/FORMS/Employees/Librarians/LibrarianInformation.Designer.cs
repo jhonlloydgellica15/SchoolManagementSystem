@@ -29,8 +29,8 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,16 +69,16 @@ namespace SchoolManagementSystem
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmin.IconSize = 40;
+            this.btnAdmin.IconSize = 30;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(-3, 8);
+            this.btnAdmin.Location = new System.Drawing.Point(-14, 16);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(391, 47);
+            this.btnAdmin.Size = new System.Drawing.Size(391, 33);
             this.btnAdmin.TabIndex = 10;
             this.btnAdmin.Text = "Librarian Information";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -118,15 +118,15 @@ namespace SchoolManagementSystem
             // 
             // btnAddLibrarian
             // 
-            this.btnAddLibrarian.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddLibrarian.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddLibrarian.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddLibrarian.IconColor = System.Drawing.Color.Black;
             this.btnAddLibrarian.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddLibrarian.IconSize = 25;
+            this.btnAddLibrarian.IconSize = 20;
             this.btnAddLibrarian.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddLibrarian.Location = new System.Drawing.Point(110, 65);
+            this.btnAddLibrarian.Location = new System.Drawing.Point(100, 65);
             this.btnAddLibrarian.Name = "btnAddLibrarian";
-            this.btnAddLibrarian.Size = new System.Drawing.Size(129, 28);
+            this.btnAddLibrarian.Size = new System.Drawing.Size(95, 25);
             this.btnAddLibrarian.TabIndex = 2;
             this.btnAddLibrarian.Text = "Add New";
             this.btnAddLibrarian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,7 +136,7 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -146,10 +146,10 @@ namespace SchoolManagementSystem
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvLibrarians);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 457);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Librarian List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -160,14 +160,14 @@ namespace SchoolManagementSystem
             this.dgvLibrarians.AllowUserToResizeColumns = false;
             this.dgvLibrarians.AllowUserToResizeRows = false;
             this.dgvLibrarians.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLibrarians.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLibrarians.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvLibrarians.ColumnHeadersHeight = 45;
             this.dgvLibrarians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLibrarians.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -184,14 +184,14 @@ namespace SchoolManagementSystem
             this.Column10,
             this.Column11,
             this.Column12});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLibrarians.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLibrarians.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvLibrarians.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvLibrarians.EnableHeadersVisualStyles = false;
             this.dgvLibrarians.Location = new System.Drawing.Point(3, 3);
@@ -200,7 +200,7 @@ namespace SchoolManagementSystem
             this.dgvLibrarians.RowHeadersVisible = false;
             this.dgvLibrarians.RowTemplate.Height = 25;
             this.dgvLibrarians.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLibrarians.Size = new System.Drawing.Size(1057, 451);
+            this.dgvLibrarians.Size = new System.Drawing.Size(1057, 455);
             this.dgvLibrarians.TabIndex = 1;
             this.dgvLibrarians.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLibrarians_CellMouseDoubleClick);
             // 
@@ -230,7 +230,7 @@ namespace SchoolManagementSystem
             this.Column3.HeaderText = "Middlename";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 122;
+            this.Column3.Width = 114;
             // 
             // Column4
             // 
@@ -238,7 +238,7 @@ namespace SchoolManagementSystem
             this.Column4.HeaderText = "Age";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 62;
+            this.Column4.Width = 59;
             // 
             // Column5
             // 
@@ -246,7 +246,7 @@ namespace SchoolManagementSystem
             this.Column5.HeaderText = "Date of Birth";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 122;
+            this.Column5.Width = 79;
             // 
             // Column6
             // 
@@ -254,7 +254,7 @@ namespace SchoolManagementSystem
             this.Column6.HeaderText = "Place Of Birth";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 129;
+            this.Column6.Width = 85;
             // 
             // Column7
             // 
@@ -262,7 +262,7 @@ namespace SchoolManagementSystem
             this.Column7.HeaderText = "Contact No";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 113;
+            this.Column7.Width = 102;
             // 
             // Column8
             // 
@@ -270,7 +270,7 @@ namespace SchoolManagementSystem
             this.Column8.HeaderText = "Gender";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 86;
+            this.Column8.Width = 81;
             // 
             // Column9
             // 
@@ -278,7 +278,7 @@ namespace SchoolManagementSystem
             this.Column9.HeaderText = "Marital Status";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 130;
+            this.Column9.Width = 109;
             // 
             // Column10
             // 
@@ -286,7 +286,7 @@ namespace SchoolManagementSystem
             this.Column10.HeaderText = "Citizenship";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 111;
+            this.Column10.Width = 102;
             // 
             // Column11
             // 
@@ -294,7 +294,7 @@ namespace SchoolManagementSystem
             this.Column11.HeaderText = "Religion";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 92;
+            this.Column11.Width = 84;
             // 
             // Column12
             // 
@@ -302,7 +302,7 @@ namespace SchoolManagementSystem
             this.Column12.HeaderText = "Address";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 91;
+            this.Column12.Width = 82;
             // 
             // panel3
             // 

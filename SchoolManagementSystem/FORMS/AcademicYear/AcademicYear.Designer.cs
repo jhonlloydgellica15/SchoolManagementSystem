@@ -61,16 +61,16 @@ namespace SchoolManagementSystem
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmin.IconSize = 40;
+            this.btnAdmin.IconSize = 30;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(-3, 8);
+            this.btnAdmin.Location = new System.Drawing.Point(-14, 16);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(531, 47);
+            this.btnAdmin.Size = new System.Drawing.Size(535, 31);
             this.btnAdmin.TabIndex = 14;
             this.btnAdmin.Text = "Academic Year Information";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -110,14 +110,14 @@ namespace SchoolManagementSystem
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddNew.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddNew.IconColor = System.Drawing.Color.Black;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNew.IconSize = 25;
-            this.btnAddNew.Location = new System.Drawing.Point(148, 65);
+            this.btnAddNew.IconSize = 20;
+            this.btnAddNew.Location = new System.Drawing.Point(139, 65);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(154, 28);
+            this.btnAddNew.Size = new System.Drawing.Size(95, 25);
             this.btnAddNew.TabIndex = 2;
             this.btnAddNew.Text = "Add New";
             this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,7 +127,7 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -137,10 +137,10 @@ namespace SchoolManagementSystem
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvAcademicYear);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 459);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 463);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Academic Year List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@ namespace SchoolManagementSystem
             this.dgvAcademicYear.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -169,7 +169,7 @@ namespace SchoolManagementSystem
             this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -183,7 +183,7 @@ namespace SchoolManagementSystem
             this.dgvAcademicYear.RowHeadersVisible = false;
             this.dgvAcademicYear.RowTemplate.Height = 25;
             this.dgvAcademicYear.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAcademicYear.Size = new System.Drawing.Size(1057, 453);
+            this.dgvAcademicYear.Size = new System.Drawing.Size(1057, 457);
             this.dgvAcademicYear.TabIndex = 1;
             this.dgvAcademicYear.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAcademicYear_CellMouseDoubleClick);
             // 
@@ -206,7 +206,7 @@ namespace SchoolManagementSystem
             this.Column2.HeaderText = "Year";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 65;
+            this.Column2.Width = 61;
             // 
             // Column3
             // 
@@ -214,7 +214,7 @@ namespace SchoolManagementSystem
             this.Column3.HeaderText = "Term";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 69;
+            this.Column3.Width = 63;
             // 
             // Column4
             // 
@@ -222,7 +222,7 @@ namespace SchoolManagementSystem
             this.Column4.HeaderText = "Status";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 77;
+            this.Column4.Width = 71;
             // 
             // panel3
             // 
@@ -237,11 +237,11 @@ namespace SchoolManagementSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 21);
+            this.label1.Size = new System.Drawing.Size(224, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Academic Year Information Page";
             // 

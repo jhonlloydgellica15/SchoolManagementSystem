@@ -34,7 +34,6 @@ namespace SchoolManagementSystem
                     {
                          subjectCode = txtSubjectCode.Text,
                          subjectTitle = txtDescriptiveTitle.Text,
-
                     });
                     reloadDatagrid.displayData();
                     this.Close();
@@ -44,10 +43,8 @@ namespace SchoolManagementSystem
             {
                 if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
-
                     DBContext.GetContext().Query("subjects").Insert(new
                     {
-
                         subjectCode = txtSubjectCode.Text,
                         subjectTitle = txtDescriptiveTitle.Text,
                         lec = txtLec.Text,
@@ -60,13 +57,10 @@ namespace SchoolManagementSystem
                         labprice = txtLabprice.Text,
                         lecprice = txtLecPrice.Text,
                         totalprice = TotalPrice.Text
-
-
                     });
                     MessageBox.Show("success");
                  //   reloadDatagrid.displayData();
                     //this.Close();
-
                 }
             }
         }
