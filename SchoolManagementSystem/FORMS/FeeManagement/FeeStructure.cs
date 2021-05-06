@@ -27,6 +27,11 @@ namespace SchoolManagementSystem
 
         private void FeeStructure_Load(object sender, EventArgs e)
         {
+            displayData();
+        }
+
+        public void displayData()
+        {
             fee.view();
             dgvFee.Rows.Clear();
             foreach (DataRow Drow in fee.dt.Rows)
@@ -40,10 +45,9 @@ namespace SchoolManagementSystem
                 dgvFee.Rows[num].Cells[4].Value = Drow["total"].ToString();
             }
         }
-
         private void dgvFee_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var add = new addfees(dgvFee.SelectedRows[0].Cells[0].Value.ToString(), dgvFee.SelectedRows[0].Cells[1].Value.ToString());
+            var add = new addfees(dgvFee.SelectedRows[0].Cells[0].Value.ToString(), dgvFee.SelectedRows[0].Cells[1].Value.ToString(), this);
             add.Show();
         }
     }

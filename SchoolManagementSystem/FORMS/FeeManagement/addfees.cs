@@ -14,13 +14,15 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
         feeStruc struc = new feeStruc();
         string id;
         string categoryid;
-        public addfees(string val, string val2)
+        FeeStructure reloadDatagrid;
+        public addfees(string val, string val2, FeeStructure reloadDatagrid)
         {
 
 
             InitializeComponent();
             id = val;
             struckname.Text = val2;
+            this.reloadDatagrid = reloadDatagrid;
         }
 
         private void addfees_Load(object sender, EventArgs e)
@@ -60,11 +62,12 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            reloadDatagrid.displayData();
             this.Close();
         }
 
@@ -81,12 +84,13 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
 
         private void dgvCategories_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow rows = dgvCategories.Rows[e.RowIndex];
+            // DataGridViewRow rows = dgvCategories.Rows[e.RowIndex];
+            string aaa = dgvCategories.SelectedRows[0].Cells[3].Value.ToString();
 
-
-            if(e.RowIndex == 3)
+            if (aaa == "Delete") 
             {
-                 DBContext.GetContext().Query("totalfee").Where("totalFeeID", rows.Cells[0].Value).Delete();
+                deleteFees();
+                displayData();
             }
             else
             {
@@ -94,10 +98,41 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
             }
         }
 
+        private void deleteFees()
+        {
+            string category = dgvCategories.SelectedRows[0].Cells[0].Value.ToString();
+            string amount = dgvCategories.SelectedRows[0].Cells[1].Value.ToString();
+            struc.getcat = category;
+            struc.getid();
+
+
+            string getcatid = struc.getcatid;
+
+            var value = DBContext.GetContext().Query("totalfee").Where(new
+            {
+                categoryID = getcatid,
+                structureID = id,
+                total = amount,
+            }).First();
+            
+            int selTot = value.totalFeeID;
+            // MessageBox.Show("aa");
+            DBContext.GetContext().Query("totalfee").Where("totalFeeID", selTot).Delete();
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
-           string wew = dgvCategories.SelectedRows[0].Cells[0].Value.ToString();
-            MessageBox.Show(wew);
+          
+
+         //   MessageBox.Show(value.totalFeeID.ToString());
+             //DBContext.GetContext().Query("totalfee").Where("totalFeeID", value).Delete();
+
+
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

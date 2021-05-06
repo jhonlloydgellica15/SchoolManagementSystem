@@ -19,8 +19,10 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-           var result = string.Join("", textBox1.Text.Split(" ").Select(x => x[0]).ToArray());
-            MessageBox.Show(result);
+            //var result = string.Join("", textBox1.Text.Split(" ").Select(x => x[0]).ToArray());
+            // MessageBox.Show(result);
+
+            textBox1.Text = GetMacAddress();
         }
 
         public string GetMacAddress()
