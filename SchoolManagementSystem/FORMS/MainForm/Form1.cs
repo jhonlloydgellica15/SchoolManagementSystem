@@ -249,6 +249,26 @@ namespace SchoolManagementSystem
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
+
+        private void displayUser()
+        {
+            var myForm = new Users();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayUserRole()
+        {
+            var myForm = new UserRole();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             displayDashboard();
@@ -442,6 +462,18 @@ namespace SchoolManagementSystem
 
             ActivateButton(sender, RGBColors.color1);
             showSubMenu(pnlFeeMenu);
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayUser();
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayUserRole();
         }
     }
 }
