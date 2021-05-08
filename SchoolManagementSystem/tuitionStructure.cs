@@ -37,14 +37,7 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DBContext.GetContext().Query("tuition").Insert(new
-            {
-                tuitionCatID = catid,
-                subjectCode = comboBox2.Text
-
-
-            });
-            MessageBox.Show("success");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,6 +50,26 @@ namespace SchoolManagementSystem
             tuit.select();
             comboBox1.DataSource = tuit.datafill;
             comboBox2.DataSource = tuit.datafillsubj;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            DBContext.GetContext().Query("tuition").Insert(new
+            {
+                tuitionCatID = catid,
+                subjectCode = comboBox2.Text
+            });
+            MessageBox.Show("success");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

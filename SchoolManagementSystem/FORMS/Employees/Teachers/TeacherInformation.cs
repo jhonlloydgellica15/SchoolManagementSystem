@@ -30,8 +30,7 @@ namespace SchoolManagementSystem
 
             foreach (var value in values)
             {
-                dgvTeachers.Rows.Add(value.teacherId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.DateOfBirth, value.PlaceOfBirth, value.ContactNo,
-                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
+                dgvTeachers.Rows.Add(value.teacherId, $"{value.Firstname} {value.Middlename} {value.Lastname}", value.ContactNo, value.Gender, value.Address);
             }
         }
         private void btnAddTeacher_Click(object sender, EventArgs e)
@@ -41,6 +40,11 @@ namespace SchoolManagementSystem
         }
 
         private void dgvTeachers_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+           
+        }
+
+        private void dgvTeachers_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddTeacher(this);
             int id = Convert.ToInt32(dgvTeachers.Rows[dgvTeachers.CurrentRow.Index].Cells[0].Value);

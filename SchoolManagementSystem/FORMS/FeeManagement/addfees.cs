@@ -78,23 +78,18 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
             struc.structureID = id;
 
             struc.insertfee();
-            MessageBox.Show("success");
             displayData();
         }
 
         private void dgvCategories_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // DataGridViewRow rows = dgvCategories.Rows[e.RowIndex];
-            string aaa = dgvCategories.SelectedRows[0].Cells[3].Value.ToString();
+            string aaa = dgvCategories.SelectedRows[0].Cells[2].Value.ToString();
 
-            if (aaa == "Delete") 
+            if (aaa.Equals("Delete") && Validator.DeleteConfirmation()) 
             {
                 deleteFees();
                 displayData();
-            }
-            else
-            {
-                MessageBox.Show("Error");
             }
         }
 
@@ -122,9 +117,6 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
         private void button1_Click_1(object sender, EventArgs e)
         {
           
-
-         //   MessageBox.Show(value.totalFeeID.ToString());
-             //DBContext.GetContext().Query("totalfee").Where("totalFeeID", value).Delete();
 
 
 

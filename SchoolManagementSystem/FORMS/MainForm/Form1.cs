@@ -26,7 +26,10 @@ namespace SchoolManagementSystem
             pnlStudentMenu.Visible = false;
             pnlAcademicMenu.Visible = false;
             pnlFeeMenu.Visible = false;
-            pnlDeptMenu.Visible = false;
+            pnlDept.Visible = false;
+            pnlTuitionMenu.Visible = false;
+            pnlSchedules.Visible = false;
+            pnlEmployees.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -217,7 +220,35 @@ namespace SchoolManagementSystem
             myForm.Show();
         }
 
+        private void displayTuitionCategory()
+        {
+            var myForm = new TuitionCategoryInfo();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
 
+        private void displayTuitionStructure()
+        {
+            var myForm = new tuition();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
+
+        private void displayStudentScheduling()
+        {
+            var myForm = new StudentScheduling();
+            pnlShow.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            pnlShow.Controls.Add(myForm);
+            myForm.Show();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             displayDashboard();
@@ -251,21 +282,18 @@ namespace SchoolManagementSystem
 
         private void btnTeachers_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             displayTeachers();
         }
 
         private void btnLibrarians_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             displayLibrarians();
         }
 
         private void btnAccountants_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             displayAccountants();
         }
@@ -284,23 +312,16 @@ namespace SchoolManagementSystem
             displayCourse();
         }
 
-        private void btnAcademic_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            showSubMenu(pnlAcademicMenu);
-        }
+   
 
         private void btnScheduling_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             displayScheduling();
         }
 
         private void btnFeesManagement_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            showSubMenu(pnlFeeMenu);
 
         }
 
@@ -323,11 +344,7 @@ namespace SchoolManagementSystem
             displayFeeStructure();
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            showSubMenu(pnlDeptMenu);
-        }
+       
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -339,6 +356,92 @@ namespace SchoolManagementSystem
         {
             ActivateButton(sender, RGBColors.color1);
             displayDepartment();
+        }
+
+        private void btnTuitionCategory_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayTuitionCategory();
+        }
+
+        private void btnTuitionStructure_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayTuitionStructure();
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlSideMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnBulkStudent_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnStudentSched_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displayStudentScheduling();
+        }
+
+        private void btnMngEmployees_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlEmployees);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlDept);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlAcademicMenu);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlSchedules);
+        }
+
+        private void btnScheduling_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            displaySubjects();
+        }
+
+        private void iconButton6_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlTuitionMenu);
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlFeeMenu);
         }
     }
 }

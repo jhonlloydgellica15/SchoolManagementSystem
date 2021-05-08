@@ -567,7 +567,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnAdmissionForm;
-        private System.Windows.Forms.TextBox xt;
         private System.Windows.Forms.DateTimePicker dtp;
         public FontAwesome.Sharp.IconButton btnAddTeachers;
         public System.Windows.Forms.TextBox txtAddress;

@@ -35,12 +35,11 @@ namespace SchoolManagementSystem
 
             foreach (var value in values)
             {
-                dgvLibrarians.Rows.Add(value.librarianId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.DateofBirth, value.PlaceofBirth, value.ContactNo,
-                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
+                dgvLibrarians.Rows.Add(value.librarianId, $"{value.Firstname} {value.Middlename} {value.Lastname}", value.ContactNo, value.Gender, value.Address);
             }
         }
 
-        private void dgvLibrarians_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvLibrarians_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddLibrarian(this);
             int id = Convert.ToInt32(dgvLibrarians.Rows[dgvLibrarians.CurrentRow.Index].Cells[0].Value);

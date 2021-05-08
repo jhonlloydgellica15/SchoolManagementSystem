@@ -35,7 +35,7 @@ namespace SchoolManagementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAddStudent = new FontAwesome.Sharp.IconButton();
+            this.btnNew = new FontAwesome.Sharp.IconButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
@@ -89,7 +89,7 @@ namespace SchoolManagementSystem
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnAddStudent);
+            this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -108,22 +108,22 @@ namespace SchoolManagementSystem
             this.panel4.Size = new System.Drawing.Size(1066, 1);
             this.panel4.TabIndex = 3;
             // 
-            // btnAddStudent
+            // btnNew
             // 
-            this.btnAddStudent.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddStudent.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddStudent.IconColor = System.Drawing.Color.Black;
-            this.btnAddStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddStudent.IconSize = 20;
-            this.btnAddStudent.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddStudent.Location = new System.Drawing.Point(89, 65);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(95, 25);
-            this.btnAddStudent.TabIndex = 2;
-            this.btnAddStudent.Text = "Add New";
-            this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddStudent.UseVisualStyleBackColor = true;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            this.btnNew.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNew.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNew.IconColor = System.Drawing.Color.Black;
+            this.btnNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNew.IconSize = 20;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnNew.Location = new System.Drawing.Point(89, 65);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(95, 25);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "Add New";
+            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // tabControl1
             // 
@@ -276,7 +276,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnAddStudent;
+        private FontAwesome.Sharp.IconButton btnNew;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel3;

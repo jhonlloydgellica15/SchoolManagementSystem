@@ -54,7 +54,7 @@ namespace SchoolManagementSystem
             myfrm.txtDescription.Text = value.description;
             myfrm.txtAbbreviation.Text = value.abbreviation;
          
-            myfrm.btnAddCourse.Text = "Update";
+            myfrm.btnSave.Text = "Update";
             myfrm.ShowDialog();
         }
     }

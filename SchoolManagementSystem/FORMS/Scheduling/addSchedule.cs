@@ -6,14 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EonBotzLibrary;
-using System.Data;
 namespace SchoolManagementSystem
 {
     public partial class addSchedule : Form
     {
-
-   
-
         string dateequal;
         string dtpTimstart;
         string dtpTimeEnd;
@@ -46,13 +42,10 @@ namespace SchoolManagementSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             scheds.subjcode = cbSubjCode.Text;
 
             scheds.Viewdescription();
             txtDescrip.Text = scheds.subjTitle;
-
         }
 
         private void txtDescrip_TextChanged(object sender, EventArgs e)
@@ -62,93 +55,73 @@ namespace SchoolManagementSystem
         private CheckBox[] checkboxcontrol;
         private void button1_Click(object sender, EventArgs e)
         {
-             checkboxcontrol = new CheckBox[] { cbmon, cbtues, cbwed, cbthu, cbfri, cbsat };
-
-            foreach (CheckBox chk in checkboxcontrol)
+            try
             {
+                checkboxcontrol = new CheckBox[] { cbmon, cbtues, cbwed, cbthu, cbfri, cbsat };
 
-                if (chk.Checked)
+                foreach (CheckBox chk in checkboxcontrol)
                 {
-                    dateequal += chk.Text;
+
+                    if (chk.Checked)
+                    {
+                        dateequal += chk.Text;
+                    }
+                }
+
+                dateequal = monday + tuesday + wednesday + thursday + friday + saturday;
+
+                dtpTimstart = dateTimePicker1.Value.ToString("HH:mm");
+                dtpTimeEnd = dateTimePicker2.Value.ToString("HH:mm");
+
+                scheds.timeStart = dtpTimstart;
+                scheds.timeEnd = dtpTimeEnd;
+                scheds.subjcode = cbSubjCode.Text;
+                scheds.date = dateequal;
+
+                scheds.viewCourseID();
+                scheds.Viewdescription();
+                scheds.viewroomNum();
+                scheds.times();
+
+
+                if (scheds.timediff == null || scheds.timediff == "")
+                {
+                    save();
+                    Validator.AlertSuccess("Schedule saved");
+
+                }
+                else if (scheds.timeEnd == dtpTimstart)
+                {
+                    save();
+                }
+                else
+                {
+                    Validator.AlertDanger("Schedule existed");
                 }
             }
-
-
-            dateequal = monday + tuesday + wednesday + thursday + friday + saturday;
-
-
-
-            dtpTimstart = dateTimePicker1.Value.ToString("H:mm");
-            dtpTimeEnd = dateTimePicker2.Value.ToString("H:mm");
-
-            scheds.timeStart = dtpTimstart;
-            scheds.timeEnd = dtpTimeEnd;
-            scheds.subjcode = cbSubjCode.Text;
-            scheds.date = dateequal;
-
-
-            scheds.viewCourseID();
-            scheds.Viewdescription();
-            scheds.viewroomNum();
-            scheds.times();
-
-            if (scheds.timediff == null || scheds.timediff == "")
+            catch(Exception)
             {
-                save();
-                MessageBox.Show("saved");
-
+                Validator.AlertDanger("Please fill up the following fields");
             }
-            else if(scheds.timeEnd == dtpTimstart)
-            {
-                save();
-                MessageBox.Show("saved exact");
-            }
-            else
-            {
-                MessageBox.Show("not saved");
-                // MessageBox.Show(scheds.timeStart);
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
             scheds.timediff = "";
           
             scheds.date = "";
             scheds.timeStart = "";
             scheds.timeEnd = "";
-
         }
 
         private void save()
         {
-         
-            CbRoomNO.Text = scheds.roomdesc;
-
-            //  scheds.date = txtDate.Text;
-            scheds.date = dateequal;
-            scheds.timeEnd = dtpTimeEnd;
-            scheds.timeStart = dtpTimstart;
-            scheds.maxStudent = txtMax.Text;
-            cbSubjCode.Text = scheds.subjcode;
-            cbCourse.Text = scheds.course;
-            scheds.insertSched();
-
-
-
+                CbRoomNO.Text = scheds.roomdesc;
+                //  scheds.date = txtDate.Text;
+                scheds.date = dateequal;
+                scheds.timeEnd = dtpTimeEnd;
+                scheds.timeStart = dtpTimstart;
+                scheds.maxStudent = txtMax.Text;
+                cbSubjCode.Text = scheds.subjcode;
+                cbCourse.Text = scheds.course;
+                scheds.insertSched();
         }
 
         private void CbRoomNO_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,52 +143,6 @@ namespace SchoolManagementSystem
 
 
 
-            //scheds.timeStart =dtpTimstart;
-            //scheds.timeEnd = dtpTimeEnd;
-            //scheds.date = txtDate.Text;
-
-            //scheds.subjcode = cbSubjCode.Text;
-            //scheds.viewCourseID();
-            //scheds.Viewdescription();
-            //scheds.viewroomNum();
-
-            //scheds.times();
-
-            //MessageBox.Show(scheds.timeStart);
-            ////if (scheds.timediff == "")
-            ////{
-            ////    save();
-            ////    MessageBox.Show("successfully saved"+scheds.timediff);
-
-            ////}
-            ////else if (scheds.timediff == dtpTimstart)
-            ////{
-            ////    // save();
-            ////    MessageBox.Show("successfully saved exact time"+scheds.timediff);
-            ////}
-            ////else if (scheds.timediff == dtpTimstart)
-            ////{
-            ////    save();
-            ////    MessageBox.Show("successfully saved exact time" + scheds.timediff);
-            ////}
-
-            ////else
-            ////{
-            ////    MessageBox.Show("there is already scheduled for this start time @  " + scheds.timediff + scheds.date);
-            ////}
-
-
-
-
-            ////scheds.timediff = "";
-            ////txtDate.Text = "";
-            ////scheds.date = "";
-            ////scheds.timeStart = "";
-            ////scheds.timeEnd = "";
-
-
-
-
         }
      
 
@@ -228,13 +155,6 @@ namespace SchoolManagementSystem
         {
         
            dtpTimstart= dateTimePicker1.Value.ToString("H:mm:ss");
-
-
-
-
-
-
-       
         }
 
         private void cbmon_CheckedChanged(object sender, EventArgs e)

@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using EonBotzLibrary;
 using SqlKata.Execution;
 using System.Net.NetworkInformation;
-using EonBotzLibrary;
 
 namespace SchoolManagementSystem
 {

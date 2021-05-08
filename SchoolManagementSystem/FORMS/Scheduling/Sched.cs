@@ -19,8 +19,8 @@ namespace SchoolManagementSystem
         {
             schedule sched = new schedule();
 
-            dgvSched.Columns[6].DefaultCellStyle.Format = "hh:mm:ss tt";
-            dgvSched.Columns[7].DefaultCellStyle.Format = "hh:mm:ss tt";
+            dgvSched.Columns[6].DefaultCellStyle.Format = "hh:mm tt";
+            dgvSched.Columns[7].DefaultCellStyle.Format = "hh:mm tt";
             sched.viewsched();
 
             dgvSched.Rows.Clear();
@@ -34,8 +34,8 @@ namespace SchoolManagementSystem
                 dgvSched.Rows[num].Cells[3].Value = Drow["courseID"].ToString();
                 dgvSched.Rows[num].Cells[4].Value = Drow["date"].ToString();
                 dgvSched.Rows[num].Cells[5].Value = Drow["maxStudent"].ToString();
-                dgvSched.Rows[num].Cells[6].Value = Drow["time start"].ToString();
-                dgvSched.Rows[num].Cells[7].Value = Drow["time end"].ToString();
+                dgvSched.Rows[num].Cells[6].Value = Convert.ToDateTime(Drow["time start"].ToString());
+                dgvSched.Rows[num].Cells[7].Value = Convert.ToDateTime(Drow["time end"].ToString());
                 dgvSched.Rows[num].Cells[8].Value = Drow["status"].ToString();
             }
 
@@ -43,10 +43,8 @@ namespace SchoolManagementSystem
             {            //Here 2 cell is target value and 1 cell is Volume
                 if (Convert.ToString(Myrow.Cells[6].Value) == "available")// Or your condition 
                 {
-
                     // Myrow.DefaultCellStyle.BackColor = Color.IndianRed;
                     Myrow.DefaultCellStyle.BackColor = Color.White;
-
                 }
 
                 else if (Convert.ToString(Myrow.Cells[6].Value) == "full")

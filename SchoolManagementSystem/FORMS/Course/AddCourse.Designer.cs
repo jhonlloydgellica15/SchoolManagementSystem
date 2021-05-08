@@ -40,7 +40,7 @@ namespace SchoolManagementSystem
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblIDD = new System.Windows.Forms.Label();
             this.btnAdmissionForm = new FontAwesome.Sharp.IconButton();
-            this.btnAddCourse = new FontAwesome.Sharp.IconButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -186,24 +186,24 @@ namespace SchoolManagementSystem
             this.btnAdmissionForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmissionForm.UseVisualStyleBackColor = true;
             // 
-            // btnAddCourse
+            // btnSave
             // 
-            this.btnAddCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.btnAddCourse.FlatAppearance.BorderSize = 0;
-            this.btnAddCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCourse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
-            this.btnAddCourse.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddCourse.IconColor = System.Drawing.Color.White;
-            this.btnAddCourse.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddCourse.IconSize = 30;
-            this.btnAddCourse.Location = new System.Drawing.Point(331, 263);
-            this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(87, 27);
-            this.btnAddCourse.TabIndex = 26;
-            this.btnAddCourse.Text = "Save";
-            this.btnAddCourse.UseVisualStyleBackColor = false;
-            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSave.IconColor = System.Drawing.Color.White;
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.IconSize = 30;
+            this.btnSave.Location = new System.Drawing.Point(331, 263);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 27);
+            this.btnSave.TabIndex = 26;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // panel2
             // 
@@ -303,7 +303,7 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAddCourse);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -327,7 +327,7 @@ namespace SchoolManagementSystem
         public System.Windows.Forms.TextBox txtAbbreviation;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtDescription;
-        public FontAwesome.Sharp.IconButton btnAddCourse;
+        public FontAwesome.Sharp.IconButton btnSave;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;

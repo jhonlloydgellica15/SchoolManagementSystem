@@ -13,8 +13,8 @@ namespace SchoolManagementSystem
         tuitionfee tuit = new tuitionfee();
         public tuition()
         {
-          
-            
+
+
             InitializeComponent();
         }
 
@@ -22,21 +22,32 @@ namespace SchoolManagementSystem
         {
             displaydata();
         }
-       public void displaydata()
+        public void displaydata()
         {
             tuit.view();
             foreach (DataRow Drow in tuit.dt.Rows)
             {
-                int num = dataGridView1.Rows.Add();
+                int num = dgvTuition.Rows.Add();
 
-                dataGridView1.Rows[num].Cells[0].Value = Drow["ID"].ToString();
-                dataGridView1.Rows[num].Cells[1].Value = Drow["Category"].ToString();
-                dataGridView1.Rows[num].Cells[2].Value = Drow["Count"].ToString();
-                dataGridView1.Rows[num].Cells[3].Value = Drow["lec price"].ToString();
-                dataGridView1.Rows[num].Cells[4].Value = Drow["lab price"].ToString();
-                dataGridView1.Rows[num].Cells[5].Value = Drow["total units"].ToString();
-                dataGridView1.Rows[num].Cells[6].Value = Drow["total price"].ToString();
+                dgvTuition.Rows[num].Cells[0].Value = Drow["ID"].ToString();
+                dgvTuition.Rows[num].Cells[1].Value = Drow["Category"].ToString();
+                dgvTuition.Rows[num].Cells[2].Value = Drow["Count"].ToString();
+                dgvTuition.Rows[num].Cells[3].Value = Drow["lec price"].ToString();
+                dgvTuition.Rows[num].Cells[4].Value = Drow["lab price"].ToString();
+                dgvTuition.Rows[num].Cells[5].Value = Drow["total units"].ToString();
+                dgvTuition.Rows[num].Cells[6].Value = Drow["total price"].ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            tuitionStructure tui = new tuitionStructure();
+            tui.ShowDialog();
         }
     }
 }

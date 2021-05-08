@@ -37,25 +37,34 @@ namespace SchoolManagementSystem
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlShow = new System.Windows.Forms.Panel();
-            this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlDeptMenu = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.pnlFeeMenu = new System.Windows.Forms.Panel();
             this.btnFeeStructure = new FontAwesome.Sharp.IconButton();
             this.btnFeeCategory = new FontAwesome.Sharp.IconButton();
-            this.btnFeesManagement = new FontAwesome.Sharp.IconButton();
+            this.btnTuitionStructure = new FontAwesome.Sharp.IconButton();
+            this.btnTuitionCategory = new FontAwesome.Sharp.IconButton();
+            this.btnStudentSched = new FontAwesome.Sharp.IconButton();
             this.btnScheduling = new FontAwesome.Sharp.IconButton();
-            this.pnlAcademicMenu = new System.Windows.Forms.Panel();
             this.btnSmsSetiing = new FontAwesome.Sharp.IconButton();
             this.btnSubject = new FontAwesome.Sharp.IconButton();
-            this.btnAcademic = new FontAwesome.Sharp.IconButton();
+            this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlFeeMenu = new System.Windows.Forms.Panel();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.pnlTuitionMenu = new System.Windows.Forms.Panel();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.pnlSchedules = new System.Windows.Forms.Panel();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.pnlAcademicMenu = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.pnlDept = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.btnRooms = new FontAwesome.Sharp.IconButton();
+            this.pnlEmployees = new System.Windows.Forms.Panel();
             this.btnAccountants = new FontAwesome.Sharp.IconButton();
-            this.btnLibrarians = new FontAwesome.Sharp.IconButton();
             this.btnTeachers = new FontAwesome.Sharp.IconButton();
+            this.btnLibrarians = new FontAwesome.Sharp.IconButton();
+            this.btnMngEmployees = new FontAwesome.Sharp.IconButton();
             this.pnlStudentMenu = new System.Windows.Forms.Panel();
             this.btnBulkStudent = new FontAwesome.Sharp.IconButton();
             this.btnAdmitStudent = new FontAwesome.Sharp.IconButton();
@@ -66,9 +75,12 @@ namespace SchoolManagementSystem
             this.panel1.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            this.pnlDeptMenu.SuspendLayout();
             this.pnlFeeMenu.SuspendLayout();
+            this.pnlTuitionMenu.SuspendLayout();
+            this.pnlSchedules.SuspendLayout();
             this.pnlAcademicMenu.SuspendLayout();
+            this.pnlDept.SuspendLayout();
+            this.pnlEmployees.SuspendLayout();
             this.pnlStudentMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +96,7 @@ namespace SchoolManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1366, 125);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
@@ -172,6 +185,197 @@ namespace SchoolManagementSystem
             this.pnlShow.Size = new System.Drawing.Size(1075, 635);
             this.pnlShow.TabIndex = 3;
             // 
+            // btnFeeStructure
+            // 
+            this.btnFeeStructure.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeeStructure.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeeStructure.FlatAppearance.BorderSize = 0;
+            this.btnFeeStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeeStructure.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFeeStructure.ForeColor = System.Drawing.Color.Gray;
+            this.btnFeeStructure.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnFeeStructure.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFeeStructure.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFeeStructure.IconSize = 10;
+            this.btnFeeStructure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeStructure.Location = new System.Drawing.Point(0, 45);
+            this.btnFeeStructure.Name = "btnFeeStructure";
+            this.btnFeeStructure.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnFeeStructure.Size = new System.Drawing.Size(261, 45);
+            this.btnFeeStructure.TabIndex = 3;
+            this.btnFeeStructure.Text = "Fee Structure";
+            this.btnFeeStructure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeStructure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFeeStructure.UseVisualStyleBackColor = true;
+            this.btnFeeStructure.Click += new System.EventHandler(this.btnFeeStructure_Click);
+            // 
+            // btnFeeCategory
+            // 
+            this.btnFeeCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeeCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeeCategory.FlatAppearance.BorderSize = 0;
+            this.btnFeeCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeeCategory.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFeeCategory.ForeColor = System.Drawing.Color.Gray;
+            this.btnFeeCategory.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnFeeCategory.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFeeCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFeeCategory.IconSize = 10;
+            this.btnFeeCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeCategory.Location = new System.Drawing.Point(0, 0);
+            this.btnFeeCategory.Name = "btnFeeCategory";
+            this.btnFeeCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnFeeCategory.Size = new System.Drawing.Size(261, 45);
+            this.btnFeeCategory.TabIndex = 2;
+            this.btnFeeCategory.Text = "Fee Category";
+            this.btnFeeCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFeeCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFeeCategory.UseVisualStyleBackColor = true;
+            this.btnFeeCategory.Click += new System.EventHandler(this.btnFeeCategory_Click);
+            // 
+            // btnTuitionStructure
+            // 
+            this.btnTuitionStructure.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTuitionStructure.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTuitionStructure.FlatAppearance.BorderSize = 0;
+            this.btnTuitionStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTuitionStructure.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTuitionStructure.ForeColor = System.Drawing.Color.Gray;
+            this.btnTuitionStructure.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnTuitionStructure.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnTuitionStructure.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTuitionStructure.IconSize = 10;
+            this.btnTuitionStructure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTuitionStructure.Location = new System.Drawing.Point(0, 45);
+            this.btnTuitionStructure.Name = "btnTuitionStructure";
+            this.btnTuitionStructure.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnTuitionStructure.Size = new System.Drawing.Size(261, 45);
+            this.btnTuitionStructure.TabIndex = 3;
+            this.btnTuitionStructure.Text = "Tuition Structure";
+            this.btnTuitionStructure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTuitionStructure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTuitionStructure.UseVisualStyleBackColor = true;
+            this.btnTuitionStructure.Click += new System.EventHandler(this.btnTuitionStructure_Click);
+            // 
+            // btnTuitionCategory
+            // 
+            this.btnTuitionCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTuitionCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTuitionCategory.FlatAppearance.BorderSize = 0;
+            this.btnTuitionCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTuitionCategory.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTuitionCategory.ForeColor = System.Drawing.Color.Gray;
+            this.btnTuitionCategory.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnTuitionCategory.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnTuitionCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTuitionCategory.IconSize = 10;
+            this.btnTuitionCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTuitionCategory.Location = new System.Drawing.Point(0, 0);
+            this.btnTuitionCategory.Name = "btnTuitionCategory";
+            this.btnTuitionCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnTuitionCategory.Size = new System.Drawing.Size(261, 45);
+            this.btnTuitionCategory.TabIndex = 2;
+            this.btnTuitionCategory.Text = "Tuition Category";
+            this.btnTuitionCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTuitionCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTuitionCategory.UseVisualStyleBackColor = true;
+            this.btnTuitionCategory.Click += new System.EventHandler(this.btnTuitionCategory_Click);
+            // 
+            // btnStudentSched
+            // 
+            this.btnStudentSched.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentSched.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudentSched.FlatAppearance.BorderSize = 0;
+            this.btnStudentSched.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentSched.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStudentSched.ForeColor = System.Drawing.Color.Gray;
+            this.btnStudentSched.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnStudentSched.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnStudentSched.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStudentSched.IconSize = 10;
+            this.btnStudentSched.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudentSched.Location = new System.Drawing.Point(0, 45);
+            this.btnStudentSched.Name = "btnStudentSched";
+            this.btnStudentSched.Padding = new System.Windows.Forms.Padding(40, 0, 20, 0);
+            this.btnStudentSched.Size = new System.Drawing.Size(261, 45);
+            this.btnStudentSched.TabIndex = 34;
+            this.btnStudentSched.Text = "Student Scheduling";
+            this.btnStudentSched.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudentSched.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStudentSched.UseVisualStyleBackColor = true;
+            this.btnStudentSched.Click += new System.EventHandler(this.btnStudentSched_Click);
+            // 
+            // btnScheduling
+            // 
+            this.btnScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnScheduling.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnScheduling.FlatAppearance.BorderSize = 0;
+            this.btnScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScheduling.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnScheduling.ForeColor = System.Drawing.Color.Gray;
+            this.btnScheduling.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnScheduling.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnScheduling.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScheduling.IconSize = 10;
+            this.btnScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScheduling.Location = new System.Drawing.Point(0, 0);
+            this.btnScheduling.Name = "btnScheduling";
+            this.btnScheduling.Padding = new System.Windows.Forms.Padding(40, 0, 20, 0);
+            this.btnScheduling.Size = new System.Drawing.Size(261, 45);
+            this.btnScheduling.TabIndex = 39;
+            this.btnScheduling.Text = "Subject Scheduling";
+            this.btnScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScheduling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnScheduling.UseVisualStyleBackColor = true;
+            this.btnScheduling.Click += new System.EventHandler(this.btnScheduling_Click_1);
+            // 
+            // btnSmsSetiing
+            // 
+            this.btnSmsSetiing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSmsSetiing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSmsSetiing.FlatAppearance.BorderSize = 0;
+            this.btnSmsSetiing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSmsSetiing.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSmsSetiing.ForeColor = System.Drawing.Color.Gray;
+            this.btnSmsSetiing.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnSmsSetiing.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSmsSetiing.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSmsSetiing.IconSize = 10;
+            this.btnSmsSetiing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmsSetiing.Location = new System.Drawing.Point(0, 45);
+            this.btnSmsSetiing.Name = "btnSmsSetiing";
+            this.btnSmsSetiing.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnSmsSetiing.Size = new System.Drawing.Size(261, 45);
+            this.btnSmsSetiing.TabIndex = 3;
+            this.btnSmsSetiing.Text = "Sms Setting";
+            this.btnSmsSetiing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmsSetiing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSmsSetiing.UseVisualStyleBackColor = true;
+            // 
+            // btnSubject
+            // 
+            this.btnSubject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubject.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubject.FlatAppearance.BorderSize = 0;
+            this.btnSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubject.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSubject.ForeColor = System.Drawing.Color.Gray;
+            this.btnSubject.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnSubject.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSubject.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSubject.IconSize = 10;
+            this.btnSubject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubject.Location = new System.Drawing.Point(0, 0);
+            this.btnSubject.Name = "btnSubject";
+            this.btnSubject.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnSubject.Size = new System.Drawing.Size(261, 45);
+            this.btnSubject.TabIndex = 2;
+            this.btnSubject.Text = "Subjects";
+            this.btnSubject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSubject.UseVisualStyleBackColor = true;
+            this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
+            // 
             // pnlSideMenu
             // 
             this.pnlSideMenu.AutoScroll = true;
@@ -180,41 +384,179 @@ namespace SchoolManagementSystem
             this.pnlSideMenu.Controls.Add(this.panel3);
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(278, 768);
+            this.pnlSideMenu.Size = new System.Drawing.Size(261, 768);
             this.pnlSideMenu.TabIndex = 0;
+            this.pnlSideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideMenu_Paint);
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Controls.Add(this.pnlDeptMenu);
-            this.pnlMenu.Controls.Add(this.iconButton3);
             this.pnlMenu.Controls.Add(this.pnlFeeMenu);
-            this.pnlMenu.Controls.Add(this.btnFeesManagement);
-            this.pnlMenu.Controls.Add(this.btnScheduling);
+            this.pnlMenu.Controls.Add(this.iconButton7);
+            this.pnlMenu.Controls.Add(this.pnlTuitionMenu);
+            this.pnlMenu.Controls.Add(this.iconButton6);
+            this.pnlMenu.Controls.Add(this.pnlSchedules);
+            this.pnlMenu.Controls.Add(this.iconButton5);
             this.pnlMenu.Controls.Add(this.pnlAcademicMenu);
-            this.pnlMenu.Controls.Add(this.btnAcademic);
+            this.pnlMenu.Controls.Add(this.iconButton3);
+            this.pnlMenu.Controls.Add(this.pnlDept);
+            this.pnlMenu.Controls.Add(this.iconButton4);
             this.pnlMenu.Controls.Add(this.btnRooms);
-            this.pnlMenu.Controls.Add(this.btnAccountants);
-            this.pnlMenu.Controls.Add(this.btnLibrarians);
-            this.pnlMenu.Controls.Add(this.btnTeachers);
+            this.pnlMenu.Controls.Add(this.pnlEmployees);
+            this.pnlMenu.Controls.Add(this.btnMngEmployees);
             this.pnlMenu.Controls.Add(this.pnlStudentMenu);
             this.pnlMenu.Controls.Add(this.btnStudents);
             this.pnlMenu.Controls.Add(this.btnManageSession);
             this.pnlMenu.Controls.Add(this.btnDashboard);
             this.pnlMenu.Location = new System.Drawing.Point(0, 125);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(261, 1049);
+            this.pnlMenu.Size = new System.Drawing.Size(261, 639);
             this.pnlMenu.TabIndex = 1;
             // 
-            // pnlDeptMenu
+            // pnlFeeMenu
             // 
-            this.pnlDeptMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.pnlDeptMenu.Controls.Add(this.iconButton1);
-            this.pnlDeptMenu.Controls.Add(this.iconButton2);
-            this.pnlDeptMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDeptMenu.Location = new System.Drawing.Point(0, 771);
-            this.pnlDeptMenu.Name = "pnlDeptMenu";
-            this.pnlDeptMenu.Size = new System.Drawing.Size(261, 92);
-            this.pnlDeptMenu.TabIndex = 43;
+            this.pnlFeeMenu.Controls.Add(this.btnFeeStructure);
+            this.pnlFeeMenu.Controls.Add(this.btnFeeCategory);
+            this.pnlFeeMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFeeMenu.Location = new System.Drawing.Point(0, 1056);
+            this.pnlFeeMenu.Name = "pnlFeeMenu";
+            this.pnlFeeMenu.Size = new System.Drawing.Size(261, 92);
+            this.pnlFeeMenu.TabIndex = 42;
+            // 
+            // iconButton7
+            // 
+            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton7.ForeColor = System.Drawing.Color.Gray;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            this.iconButton7.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.IconSize = 20;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.Location = new System.Drawing.Point(0, 1011);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.iconButton7.Size = new System.Drawing.Size(261, 45);
+            this.iconButton7.TabIndex = 55;
+            this.iconButton7.Text = "Fee\'s Management";
+            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            // 
+            // pnlTuitionMenu
+            // 
+            this.pnlTuitionMenu.Controls.Add(this.btnTuitionStructure);
+            this.pnlTuitionMenu.Controls.Add(this.btnTuitionCategory);
+            this.pnlTuitionMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTuitionMenu.Location = new System.Drawing.Point(0, 917);
+            this.pnlTuitionMenu.Name = "pnlTuitionMenu";
+            this.pnlTuitionMenu.Size = new System.Drawing.Size(261, 94);
+            this.pnlTuitionMenu.TabIndex = 54;
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton6.ForeColor = System.Drawing.Color.Gray;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 20;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(0, 872);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.iconButton6.Size = new System.Drawing.Size(261, 45);
+            this.iconButton6.TabIndex = 53;
+            this.iconButton6.Text = "Tuition";
+            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click_1);
+            // 
+            // pnlSchedules
+            // 
+            this.pnlSchedules.Controls.Add(this.btnStudentSched);
+            this.pnlSchedules.Controls.Add(this.btnScheduling);
+            this.pnlSchedules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSchedules.Location = new System.Drawing.Point(0, 779);
+            this.pnlSchedules.Name = "pnlSchedules";
+            this.pnlSchedules.Size = new System.Drawing.Size(261, 93);
+            this.pnlSchedules.TabIndex = 48;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton5.ForeColor = System.Drawing.Color.Gray;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 20;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(0, 734);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.iconButton5.Size = new System.Drawing.Size(261, 45);
+            this.iconButton5.TabIndex = 52;
+            this.iconButton5.Text = "Manage Schedule";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // pnlAcademicMenu
+            // 
+            this.pnlAcademicMenu.Controls.Add(this.btnSmsSetiing);
+            this.pnlAcademicMenu.Controls.Add(this.btnSubject);
+            this.pnlAcademicMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAcademicMenu.Location = new System.Drawing.Point(0, 639);
+            this.pnlAcademicMenu.Name = "pnlAcademicMenu";
+            this.pnlAcademicMenu.Size = new System.Drawing.Size(261, 95);
+            this.pnlAcademicMenu.TabIndex = 48;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton3.ForeColor = System.Drawing.Color.Gray;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 20;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(0, 594);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.iconButton3.Size = new System.Drawing.Size(261, 45);
+            this.iconButton3.TabIndex = 51;
+            this.iconButton3.Text = "Academic";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // pnlDept
+            // 
+            this.pnlDept.Controls.Add(this.iconButton1);
+            this.pnlDept.Controls.Add(this.iconButton2);
+            this.pnlDept.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDept.Location = new System.Drawing.Point(0, 502);
+            this.pnlDept.Name = "pnlDept";
+            this.pnlDept.Size = new System.Drawing.Size(261, 92);
+            this.pnlDept.TabIndex = 48;
             // 
             // iconButton1
             // 
@@ -264,218 +606,29 @@ namespace SchoolManagementSystem
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton3
+            // iconButton4
             // 
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iconButton3.ForeColor = System.Drawing.Color.Gray;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 20;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 726);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.iconButton3.Size = new System.Drawing.Size(261, 45);
-            this.iconButton3.TabIndex = 42;
-            this.iconButton3.Text = "Department";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // pnlFeeMenu
-            // 
-            this.pnlFeeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.pnlFeeMenu.Controls.Add(this.btnFeeStructure);
-            this.pnlFeeMenu.Controls.Add(this.btnFeeCategory);
-            this.pnlFeeMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFeeMenu.Location = new System.Drawing.Point(0, 634);
-            this.pnlFeeMenu.Name = "pnlFeeMenu";
-            this.pnlFeeMenu.Size = new System.Drawing.Size(261, 92);
-            this.pnlFeeMenu.TabIndex = 41;
-            // 
-            // btnFeeStructure
-            // 
-            this.btnFeeStructure.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeeStructure.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeeStructure.FlatAppearance.BorderSize = 0;
-            this.btnFeeStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeStructure.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFeeStructure.ForeColor = System.Drawing.Color.Gray;
-            this.btnFeeStructure.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.btnFeeStructure.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnFeeStructure.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFeeStructure.IconSize = 10;
-            this.btnFeeStructure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeeStructure.Location = new System.Drawing.Point(0, 45);
-            this.btnFeeStructure.Name = "btnFeeStructure";
-            this.btnFeeStructure.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnFeeStructure.Size = new System.Drawing.Size(261, 45);
-            this.btnFeeStructure.TabIndex = 3;
-            this.btnFeeStructure.Text = "Fee Structure";
-            this.btnFeeStructure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeeStructure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFeeStructure.UseVisualStyleBackColor = true;
-            this.btnFeeStructure.Click += new System.EventHandler(this.btnFeeStructure_Click);
-            // 
-            // btnFeeCategory
-            // 
-            this.btnFeeCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeeCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeeCategory.FlatAppearance.BorderSize = 0;
-            this.btnFeeCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeeCategory.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFeeCategory.ForeColor = System.Drawing.Color.Gray;
-            this.btnFeeCategory.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.btnFeeCategory.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnFeeCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFeeCategory.IconSize = 10;
-            this.btnFeeCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeeCategory.Location = new System.Drawing.Point(0, 0);
-            this.btnFeeCategory.Name = "btnFeeCategory";
-            this.btnFeeCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnFeeCategory.Size = new System.Drawing.Size(261, 45);
-            this.btnFeeCategory.TabIndex = 2;
-            this.btnFeeCategory.Text = "Fee Category";
-            this.btnFeeCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeeCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFeeCategory.UseVisualStyleBackColor = true;
-            this.btnFeeCategory.Click += new System.EventHandler(this.btnFeeCategory_Click);
-            // 
-            // btnFeesManagement
-            // 
-            this.btnFeesManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeesManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeesManagement.FlatAppearance.BorderSize = 0;
-            this.btnFeesManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeesManagement.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFeesManagement.ForeColor = System.Drawing.Color.Gray;
-            this.btnFeesManagement.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnFeesManagement.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnFeesManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFeesManagement.IconSize = 20;
-            this.btnFeesManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeesManagement.Location = new System.Drawing.Point(0, 589);
-            this.btnFeesManagement.Name = "btnFeesManagement";
-            this.btnFeesManagement.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnFeesManagement.Size = new System.Drawing.Size(261, 45);
-            this.btnFeesManagement.TabIndex = 40;
-            this.btnFeesManagement.Text = "Fees Management";
-            this.btnFeesManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeesManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFeesManagement.UseVisualStyleBackColor = true;
-            this.btnFeesManagement.Click += new System.EventHandler(this.btnFeesManagement_Click);
-            // 
-            // btnScheduling
-            // 
-            this.btnScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScheduling.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnScheduling.FlatAppearance.BorderSize = 0;
-            this.btnScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScheduling.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnScheduling.ForeColor = System.Drawing.Color.Gray;
-            this.btnScheduling.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnScheduling.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnScheduling.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScheduling.IconSize = 20;
-            this.btnScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScheduling.Location = new System.Drawing.Point(0, 544);
-            this.btnScheduling.Name = "btnScheduling";
-            this.btnScheduling.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnScheduling.Size = new System.Drawing.Size(261, 45);
-            this.btnScheduling.TabIndex = 39;
-            this.btnScheduling.Text = "Scheduling";
-            this.btnScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScheduling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnScheduling.UseVisualStyleBackColor = true;
-            this.btnScheduling.Click += new System.EventHandler(this.btnScheduling_Click);
-            // 
-            // pnlAcademicMenu
-            // 
-            this.pnlAcademicMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.pnlAcademicMenu.Controls.Add(this.btnSmsSetiing);
-            this.pnlAcademicMenu.Controls.Add(this.btnSubject);
-            this.pnlAcademicMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAcademicMenu.Location = new System.Drawing.Point(0, 452);
-            this.pnlAcademicMenu.Name = "pnlAcademicMenu";
-            this.pnlAcademicMenu.Size = new System.Drawing.Size(261, 92);
-            this.pnlAcademicMenu.TabIndex = 38;
-            // 
-            // btnSmsSetiing
-            // 
-            this.btnSmsSetiing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSmsSetiing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSmsSetiing.FlatAppearance.BorderSize = 0;
-            this.btnSmsSetiing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSmsSetiing.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSmsSetiing.ForeColor = System.Drawing.Color.Gray;
-            this.btnSmsSetiing.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.btnSmsSetiing.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSmsSetiing.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSmsSetiing.IconSize = 10;
-            this.btnSmsSetiing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmsSetiing.Location = new System.Drawing.Point(0, 45);
-            this.btnSmsSetiing.Name = "btnSmsSetiing";
-            this.btnSmsSetiing.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnSmsSetiing.Size = new System.Drawing.Size(261, 45);
-            this.btnSmsSetiing.TabIndex = 3;
-            this.btnSmsSetiing.Text = "Sms Setting";
-            this.btnSmsSetiing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmsSetiing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSmsSetiing.UseVisualStyleBackColor = true;
-            // 
-            // btnSubject
-            // 
-            this.btnSubject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubject.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSubject.FlatAppearance.BorderSize = 0;
-            this.btnSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubject.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSubject.ForeColor = System.Drawing.Color.Gray;
-            this.btnSubject.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.btnSubject.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSubject.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSubject.IconSize = 10;
-            this.btnSubject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubject.Location = new System.Drawing.Point(0, 0);
-            this.btnSubject.Name = "btnSubject";
-            this.btnSubject.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnSubject.Size = new System.Drawing.Size(261, 45);
-            this.btnSubject.TabIndex = 2;
-            this.btnSubject.Text = "Subjects";
-            this.btnSubject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSubject.UseVisualStyleBackColor = true;
-            this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
-            // 
-            // btnAcademic
-            // 
-            this.btnAcademic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAcademic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAcademic.FlatAppearance.BorderSize = 0;
-            this.btnAcademic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcademic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAcademic.ForeColor = System.Drawing.Color.Gray;
-            this.btnAcademic.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.btnAcademic.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnAcademic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAcademic.IconSize = 20;
-            this.btnAcademic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcademic.Location = new System.Drawing.Point(0, 407);
-            this.btnAcademic.Name = "btnAcademic";
-            this.btnAcademic.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnAcademic.Size = new System.Drawing.Size(261, 45);
-            this.btnAcademic.TabIndex = 37;
-            this.btnAcademic.Text = "Academic";
-            this.btnAcademic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcademic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAcademic.UseVisualStyleBackColor = true;
-            this.btnAcademic.Click += new System.EventHandler(this.btnAcademic_Click);
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton4.ForeColor = System.Drawing.Color.Gray;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.LaptopHouse;
+            this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 20;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(0, 457);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.iconButton4.Size = new System.Drawing.Size(261, 45);
+            this.iconButton4.TabIndex = 50;
+            this.iconButton4.Text = "Department";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // btnRooms
             // 
@@ -490,7 +643,7 @@ namespace SchoolManagementSystem
             this.btnRooms.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRooms.IconSize = 20;
             this.btnRooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRooms.Location = new System.Drawing.Point(0, 362);
+            this.btnRooms.Location = new System.Drawing.Point(0, 412);
             this.btnRooms.Name = "btnRooms";
             this.btnRooms.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnRooms.Size = new System.Drawing.Size(261, 45);
@@ -501,6 +654,18 @@ namespace SchoolManagementSystem
             this.btnRooms.UseVisualStyleBackColor = true;
             this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
             // 
+            // pnlEmployees
+            // 
+            this.pnlEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.pnlEmployees.Controls.Add(this.btnAccountants);
+            this.pnlEmployees.Controls.Add(this.btnTeachers);
+            this.pnlEmployees.Controls.Add(this.btnLibrarians);
+            this.pnlEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmployees.Location = new System.Drawing.Point(0, 272);
+            this.pnlEmployees.Name = "pnlEmployees";
+            this.pnlEmployees.Size = new System.Drawing.Size(261, 140);
+            this.pnlEmployees.TabIndex = 49;
+            // 
             // btnAccountants
             // 
             this.btnAccountants.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -509,14 +674,14 @@ namespace SchoolManagementSystem
             this.btnAccountants.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccountants.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAccountants.ForeColor = System.Drawing.Color.Gray;
-            this.btnAccountants.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btnAccountants.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
             this.btnAccountants.IconColor = System.Drawing.Color.Gainsboro;
             this.btnAccountants.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccountants.IconSize = 20;
+            this.btnAccountants.IconSize = 10;
             this.btnAccountants.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccountants.Location = new System.Drawing.Point(0, 317);
+            this.btnAccountants.Location = new System.Drawing.Point(0, 90);
             this.btnAccountants.Name = "btnAccountants";
-            this.btnAccountants.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnAccountants.Padding = new System.Windows.Forms.Padding(40, 0, 20, 0);
             this.btnAccountants.Size = new System.Drawing.Size(261, 45);
             this.btnAccountants.TabIndex = 34;
             this.btnAccountants.Text = "Accountants";
@@ -524,30 +689,6 @@ namespace SchoolManagementSystem
             this.btnAccountants.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccountants.UseVisualStyleBackColor = true;
             this.btnAccountants.Click += new System.EventHandler(this.btnAccountants_Click);
-            // 
-            // btnLibrarians
-            // 
-            this.btnLibrarians.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLibrarians.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLibrarians.FlatAppearance.BorderSize = 0;
-            this.btnLibrarians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibrarians.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLibrarians.ForeColor = System.Drawing.Color.Gray;
-            this.btnLibrarians.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.btnLibrarians.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnLibrarians.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLibrarians.IconSize = 20;
-            this.btnLibrarians.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibrarians.Location = new System.Drawing.Point(0, 272);
-            this.btnLibrarians.Name = "btnLibrarians";
-            this.btnLibrarians.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnLibrarians.Size = new System.Drawing.Size(261, 45);
-            this.btnLibrarians.TabIndex = 33;
-            this.btnLibrarians.Text = "Librarians";
-            this.btnLibrarians.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibrarians.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLibrarians.UseVisualStyleBackColor = true;
-            this.btnLibrarians.Click += new System.EventHandler(this.btnLibrarians_Click);
             // 
             // btnTeachers
             // 
@@ -557,14 +698,14 @@ namespace SchoolManagementSystem
             this.btnTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeachers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTeachers.ForeColor = System.Drawing.Color.Gray;
-            this.btnTeachers.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btnTeachers.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
             this.btnTeachers.IconColor = System.Drawing.Color.Gainsboro;
             this.btnTeachers.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTeachers.IconSize = 20;
+            this.btnTeachers.IconSize = 10;
             this.btnTeachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeachers.Location = new System.Drawing.Point(0, 227);
+            this.btnTeachers.Location = new System.Drawing.Point(0, 45);
             this.btnTeachers.Name = "btnTeachers";
-            this.btnTeachers.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnTeachers.Padding = new System.Windows.Forms.Padding(40, 0, 20, 0);
             this.btnTeachers.Size = new System.Drawing.Size(261, 45);
             this.btnTeachers.TabIndex = 32;
             this.btnTeachers.Text = "Teachers";
@@ -572,6 +713,54 @@ namespace SchoolManagementSystem
             this.btnTeachers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeachers.UseVisualStyleBackColor = true;
             this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
+            // 
+            // btnLibrarians
+            // 
+            this.btnLibrarians.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLibrarians.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLibrarians.FlatAppearance.BorderSize = 0;
+            this.btnLibrarians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibrarians.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLibrarians.ForeColor = System.Drawing.Color.Gray;
+            this.btnLibrarians.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
+            this.btnLibrarians.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLibrarians.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLibrarians.IconSize = 10;
+            this.btnLibrarians.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLibrarians.Location = new System.Drawing.Point(0, 0);
+            this.btnLibrarians.Name = "btnLibrarians";
+            this.btnLibrarians.Padding = new System.Windows.Forms.Padding(40, 0, 20, 0);
+            this.btnLibrarians.Size = new System.Drawing.Size(261, 45);
+            this.btnLibrarians.TabIndex = 33;
+            this.btnLibrarians.Text = "Librarians";
+            this.btnLibrarians.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLibrarians.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLibrarians.UseVisualStyleBackColor = true;
+            this.btnLibrarians.Click += new System.EventHandler(this.btnLibrarians_Click);
+            // 
+            // btnMngEmployees
+            // 
+            this.btnMngEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMngEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMngEmployees.FlatAppearance.BorderSize = 0;
+            this.btnMngEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngEmployees.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMngEmployees.ForeColor = System.Drawing.Color.Gray;
+            this.btnMngEmployees.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnMngEmployees.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMngEmployees.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMngEmployees.IconSize = 20;
+            this.btnMngEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngEmployees.Location = new System.Drawing.Point(0, 227);
+            this.btnMngEmployees.Name = "btnMngEmployees";
+            this.btnMngEmployees.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnMngEmployees.Size = new System.Drawing.Size(261, 45);
+            this.btnMngEmployees.TabIndex = 48;
+            this.btnMngEmployees.Text = "Manage Employees";
+            this.btnMngEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMngEmployees.UseVisualStyleBackColor = true;
+            this.btnMngEmployees.Click += new System.EventHandler(this.btnMngEmployees_Click);
             // 
             // pnlStudentMenu
             // 
@@ -606,6 +795,7 @@ namespace SchoolManagementSystem
             this.btnBulkStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBulkStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBulkStudent.UseVisualStyleBackColor = true;
+            this.btnBulkStudent.Click += new System.EventHandler(this.btnBulkStudent_Click);
             // 
             // btnAdmitStudent
             // 
@@ -730,9 +920,12 @@ namespace SchoolManagementSystem
             this.panel1.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
-            this.pnlDeptMenu.ResumeLayout(false);
             this.pnlFeeMenu.ResumeLayout(false);
+            this.pnlTuitionMenu.ResumeLayout(false);
+            this.pnlSchedules.ResumeLayout(false);
             this.pnlAcademicMenu.ResumeLayout(false);
+            this.pnlDept.ResumeLayout(false);
+            this.pnlEmployees.ResumeLayout(false);
             this.pnlStudentMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -750,15 +943,11 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel pnlSideMenu;
         public System.Windows.Forms.Panel pnlShow;
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Panel pnlFeeMenu;
         private FontAwesome.Sharp.IconButton btnFeeStructure;
         private FontAwesome.Sharp.IconButton btnFeeCategory;
-        private FontAwesome.Sharp.IconButton btnFeesManagement;
         private FontAwesome.Sharp.IconButton btnScheduling;
-        private System.Windows.Forms.Panel pnlAcademicMenu;
         private FontAwesome.Sharp.IconButton btnSmsSetiing;
         private FontAwesome.Sharp.IconButton btnSubject;
-        private FontAwesome.Sharp.IconButton btnAcademic;
         private FontAwesome.Sharp.IconButton btnRooms;
         private FontAwesome.Sharp.IconButton btnAccountants;
         private FontAwesome.Sharp.IconButton btnLibrarians;
@@ -771,10 +960,23 @@ namespace SchoolManagementSystem
         private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel pnlDeptMenu;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnTuitionStructure;
+        private FontAwesome.Sharp.IconButton btnTuitionCategory;
+        private System.Windows.Forms.Panel pnlEmployees;
+        private FontAwesome.Sharp.IconButton btnMngEmployees;
+        private FontAwesome.Sharp.IconButton btnStudentSched;
+        private System.Windows.Forms.Panel pnlDept;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private System.Windows.Forms.Panel pnlAcademicMenu;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.Panel pnlSchedules;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private System.Windows.Forms.Panel pnlTuitionMenu;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private System.Windows.Forms.Panel pnlFeeMenu;
+        private FontAwesome.Sharp.IconButton iconButton7;
     }
 }
 

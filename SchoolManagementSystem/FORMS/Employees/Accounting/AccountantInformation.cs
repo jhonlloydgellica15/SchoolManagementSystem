@@ -35,8 +35,7 @@ namespace SchoolManagementSystem
 
             foreach (var value in values)
             {
-                dgvAccountant.Rows.Add(value.accountantId, value.Lastname, value.Firstname, value.Middlename, value.Age, value.Dateofbirth, value.Placeofbirth, value.ContactNo,
-                value.Gender, value.MaritalStatus, value.Citizenship, value.Religion, value.Address);
+                dgvAccountant.Rows.Add(value.accountantId, $"{value.Firstname} {value.Middlename} {value.Lastname}", value.ContactNo, value.Gender, value.Address);
             }
         }
 

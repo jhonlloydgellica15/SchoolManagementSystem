@@ -36,7 +36,7 @@ namespace SchoolManagementSystem
 
             var value = DBContext.GetContext().Query("department").Where("description", cmbDepartment.Text).First();
             
-            if (btnAddCourse.Text.Equals("Update"))
+            if (btnSave.Text.Equals("Update"))
             {
                 if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
                 {
@@ -49,7 +49,7 @@ namespace SchoolManagementSystem
                     this.Close();
                 }
             }
-            else if (btnAddCourse.Text.Equals("Save"))
+            else if (btnSave.Text.Equals("Save"))
             {
                 if (Validator.isEmpty(inputs) && Validator.AddConfirmation())
                 {
