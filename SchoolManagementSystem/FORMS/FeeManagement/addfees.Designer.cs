@@ -325,6 +325,7 @@ namespace SchoolManagementSystem.FORMS.FeeManagement
             // 
             // Column2
             // 
+            this.Column2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Column2.HeaderText = "";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;

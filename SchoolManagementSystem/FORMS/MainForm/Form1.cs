@@ -448,7 +448,7 @@ namespace SchoolManagementSystem
         private void btnScheduling_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            displaySubjects();
+            displayScheduling();
         }
 
         private void iconButton6_Click_1(object sender, EventArgs e)
