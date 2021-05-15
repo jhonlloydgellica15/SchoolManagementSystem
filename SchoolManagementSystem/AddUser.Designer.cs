@@ -191,7 +191,7 @@ namespace SchoolManagementSystem
             this.txtConfirmPassword.Location = new System.Drawing.Point(125, 231);
             this.txtConfirmPassword.Multiline = true;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PlaceholderText = "Confirm Password";
+            //this.txtConfirmPassword.PlaceholderText = "Confirm Password";
             this.txtConfirmPassword.Size = new System.Drawing.Size(377, 29);
             this.txtConfirmPassword.TabIndex = 36;
             // 
