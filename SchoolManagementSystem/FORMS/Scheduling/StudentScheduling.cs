@@ -224,6 +224,7 @@ namespace SchoolManagementSystem
 
                 dgvStudentSched.Rows[num].Cells[6].Value = Drow["MaxStudent"].ToString();
                 dgvStudentSched.Rows[num].Cells[7].Value = Drow["Status"].ToString();
+                
             }
         }
 
@@ -236,21 +237,22 @@ namespace SchoolManagementSystem
         ReportDataSource rs = new ReportDataSource();
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            List<StudentSchedulings> lst = new List<StudentSchedulings>();
+            List<Schedulings> lst = new List<Schedulings>();
             lst.Clear();
             StudentSchedulesReportViewer frm = new StudentSchedulesReportViewer();
             for (int i = 0; i < dgvStudentSched.Rows.Count - 1; i++)
             {
-                lst.Add(new StudentSchedulings
+                lst.Add(new Schedulings
                 {
                     schedID = dgvStudentSched.Rows[i].Cells[0].Value.ToString(),
                     subjectCode = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    room = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    day = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    timestart = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    timeend = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    capacity = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    status = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
+                    room = dgvStudentSched.Rows[i].Cells[2].Value.ToString(),
+                    day = dgvStudentSched.Rows[i].Cells[3].Value.ToString(),
+             // MERGE =   dgvStudentSched.Rows[i].Cells[4].Value.ToString("hh:mm tt") + dgvStudentSched.Rows[i].Cells[5].Value.ToString("hh:mm tt"),
+                    //timestart = dgvStudentSched.Rows[i].Cells[4].Value.ToString(),
+                    //timeend = dgvStudentSched.Rows[i].Cells[5].Value.ToString(),
+                    capacity = dgvStudentSched.Rows[i].Cells[6].Value.ToString(),
+                    status = dgvStudentSched.Rows[i].Cells[7].Value.ToString(),
                 });
 
                 rs.Name = "DataSet1";
@@ -258,15 +260,16 @@ namespace SchoolManagementSystem
 
                 frm.reportViewer1.LocalReport.DataSources.Clear();
                 frm.reportViewer1.LocalReport.DataSources.Add(rs);
-                frm.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolManagementSystem.Report1.rdlc";
+                frm.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolManagementSystem.Report2.rdlc";
 
             }
             frm.ShowDialog();
         }
     }
-    public class StudentSchedulings
+    public class Schedulings
     {
         public string schedID { get; set; }
+        public string MERGE { get; set; }
         public string subjectCode { get; set; }
         public string room { get; set; }
         public string day { get; set; }
