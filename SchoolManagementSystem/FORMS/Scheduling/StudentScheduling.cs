@@ -23,7 +23,6 @@ namespace SchoolManagementSystem
 
         private void StudentScheduling_Load(object sender, EventArgs e)
         {
-            displayStudents();
             displayDataCmb();
         }
 
@@ -51,28 +50,6 @@ namespace SchoolManagementSystem
             }
         }
 
-
-
-        private void dgvSched_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-
-        }
-
-        private void dgvStudentSched_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvStudentSched_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             var myfrm = new AddStudentScheduling(this);
@@ -82,31 +59,31 @@ namespace SchoolManagementSystem
 
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
+            var values = DBContext.GetContext().Query("student").Where("studentId", comboBox1.Text).Get();
 
-            //var values = DBContext.GetContext().Query("student").Where("studentId", txtStudentNo.Text).Get();
-
-            //foreach(var value in values)
-            //{
-            //    txtName.Text = $"{value.firstname} {value.lastname}";
-            //}
+            foreach (var value in values)
+            {
+                txtName.Text = $"{value.firstname} {value.lastname}";
+                txtGender.Text = value.gender;
+                txtCourse.Text = value.course;
+                txtDateOfRegistration.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //var values = DBContext.GetContext().Query("student").Where("studentId", comboBox1.Text).Get();
 
-            var values = DBContext.GetContext().Query("student").Where("lastname", comboBox1.Text).Get();
-
-            foreach (var value in values)
-            {
-                txtName.Text = value.firstname();
-            }
+            //foreach (var value in values)
+            //{
+            //    txtName.Text = value.firstname();
+            //}
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvStudentSched.Rows.Clear();
             sched.category = cmbSubjects.Text;
-
 
             dgvStudentSched.Columns[4].DefaultCellStyle.Format = "hh:mm tt";
             dgvStudentSched.Columns[5].DefaultCellStyle.Format = "hh:mm tt";
@@ -161,6 +138,7 @@ namespace SchoolManagementSystem
 
                 frm.reportViewer1.LocalReport.DataSources.Clear();
                 frm.reportViewer1.LocalReport.DataSources.Add(rs);
+                frm.reportViewer1.ZoomMode = ZoomMode.PageWidth;
                 frm.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolManagementSystem.Report2.rdlc";
 
             }

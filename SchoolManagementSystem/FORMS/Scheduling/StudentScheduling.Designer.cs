@@ -137,7 +137,6 @@ namespace SchoolManagementSystem
             this.dgvStudentSched.Size = new System.Drawing.Size(903, 263);
             this.dgvStudentSched.TabIndex = 3;
             this.dgvStudentSched.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentSched_CellContentClick);
-            this.dgvStudentSched.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSched_CellMouseDoubleClick);
             // 
             // btnNew
             // 

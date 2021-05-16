@@ -32,12 +32,14 @@ namespace SchoolManagementSystem
 
         public void displayData()
         {
-            dgvStudents.Rows.Clear();
+         
             var values = DBContext.GetContext().Query("student").Get();
-
+            dgvStudents.Rows.Clear();
             foreach (var value in values)
             {
-                dgvStudents.Rows.Add(value.studentId, $"{value.lastname}, {value.firstname} {value.middlename}", value.gender, value.presentAddress, value.course);
+                string id = value.course;
+                var course = DBContext.GetContext().Query("course").Where("courseId", id).First();
+                dgvStudents.Rows.Add(value.studentId, $"{value.lastname}, {value.firstname} {value.middlename}", value.gender, value.presentAddress, course.description);
             }
         }
 
@@ -61,7 +63,7 @@ namespace SchoolManagementSystem
             myfrm.txtCitizen.Text = value.citizenship;
             myfrm.txtContactNo.Text = Convert.ToString(value.contactno);
             myfrm.txtEmailAddress.Text = value.emailAddress;
-            myfrm.cmbCourse.Text = value.course;
+            myfrm.cmbCourse.Text = dgvStudents.Rows[dgvStudents.CurrentRow.Index].Cells[4].Value.ToString();
             myfrm.txtAddress.Text = value.presentAddress;
             myfrm.txtHomeAddress.Text = value.homeAddress;
             myfrm.txtFatherLname.Text = value.fatherLastname;

@@ -37,6 +37,7 @@ namespace SchoolManagementSystem
         private void Department_Load(object sender, EventArgs e)
         {
             displayData();
+            
         }
 
         private void dgvDepartment_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

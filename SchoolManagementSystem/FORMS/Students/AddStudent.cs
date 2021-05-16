@@ -25,11 +25,6 @@ namespace SchoolManagementSystem
             this.Close();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +43,9 @@ namespace SchoolManagementSystem
             {
                 if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
                 {
+                    var value = DBContext.GetContext().Query("course").Where("description", cmbCourse.Text).First();
+                    int studentId = value.courseId;
+
                     DBContext.GetContext().Query("student").Where("studentId", lblID.Text).Update(new
                     {
                         lastname = txtLastname.Text,
@@ -63,7 +61,7 @@ namespace SchoolManagementSystem
                         citizenship = txtCitizen.Text,
                         contactno = txtContactNo.Text,
                         emailAddress = txtEmailAddress.Text,
-                        course = cmbCourse.Text,
+                        course = studentId,
                         presentAddress = txtAddress.Text,
                         homeAddress = txtHomeAddress.Text,
                         fatherLastname = txtFatherLname.Text,
@@ -85,6 +83,8 @@ namespace SchoolManagementSystem
             {
                 if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.ValidateDate(dtpDateofbirth))
                 {
+                    var value = DBContext.GetContext().Query("course").Where("description", cmbCourse.Text).First();
+                    int studentId = value.courseId;
                     DBContext.GetContext().Query("student").Insert(new
                     {
                         lastname = txtLastname.Text,
@@ -100,7 +100,7 @@ namespace SchoolManagementSystem
                         citizenship = txtCitizen.Text,
                         contactno = txtContactNo.Text,
                         emailAddress = txtEmailAddress.Text,
-                        course = cmbCourse.Text,
+                        course = studentId,
                         presentAddress = txtAddress.Text,
                         homeAddress = txtHomeAddress.Text,
                         fatherLastname = txtFatherLname.Text,
@@ -126,48 +126,25 @@ namespace SchoolManagementSystem
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtLastname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPlaceofbirth_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCitizen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtReligion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-        }
-
         private void AddStudent_Load(object sender, EventArgs e)
         {
+            displayCourse();
             txtLastname.Focus();
+        }
+
+        private void displayCourse()
+        {
+            var values = DBContext.GetContext().Query("course").Get();
+
+            foreach(var value in values)
+            {
+                cmbCourse.Items.Add(value.description);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

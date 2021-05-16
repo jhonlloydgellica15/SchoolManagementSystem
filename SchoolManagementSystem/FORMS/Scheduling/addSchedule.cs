@@ -34,10 +34,12 @@ namespace SchoolManagementSystem
         {
 
             scheds.Schedule();
-
+            
             cbSubjCode.DataSource = scheds.datafill;
             CbRoomNO.DataSource = scheds.datafillroom;
             cbCourse.DataSource = scheds.datafillcourse;
+
+            cbSubjCode.DataSource.Equals("");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
