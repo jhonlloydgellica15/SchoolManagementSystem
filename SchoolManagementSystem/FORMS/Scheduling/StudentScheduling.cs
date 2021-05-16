@@ -26,7 +26,7 @@ namespace SchoolManagementSystem
             displayStudents();
             displayDataCmb();
         }
-        
+
         public void displayStudents()
         {
             dgvStudentSched.Columns[4].DefaultCellStyle.Format = "hh:mm tt";
@@ -55,7 +55,7 @@ namespace SchoolManagementSystem
 
         private void dgvSched_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-        
+
 
         }
 
@@ -79,105 +79,6 @@ namespace SchoolManagementSystem
             myfrm.ShowDialog();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStudentNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStudentNo_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtStudentNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void StudentScheduling_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
 
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
@@ -193,7 +94,7 @@ namespace SchoolManagementSystem
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var values = DBContext.GetContext().Query("student").Where("lastname",comboBox1.Text).Get();
+            var values = DBContext.GetContext().Query("student").Where("lastname", comboBox1.Text).Get();
 
             foreach (var value in values)
             {
@@ -215,8 +116,8 @@ namespace SchoolManagementSystem
             {
                 int num = dgvStudentSched.Rows.Add();
 
-                dgvStudentSched.Rows[num].Cells[0].Value = Drow["SchedId"].ToString();
-                dgvStudentSched.Rows[num].Cells[1].Value = Drow["SubjectCode"].ToString();
+                dgvStudentSched.Rows[num].Cells[0].Value = Drow["SubjectCode"].ToString();
+                dgvStudentSched.Rows[num].Cells[1].Value = Drow["SubjectTitle"].ToString();
                 dgvStudentSched.Rows[num].Cells[2].Value = Drow["RoomName"].ToString();
                 dgvStudentSched.Rows[num].Cells[3].Value = Drow["Day"].ToString();
                 dgvStudentSched.Rows[num].Cells[4].Value = Convert.ToDateTime(Drow["Timestart"].ToString());
@@ -224,7 +125,8 @@ namespace SchoolManagementSystem
 
                 dgvStudentSched.Rows[num].Cells[6].Value = Drow["MaxStudent"].ToString();
                 dgvStudentSched.Rows[num].Cells[7].Value = Drow["Status"].ToString();
-                
+                dgvStudentSched.Rows[num].Cells[8].Value = Drow["lablec"].ToString();
+
             }
         }
 
@@ -248,11 +150,10 @@ namespace SchoolManagementSystem
                     subjectCode = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
                     room = dgvStudentSched.Rows[i].Cells[2].Value.ToString(),
                     day = dgvStudentSched.Rows[i].Cells[3].Value.ToString(),
-             // MERGE =   dgvStudentSched.Rows[i].Cells[4].Value.ToString("hh:mm tt") + dgvStudentSched.Rows[i].Cells[5].Value.ToString("hh:mm tt"),
-                    //timestart = dgvStudentSched.Rows[i].Cells[4].Value.ToString(),
-                    //timeend = dgvStudentSched.Rows[i].Cells[5].Value.ToString(),
+                    mergeTime = dgvStudentSched.Rows[i].Cells[3].FormattedValue.ToString() + " " + dgvStudentSched.Rows[i].Cells[4].FormattedValue.ToString() + "-" + dgvStudentSched.Rows[i].Cells[5].FormattedValue.ToString(),
                     capacity = dgvStudentSched.Rows[i].Cells[6].Value.ToString(),
                     status = dgvStudentSched.Rows[i].Cells[7].Value.ToString(),
+                    lablec = dgvStudentSched.Rows[i].Cells[8].Value.ToString()
                 });
 
                 rs.Name = "DataSet1";
@@ -269,14 +170,13 @@ namespace SchoolManagementSystem
     public class Schedulings
     {
         public string schedID { get; set; }
-        public string MERGE { get; set; }
+        public string mergeTime { get; set; }
         public string subjectCode { get; set; }
         public string room { get; set; }
         public string day { get; set; }
-        public string timestart { get; set; }
-        public string timeend { get; set; }
         public string capacity { get; set; }
         public string status { get; set; }
+        public string lablec { get; set; }
     }
 
 }
