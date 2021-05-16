@@ -16,10 +16,12 @@ namespace SchoolManagementSystem
     {
         studentSched sched = new studentSched();
         StudentScheduling addDatagrid;
-        public AddStudentScheduling(StudentScheduling addDatagrid)
+        teacherSched teachDgv;
+        public AddStudentScheduling(StudentScheduling addDatagrid,teacherSched teachDgv)
         {
             InitializeComponent();
             this.addDatagrid = addDatagrid;
+            this.teachDgv = teachDgv;
 
         }
 
