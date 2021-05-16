@@ -356,6 +356,7 @@ namespace SchoolManagementSystem
             this.btnSmsSetiing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSmsSetiing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSmsSetiing.UseVisualStyleBackColor = true;
+            this.btnSmsSetiing.Click += new System.EventHandler(this.btnSmsSetiing_Click);
             // 
             // btnSubject
             // 

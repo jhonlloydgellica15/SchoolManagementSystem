@@ -475,5 +475,15 @@ namespace SchoolManagementSystem
             ActivateButton(sender, RGBColors.color1);
             displayUserRole();
         }
+
+        private void btnSmsSetiing_Click(object sender, EventArgs e)
+        {
+            //var myForm = new teacherSched(null,this);
+            //pnlShow.Controls.Clear();
+            //myForm.TopLevel = false;
+            //myForm.AutoScroll = false;
+            //pnlShow.Controls.Add(myForm);
+            //myForm.Show();
+        }
     }
 }
