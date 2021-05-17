@@ -21,7 +21,6 @@ namespace SchoolManagementSystem
 
         private void viewTuitionStruc_Load(object sender, EventArgs e)
         {
-       
             tuitionfee tui = new tuitionfee();
             tui.id = tuitionID;
             tui.selectQuery();
@@ -32,7 +31,6 @@ namespace SchoolManagementSystem
 
                 dgvCategories.Rows[num].Cells[0].Value = Drow["subjectcode"].ToString();
                 dgvCategories.Rows[num].Cells[1].Value = Drow["amount"].ToString();
-
             }
 
             tui.selectQuery2();

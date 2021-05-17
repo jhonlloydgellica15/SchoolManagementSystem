@@ -34,6 +34,15 @@ namespace SchoolManagementSystem
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvStudentSched = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNew = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,19 +59,10 @@ namespace SchoolManagementSystem
             this.label8 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStudentNo = new System.Windows.Forms.ComboBox();
             this.btnSearchStudent = new FontAwesome.Sharp.IconButton();
             this.cmbSubjects = new System.Windows.Forms.ComboBox();
             this.btnPrint = new FontAwesome.Sharp.IconButton();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSched)).BeginInit();
@@ -137,6 +137,67 @@ namespace SchoolManagementSystem
             this.dgvStudentSched.Size = new System.Drawing.Size(903, 263);
             this.dgvStudentSched.TabIndex = 3;
             this.dgvStudentSched.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentSched_CellContentClick);
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Subject Code";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Description";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Room";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.HeaderText = "Days";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 64;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Time start";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Time end";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Capacity";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "Status";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 71;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Lec/Lab";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // btnNew
             // 
@@ -297,7 +358,7 @@ namespace SchoolManagementSystem
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.cmbStudentNo);
             this.tabPage2.Controls.Add(this.btnSearchStudent);
             this.tabPage2.Controls.Add(this.txtName);
             this.tabPage2.Controls.Add(this.txtDateOfRegistration);
@@ -320,16 +381,16 @@ namespace SchoolManagementSystem
             this.tabPage2.Text = "Subject List";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbStudentNo
             // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 25);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbStudentNo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbStudentNo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbStudentNo.FormattingEnabled = true;
+            this.cmbStudentNo.Location = new System.Drawing.Point(95, 14);
+            this.cmbStudentNo.Name = "cmbStudentNo";
+            this.cmbStudentNo.Size = new System.Drawing.Size(220, 25);
+            this.cmbStudentNo.TabIndex = 28;
+            this.cmbStudentNo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnSearchStudent
             // 
@@ -342,7 +403,7 @@ namespace SchoolManagementSystem
             this.btnSearchStudent.IconColor = System.Drawing.Color.White;
             this.btnSearchStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearchStudent.IconSize = 30;
-            this.btnSearchStudent.Location = new System.Drawing.Point(404, 11);
+            this.btnSearchStudent.Location = new System.Drawing.Point(321, 14);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(92, 25);
             this.btnSearchStudent.TabIndex = 27;
@@ -379,67 +440,6 @@ namespace SchoolManagementSystem
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Subject Code";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Description";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Room";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.HeaderText = "Days";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 64;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Time start";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Time end";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Capacity";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 70;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "Status";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 71;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Lec/Lab";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // StudentScheduling
             // 
             this.AcceptButton = this.btnSearchStudent;
@@ -456,7 +456,6 @@ namespace SchoolManagementSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentScheduling";
             this.Load += new System.EventHandler(this.StudentScheduling_Load);
-      
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSched)).EndInit();
@@ -489,7 +488,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage2;
         public FontAwesome.Sharp.IconButton btnSearchStudent;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbStudentNo;
         private System.Windows.Forms.ComboBox cmbSubjects;
         public FontAwesome.Sharp.IconButton btnPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
