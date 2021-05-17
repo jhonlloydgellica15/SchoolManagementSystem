@@ -88,16 +88,15 @@ namespace SchoolManagementSystem
             foreach (DataRow Drow in sched.dt.Rows)
             {
                 int num = dgvSched.Rows.Add();
-
-                dgvSched.Rows[num].Cells[0].Value = Drow["SubjectCode"].ToString();
-                dgvSched.Rows[num].Cells[1].Value = Drow["SubjectTitle"].ToString();
-                dgvSched.Rows[num].Cells[2].Value = Drow["RoomName"].ToString();
-                dgvSched.Rows[num].Cells[3].Value = Drow["Day"].ToString();
-                dgvSched.Rows[num].Cells[4].Value = Convert.ToDateTime(Drow["Timestart"].ToString());
-                dgvSched.Rows[num].Cells[5].Value = Convert.ToDateTime(Drow["Timeend"].ToString());
-
-                dgvSched.Rows[num].Cells[6].Value = Drow["MaxStudent"].ToString();
-                dgvSched.Rows[num].Cells[7].Value = Drow["Status"].ToString();
+                dgvSched.Rows[num].Cells[0].Value = Drow["SchedID"].ToString();
+                dgvSched.Rows[num].Cells[1].Value = Drow["SubjectCode"].ToString();
+                dgvSched.Rows[num].Cells[2].Value = Drow["SubjectTitle"].ToString();
+                dgvSched.Rows[num].Cells[3].Value = Drow["RoomName"].ToString();
+                dgvSched.Rows[num].Cells[4].Value = Drow["Timestart"].ToString();
+                dgvSched.Rows[num].Cells[5].Value = Drow["Timeend"].ToString();
+                dgvSched.Rows[num].Cells[6].Value = Drow["Day"].ToString();
+                dgvSched.Rows[num].Cells[7].Value = Drow["MaxStudent"].ToString();
+                dgvSched.Rows[num].Cells[8].Value = Drow["Status"].ToString();
 
             }
         }
