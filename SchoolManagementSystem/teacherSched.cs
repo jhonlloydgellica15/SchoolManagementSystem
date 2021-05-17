@@ -13,8 +13,9 @@ namespace SchoolManagementSystem
 {
     public partial class teacherSched : Form
     {
-    
-
+        string num1 ="";
+        string storeID;
+     string   units;
         public teacherSched( )
         {
      
@@ -37,5 +38,45 @@ namespace SchoolManagementSystem
                 comboBox1.Items.Add(value.teacherId);
             }
         }
+        public string[] wew;
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click_1(object sender, EventArgs e)
+        {
+            
+            int i;
+             for (i = 0; i < dgvStudentSched.Rows.Count; i++)
+                {
+
+                    wew = new string[] { dgvStudentSched.Rows[i].Cells[0].Value.ToString() };
+
+                    foreach (string aa in wew)
+                    {
+                    storeID += (" "+aa);
+
+                }
+
+                }
+            if (storeID == "")
+            {
+             
+
+            }
+            else
+            {
+
+                DBContext.GetContext().Query("teachersched").Insert(new
+                {
+                    teacherid = comboBox1.Text,
+                    schedid =storeID
+                }) ;
+                MessageBox.Show("success");
+                storeID = "";
+            }
+        }
+    
+        }
     }
-}

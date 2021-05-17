@@ -68,7 +68,7 @@ namespace SchoolManagementSystem
 
         private void dgvSched_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            foreach (DataGridViewRow row in teachDgv.dgvTeachSched.Rows)
+            foreach (DataGridViewRow row in teachDgv.dgvStudentSched.Rows)
             {
                 if ((string)row.Cells[0].Value == dgvSched.SelectedRows[0].Cells[0].Value.ToString())
                 {
@@ -76,7 +76,7 @@ namespace SchoolManagementSystem
                     return;
                 }
             }
-            teachDgv.dgvTeachSched.Rows.Add(dgvSched.SelectedRows[0].Cells[0].Value.ToString(), dgvSched.SelectedRows[0].Cells[1].Value.ToString(),
+            teachDgv.dgvStudentSched.Rows.Add(dgvSched.SelectedRows[0].Cells[0].Value.ToString(), dgvSched.SelectedRows[0].Cells[1].Value.ToString(),
             dgvSched.SelectedRows[0].Cells[2].Value.ToString(), dgvSched.SelectedRows[0].Cells[3].Value.ToString(), dgvSched.SelectedRows[0].Cells[4].Value,
             dgvSched.SelectedRows[0].Cells[5].Value, dgvSched.SelectedRows[0].Cells[6].Value, dgvSched.SelectedRows[0].Cells[7].Value.ToString(),
             dgvSched.SelectedRows[0].Cells[8].Value.ToString(), dgvSched.SelectedRows[0].Cells[9].Value.ToString());
