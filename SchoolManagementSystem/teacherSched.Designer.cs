@@ -29,8 +29,8 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPrint = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSearchStudent = new FontAwesome.Sharp.IconButton();
@@ -55,7 +55,7 @@ namespace SchoolManagementSystem
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvStudentSched = new System.Windows.Forms.DataGridView();
+            this.dgvTeachSched = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@ namespace SchoolManagementSystem
             this.tabControl2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSched)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeachSched)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrint
@@ -93,7 +93,7 @@ namespace SchoolManagementSystem
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 14);
+            this.comboBox1.Location = new System.Drawing.Point(115, 14);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 25);
             this.comboBox1.TabIndex = 28;
@@ -109,7 +109,7 @@ namespace SchoolManagementSystem
             this.btnSearchStudent.IconColor = System.Drawing.Color.White;
             this.btnSearchStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearchStudent.IconSize = 30;
-            this.btnSearchStudent.Location = new System.Drawing.Point(404, 11);
+            this.btnSearchStudent.Location = new System.Drawing.Point(462, 13);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(92, 25);
             this.btnSearchStudent.TabIndex = 27;
@@ -167,9 +167,10 @@ namespace SchoolManagementSystem
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label1.Location = new System.Drawing.Point(3, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Student\'s No.";
+            this.label1.Text = "Teacher\'s No:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -333,7 +334,7 @@ namespace SchoolManagementSystem
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvStudentSched);
+            this.tabPage1.Controls.Add(this.dgvTeachSched);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -342,23 +343,23 @@ namespace SchoolManagementSystem
             this.tabPage1.Text = "Subject List";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvStudentSched
+            // dgvTeachSched
             // 
-            this.dgvStudentSched.AllowUserToAddRows = false;
-            this.dgvStudentSched.AllowUserToResizeColumns = false;
-            this.dgvStudentSched.AllowUserToResizeRows = false;
-            this.dgvStudentSched.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudentSched.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvStudentSched.ColumnHeadersHeight = 45;
-            this.dgvStudentSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvStudentSched.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTeachSched.AllowUserToAddRows = false;
+            this.dgvTeachSched.AllowUserToResizeColumns = false;
+            this.dgvTeachSched.AllowUserToResizeRows = false;
+            this.dgvTeachSched.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTeachSched.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTeachSched.ColumnHeadersHeight = 45;
+            this.dgvTeachSched.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvTeachSched.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column1,
             this.Column4,
@@ -368,25 +369,25 @@ namespace SchoolManagementSystem
             this.Column6,
             this.Column9,
             this.Column3});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudentSched.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvStudentSched.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvStudentSched.EnableHeadersVisualStyles = false;
-            this.dgvStudentSched.Location = new System.Drawing.Point(3, 3);
-            this.dgvStudentSched.Name = "dgvStudentSched";
-            this.dgvStudentSched.ReadOnly = true;
-            this.dgvStudentSched.RowHeadersVisible = false;
-            this.dgvStudentSched.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvStudentSched.RowTemplate.Height = 25;
-            this.dgvStudentSched.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentSched.Size = new System.Drawing.Size(903, 263);
-            this.dgvStudentSched.TabIndex = 3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTeachSched.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTeachSched.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTeachSched.EnableHeadersVisualStyles = false;
+            this.dgvTeachSched.Location = new System.Drawing.Point(3, 3);
+            this.dgvTeachSched.Name = "dgvTeachSched";
+            this.dgvTeachSched.ReadOnly = true;
+            this.dgvTeachSched.RowHeadersVisible = false;
+            this.dgvTeachSched.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTeachSched.RowTemplate.Height = 25;
+            this.dgvTeachSched.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTeachSched.Size = new System.Drawing.Size(903, 263);
+            this.dgvTeachSched.TabIndex = 3;
             // 
             // Column2
             // 
@@ -447,12 +448,13 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.tabControl1);
             this.Name = "teacherSched";
             this.Text = "teacherSched";
+            this.Load += new System.EventHandler(this.teacherSched_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSched)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeachSched)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,7 +485,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        public System.Windows.Forms.DataGridView dgvStudentSched;
+        public System.Windows.Forms.DataGridView dgvTeachSched;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

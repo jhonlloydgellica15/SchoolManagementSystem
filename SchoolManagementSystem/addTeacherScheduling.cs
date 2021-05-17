@@ -3,36 +3,29 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using EonBotzLibrary;
 using SqlKata.Execution;
-
+using SqlKata.Compilers;
+using EonBotzLibrary;
 namespace SchoolManagementSystem
 {
-
-
-    public partial class AddStudentScheduling : Form
+    public partial class addTeacherScheduling : Form
     {
         string teachid;
+       // teacherSched sched = new teacherSched();
         studentSched sched = new studentSched();
-        StudentScheduling addDatagrid;
-     
-        public AddStudentScheduling(StudentScheduling addDatagrid)
+        teacherSched teachDgv;
+        public addTeacherScheduling(teacherSched teachDg)
         {
             InitializeComponent();
-            this.addDatagrid = addDatagrid;
-         
-      
 
+            this.teachDgv = teachDg;
         }
 
-        private void AddStudentScheduling_Load(object sender, EventArgs e)
-        {
-            displayDataCmb();
-        }
-
-        public void displayDataCmb()
+        public void aa()
         {
             var values = DBContext.GetContext().Query("tuitioncategory").Get();
 
@@ -42,36 +35,9 @@ namespace SchoolManagementSystem
                 comboBox1.Items.Add(value.category);
             }
         }
-
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void addTeacherScheduling_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void dgvSched_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            foreach(DataGridViewRow row in addDatagrid.dgvStudentSched.Rows)
-            {
-                if ((string)row.Cells[0].Value == dgvSched.SelectedRows[0].Cells[0].Value.ToString())
-                {
-                    Validator.AlertDanger("Subject existed");
-                    return;
-                }
-            }
-            addDatagrid.dgvStudentSched.Rows.Add(dgvSched.SelectedRows[0].Cells[0].Value.ToString(), dgvSched.SelectedRows[0].Cells[1].Value.ToString(),
-            dgvSched.SelectedRows[0].Cells[2].Value.ToString(), dgvSched.SelectedRows[0].Cells[3].Value.ToString(), dgvSched.SelectedRows[0].Cells[4].Value,
-            dgvSched.SelectedRows[0].Cells[5].Value, dgvSched.SelectedRows[0].Cells[6].Value, dgvSched.SelectedRows[0].Cells[7].Value.ToString());
-
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-
+            aa();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,7 +55,7 @@ namespace SchoolManagementSystem
             {
                 int num = dgvSched.Rows.Add();
 
-                dgvSched.Rows[num].Cells[0].Value = Drow["SchedId"].ToString();
+              //  dgvSched.Rows[num].Cells[0].Value = Drow["SchedId"].ToString();
                 dgvSched.Rows[num].Cells[1].Value = Drow["SubjectCode"].ToString();
                 dgvSched.Rows[num].Cells[2].Value = Drow["RoomName"].ToString();
                 dgvSched.Rows[num].Cells[3].Value = Drow["Day"].ToString();
@@ -101,6 +67,21 @@ namespace SchoolManagementSystem
 
             }
         }
+
+        private void dgvSched_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            foreach (DataGridViewRow row in teachDgv.dgvTeachSched.Rows)
+            {
+                if ((string)row.Cells[0].Value == dgvSched.SelectedRows[0].Cells[0].Value.ToString())
+                {
+                    Validator.AlertDanger("Subject existed");
+                    return;
+                }
+            }
+            teachDgv.dgvTeachSched.Rows.Add(dgvSched.SelectedRows[0].Cells[0].Value.ToString(), dgvSched.SelectedRows[0].Cells[1].Value.ToString(),
+            dgvSched.SelectedRows[0].Cells[2].Value.ToString(), dgvSched.SelectedRows[0].Cells[3].Value.ToString(), dgvSched.SelectedRows[0].Cells[4].Value,
+            dgvSched.SelectedRows[0].Cells[5].Value, dgvSched.SelectedRows[0].Cells[6].Value, dgvSched.SelectedRows[0].Cells[7].Value.ToString());
+        }
     }
 }
-
