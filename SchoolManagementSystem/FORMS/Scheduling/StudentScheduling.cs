@@ -51,7 +51,7 @@ namespace SchoolManagementSystem
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
-            var myfrm = new AddStudentScheduling(this,null);
+            var myfrm = new AddStudentScheduling(this);
             myfrm.ShowDialog();
         }
 
