@@ -29,8 +29,8 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,16 +61,16 @@ namespace SchoolManagementSystem
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.IconSize = 30;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(-14, 16);
+            this.btnAdmin.Location = new System.Drawing.Point(-12, 14);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(391, 33);
+            this.btnAdmin.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnAdmin.Size = new System.Drawing.Size(335, 29);
             this.btnAdmin.TabIndex = 10;
             this.btnAdmin.Text = "Librarian Information";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -80,9 +80,9 @@ namespace SchoolManagementSystem
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(0, 61);
+            this.panel2.Location = new System.Drawing.Point(0, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1614, 1);
+            this.panel2.Size = new System.Drawing.Size(1384, 1);
             this.panel2.TabIndex = 9;
             // 
             // panel1
@@ -93,9 +93,9 @@ namespace SchoolManagementSystem
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 75);
+            this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 560);
+            this.panel1.Size = new System.Drawing.Size(1108, 597);
             this.panel1.TabIndex = 11;
             // 
             // panel4
@@ -103,22 +103,22 @@ namespace SchoolManagementSystem
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 46);
+            this.panel4.Location = new System.Drawing.Point(0, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1066, 1);
+            this.panel4.Size = new System.Drawing.Size(1104, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnAddLibrarian
             // 
-            this.btnAddLibrarian.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddLibrarian.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLibrarian.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddLibrarian.IconColor = System.Drawing.Color.Black;
+            this.btnAddLibrarian.IconColor = System.Drawing.Color.DarkOliveGreen;
             this.btnAddLibrarian.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddLibrarian.IconSize = 20;
             this.btnAddLibrarian.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddLibrarian.Location = new System.Drawing.Point(95, 65);
+            this.btnAddLibrarian.Location = new System.Drawing.Point(101, 74);
             this.btnAddLibrarian.Name = "btnAddLibrarian";
-            this.btnAddLibrarian.Size = new System.Drawing.Size(95, 25);
+            this.btnAddLibrarian.Size = new System.Drawing.Size(95, 27);
             this.btnAddLibrarian.TabIndex = 2;
             this.btnAddLibrarian.Text = "Add New";
             this.btnAddLibrarian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,20 +128,21 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 65);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1068, 491);
+            this.tabControl1.Size = new System.Drawing.Size(1104, 517);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvLibrarians);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 461);
+            this.tabPage1.Size = new System.Drawing.Size(1096, 488);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Librarian List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,14 +153,14 @@ namespace SchoolManagementSystem
             this.dgvLibrarians.AllowUserToResizeColumns = false;
             this.dgvLibrarians.AllowUserToResizeRows = false;
             this.dgvLibrarians.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLibrarians.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLibrarians.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLibrarians.ColumnHeadersHeight = 45;
             this.dgvLibrarians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLibrarians.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -168,15 +169,15 @@ namespace SchoolManagementSystem
             this.Column7,
             this.Column8,
             this.Column12});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLibrarians.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLibrarians.Dock = System.Windows.Forms.DockStyle.Left;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLibrarians.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvLibrarians.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLibrarians.EnableHeadersVisualStyles = false;
             this.dgvLibrarians.Location = new System.Drawing.Point(3, 3);
             this.dgvLibrarians.Name = "dgvLibrarians";
@@ -185,7 +186,7 @@ namespace SchoolManagementSystem
             this.dgvLibrarians.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvLibrarians.RowTemplate.Height = 25;
             this.dgvLibrarians.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLibrarians.Size = new System.Drawing.Size(1055, 455);
+            this.dgvLibrarians.Size = new System.Drawing.Size(1090, 482);
             this.dgvLibrarians.TabIndex = 2;
             this.dgvLibrarians.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLibrarians_CellMouseDoubleClick_1);
             // 
@@ -234,15 +235,15 @@ namespace SchoolManagementSystem
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1066, 46);
+            this.panel3.Size = new System.Drawing.Size(1104, 40);
             this.panel3.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Location = new System.Drawing.Point(9, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 21);
             this.label1.TabIndex = 3;
@@ -250,9 +251,9 @@ namespace SchoolManagementSystem
             // 
             // LibrarianInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 635);
+            this.ClientSize = new System.Drawing.Size(1108, 650);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.panel2);

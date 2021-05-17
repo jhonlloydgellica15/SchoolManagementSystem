@@ -49,7 +49,6 @@ namespace SchoolManagementSystem
             myfrm.txtLastname.Text = value.Lastname;
             myfrm.txtFirstname.Text = value.Firstname;
             myfrm.txtMiddlename.Text = value.Middlename;
-            myfrm.txtAge.Text =  Convert.ToString(value.Age);
             myfrm.dtpDateofbirth.Text = value.Dateofbirth;
             myfrm.txtPlaceofbirth.Text = value.Placeofbirth;
             myfrm.txtContactNo.Text = Convert.ToString(value.ContactNo);

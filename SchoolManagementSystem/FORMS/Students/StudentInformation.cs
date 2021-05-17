@@ -55,7 +55,6 @@ namespace SchoolManagementSystem
             myfrm.txtMiddlename.Text = value.middlename;
             myfrm.cmbSuffix.Text = value.suffix;
             myfrm.dtpDateofbirth.Text = value.dateofbirth;
-            myfrm.txtAge.Text = Convert.ToString(value.age);
             myfrm.txtPlaceofbirth.Text = value.placeofbirth;
             myfrm.txtReligion.Text = value.religion;
             myfrm.cmbGender.Text = value.gender;

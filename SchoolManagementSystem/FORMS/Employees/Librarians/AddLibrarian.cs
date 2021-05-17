@@ -31,7 +31,7 @@ namespace SchoolManagementSystem
         }
         private void btnAddSession_Click(object sender, EventArgs e)
         {
-            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtAge, txtPlaceofbirth, txtContactNo, txtCitizen, txtReligion, txtAddress };
+            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtPlaceofbirth, txtContactNo, txtCitizen, txtReligion, txtAddress };
             if (btnAddLibrarian.Text.Equals("Update"))
             {
                 if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
@@ -41,7 +41,6 @@ namespace SchoolManagementSystem
                         Lastname = txtLastname.Text,
                         Firstname = txtFirstname.Text,
                         Middlename = txtMiddlename.Text,
-                        Age = txtAge.Text,
                         Dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
                         Placeofbirth = txtPlaceofbirth.Text,
                         ContactNo = txtContactNo.Text,
@@ -64,7 +63,6 @@ namespace SchoolManagementSystem
                         Lastname = txtLastname.Text,
                         Firstname = txtFirstname.Text,
                         Middlename = txtMiddlename.Text,
-                        Age = txtAge.Text,
                         Dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
                         Placeofbirth = txtPlaceofbirth.Text,
                         ContactNo = txtContactNo.Text,
@@ -97,8 +95,7 @@ namespace SchoolManagementSystem
 
         private void dtpDateofbirth_ValueChanged(object sender, EventArgs e)
         {
-            int Age = DateTime.Today.Year - dtpDateofbirth.Value.Year; // CurrentYear - BirthDate
-            txtAge.Text = Age.ToString();
+            
         }
     }
 }

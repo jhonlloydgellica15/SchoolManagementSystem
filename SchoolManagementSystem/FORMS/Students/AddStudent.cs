@@ -28,7 +28,7 @@ namespace SchoolManagementSystem
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
 
-            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtAge, txtPlaceofbirth, txtReligion,
+            TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename,  txtPlaceofbirth, txtReligion,
             txtCitizen, txtContactNo, txtEmailAddress, txtAddress, txtHomeAddress, txtFatherLname, txtFatherFname,
             txtFatherMname, txtFatherOccupation, txtMotherLname, txtMotherFname, txtMotherMname, txtMotherOccupation,
             txtSchooLast};
@@ -53,7 +53,6 @@ namespace SchoolManagementSystem
                         middlename = txtMiddlename.Text,
                         suffix = cmbSuffix.Text,
                         dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
-                        age = txtAge.Text,
                         placeofbirth = txtPlaceofbirth.Text,
                         religion = txtReligion.Text,
                         gender = cmbGender.Text,
@@ -92,7 +91,6 @@ namespace SchoolManagementSystem
                         middlename = txtMiddlename.Text,
                         suffix = cmbSuffix.Text,
                         dateofbirth = dtpDateofbirth.Value.ToString("MM/dd/yyyy"),
-                        age = txtAge.Text,
                         placeofbirth = txtPlaceofbirth.Text,
                         religion = txtReligion.Text,
                         gender = cmbGender.Text,
@@ -154,8 +152,11 @@ namespace SchoolManagementSystem
 
         private void dtpDateofbirth_ValueChanged(object sender, EventArgs e)
         {
-            int Age = DateTime.Today.Year - dtpDateofbirth.Value.Year; // CurrentYear - BirthDate
-            txtAge.Text = Age.ToString();
+        }
+
+        private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

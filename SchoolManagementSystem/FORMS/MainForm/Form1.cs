@@ -190,7 +190,7 @@ namespace SchoolManagementSystem
             pnlShow.Controls.Add(myForm);
             myForm.Show();
         }
-        
+
         private void displayFeeManagement()
         {
             var myForm = new FeeManagement();
@@ -332,7 +332,7 @@ namespace SchoolManagementSystem
             displayCourse();
         }
 
-   
+
 
         private void btnScheduling_Click(object sender, EventArgs e)
         {
@@ -364,7 +364,7 @@ namespace SchoolManagementSystem
             displayFeeStructure();
         }
 
-       
+
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -392,7 +392,7 @@ namespace SchoolManagementSystem
 
         private void iconButton6_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -412,7 +412,7 @@ namespace SchoolManagementSystem
 
         private void btnBulkStudent_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnStudentSched_Click(object sender, EventArgs e)
