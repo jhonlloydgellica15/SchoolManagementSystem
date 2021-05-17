@@ -26,7 +26,8 @@ namespace SchoolManagementSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=12345;database=smsdb;port=3306")]
+        //[global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=12345;database=smsdb;port=3306")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.1.3;user id=smsadmin;password=eonbotz2016!;database=smsdb;port=3306")]
         public string smsdbConnectionString {
             get {
                 return ((string)(this["smsdbConnectionString"]));

@@ -35,7 +35,7 @@ namespace SchoolManagementSystem
 
             foreach (var value in values)
             {
-                comboBox1.Items.Add(value.lastname);
+                cmbStudentNo.Items.Add(value.lastname);
             }
         }
 
@@ -49,23 +49,24 @@ namespace SchoolManagementSystem
                 cmbSubjects.Items.Add(value.category);
             }
         }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
-            var myfrm = new AddStudentScheduling(this);
+            var myfrm = new AddStudentScheduling(this,null);
             myfrm.ShowDialog();
         }
 
 
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
-            var values = DBContext.GetContext().Query("student").Where("studentId", comboBox1.Text).Get();
+            var values = DBContext.GetContext().Query("student").Where("studentId", cmbStudentNo.Text).Get();
 
             foreach (var value in values)
             {
+                string id = value.course;
+                var desc = DBContext.GetContext().Query("course").Where("courseId", id).First();
                 txtName.Text = $"{value.firstname} {value.lastname}";
                 txtGender.Text = value.gender;
-                txtCourse.Text = value.course;
+                txtCourse.Text = desc.description;
                 txtDateOfRegistration.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
             }
         }
@@ -112,21 +113,24 @@ namespace SchoolManagementSystem
 
         }
 
-
         ReportDataSource rs = new ReportDataSource();
         private void btnPrint_Click(object sender, EventArgs e)
         {
             List<Schedulings> lst = new List<Schedulings>();
             lst.Clear();
             StudentSchedulesReportViewer frm = new StudentSchedulesReportViewer();
-            for (int i = 0; i < dgvStudentSched.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvStudentSched.Rows.Count; i++)
             {
                 lst.Add(new Schedulings
                 {
+                    studentNo = cmbStudentNo.Text,
+                    name = txtName.Text,
+                    course = txtCourse.Text,
+                    gender = txtGender.Text,
+                    date = txtDateOfRegistration.Text,
                     schedID = dgvStudentSched.Rows[i].Cells[0].Value.ToString(),
                     subjectCode = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    room = dgvStudentSched.Rows[i].Cells[2].Value.ToString(),
-                    day = dgvStudentSched.Rows[i].Cells[3].Value.ToString(),
+                    room = dgvStudentSched.Rows[i].Cells[2].FormattedValue.ToString(),
                     mergeTime = dgvStudentSched.Rows[i].Cells[3].FormattedValue.ToString() + " " + dgvStudentSched.Rows[i].Cells[4].FormattedValue.ToString() + "-" + dgvStudentSched.Rows[i].Cells[5].FormattedValue.ToString(),
                     capacity = dgvStudentSched.Rows[i].Cells[6].Value.ToString(),
                     status = dgvStudentSched.Rows[i].Cells[7].Value.ToString(),
@@ -145,16 +149,23 @@ namespace SchoolManagementSystem
             frm.ShowDialog();
         }
     }
+
+
     public class Schedulings
     {
+        public string studentNo { get; set; }
+        public string name { get; set; }
+        public string course { get; set; }
+        public string gender { get; set; }
+        public string date { get; set; }
         public string schedID { get; set; }
         public string mergeTime { get; set; }
         public string subjectCode { get; set; }
         public string room { get; set; }
-        public string day { get; set; }
         public string capacity { get; set; }
         public string status { get; set; }
         public string lablec { get; set; }
+
     }
 
 }
