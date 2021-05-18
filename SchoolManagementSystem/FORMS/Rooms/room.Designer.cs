@@ -39,11 +39,11 @@ namespace SchoolManagementSystem
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -59,16 +59,16 @@ namespace SchoolManagementSystem
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.IconSize = 30;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(-13, 17);
+            this.btnAdmin.Location = new System.Drawing.Point(-11, 15);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(391, 31);
+            this.btnAdmin.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnAdmin.Size = new System.Drawing.Size(335, 27);
             this.btnAdmin.TabIndex = 8;
             this.btnAdmin.Text = "Room Information";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -78,9 +78,9 @@ namespace SchoolManagementSystem
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(0, 61);
+            this.panel2.Location = new System.Drawing.Point(0, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1614, 1);
+            this.panel2.Size = new System.Drawing.Size(1384, 1);
             this.panel2.TabIndex = 7;
             // 
             // panel1
@@ -91,9 +91,9 @@ namespace SchoolManagementSystem
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 75);
+            this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 560);
+            this.panel1.Size = new System.Drawing.Size(1108, 597);
             this.panel1.TabIndex = 9;
             // 
             // panel4
@@ -101,22 +101,22 @@ namespace SchoolManagementSystem
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 46);
+            this.panel4.Location = new System.Drawing.Point(0, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1066, 1);
+            this.panel4.Size = new System.Drawing.Size(1104, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnAddRoom
             // 
-            this.btnAddRoom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddRoom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRoom.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddRoom.IconColor = System.Drawing.Color.Black;
+            this.btnAddRoom.IconColor = System.Drawing.Color.DarkOliveGreen;
             this.btnAddRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddRoom.IconSize = 20;
             this.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddRoom.Location = new System.Drawing.Point(80, 65);
+            this.btnAddRoom.Location = new System.Drawing.Point(78, 74);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(95, 25);
+            this.btnAddRoom.Size = new System.Drawing.Size(95, 27);
             this.btnAddRoom.TabIndex = 2;
             this.btnAddRoom.Text = "Add New";
             this.btnAddRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -126,20 +126,21 @@ namespace SchoolManagementSystem
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 65);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1068, 493);
+            this.tabControl1.Size = new System.Drawing.Size(1104, 517);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvRooms);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 463);
+            this.tabPage1.Size = new System.Drawing.Size(1096, 488);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Room List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,7 +153,7 @@ namespace SchoolManagementSystem
             this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -166,13 +167,13 @@ namespace SchoolManagementSystem
             this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.EnableHeadersVisualStyles = false;
             this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
@@ -180,30 +181,9 @@ namespace SchoolManagementSystem
             this.dgvRooms.RowHeadersVisible = false;
             this.dgvRooms.RowTemplate.Height = 25;
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRooms.Size = new System.Drawing.Size(1055, 457);
+            this.dgvRooms.Size = new System.Drawing.Size(1090, 482);
             this.dgvRooms.TabIndex = 0;
             this.dgvRooms.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRooms_CellMouseDoubleClick);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1066, 46);
-            this.panel3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(10, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Room Information Page";
             // 
             // Column13
             // 
@@ -225,11 +205,32 @@ namespace SchoolManagementSystem
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1104, 40);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Room Information Page";
+            // 
             // room
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 635);
+            this.ClientSize = new System.Drawing.Size(1108, 650);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.panel2);

@@ -33,8 +33,8 @@ namespace SchoolManagementSystem
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCitizen = new System.Windows.Forms.TextBox();
             this.txtContactNo = new System.Windows.Forms.TextBox();
@@ -99,13 +99,24 @@ namespace SchoolManagementSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 54);
             this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(150, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(273, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "School Management System";
             // 
             // btnExit
             // 
@@ -115,25 +126,14 @@ namespace SchoolManagementSystem
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 20;
-            this.btnExit.Location = new System.Drawing.Point(444, 4);
+            this.btnExit.IconSize = 25;
+            this.btnExit.Location = new System.Drawing.Point(530, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(38, 31);
             this.btnExit.TabIndex = 3;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(141, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "School Management System";
             // 
             // panel6
             // 
@@ -516,7 +516,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -546,5 +545,6 @@ namespace SchoolManagementSystem
         public System.Windows.Forms.TextBox txtLastname;
         public System.Windows.Forms.Label lblID;
         public FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label1;
     }
 }
