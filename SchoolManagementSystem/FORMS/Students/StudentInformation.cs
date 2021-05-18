@@ -57,6 +57,7 @@ namespace SchoolManagementSystem
             myfrm.dtpDateofbirth.Text = value.dateofbirth;
             myfrm.txtPlaceofbirth.Text = value.placeofbirth;
             myfrm.txtReligion.Text = value.religion;
+
             myfrm.cmbGender.Text = value.gender;
             myfrm.cmbMaritalStatus.Text = value.maritalstatus;
             myfrm.txtCitizen.Text = value.citizenship;
