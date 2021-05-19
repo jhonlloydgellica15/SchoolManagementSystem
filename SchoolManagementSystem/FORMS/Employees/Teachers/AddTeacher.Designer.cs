@@ -492,9 +492,9 @@ namespace SchoolManagementSystem
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label5.Location = new System.Drawing.Point(27, 559);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Address";
+            this.label5.Text = "Department";
             // 
             // AddTeacher
             // 

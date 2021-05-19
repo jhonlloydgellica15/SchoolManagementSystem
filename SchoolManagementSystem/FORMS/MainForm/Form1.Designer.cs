@@ -31,51 +31,51 @@ namespace SchoolManagementSystem
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSignout = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlShow = new System.Windows.Forms.Panel();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pnlFeeMenu = new System.Windows.Forms.Panel();
-            this.pnlTuitionMenu = new System.Windows.Forms.Panel();
-            this.pnlSchedules = new System.Windows.Forms.Panel();
-            this.pnlAcademicMenu = new System.Windows.Forms.Panel();
-            this.pnlDept = new System.Windows.Forms.Panel();
-            this.pnlEmployees = new System.Windows.Forms.Panel();
-            this.pnlStudentMenu = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSignout = new FontAwesome.Sharp.IconButton();
-            this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
+            this.pnlFeeMenu = new System.Windows.Forms.Panel();
             this.btnFeeStructure = new FontAwesome.Sharp.IconButton();
             this.btnFeeCategory = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.pnlTuitionMenu = new System.Windows.Forms.Panel();
             this.btnTuitionStructure = new FontAwesome.Sharp.IconButton();
             this.btnTuitionCategory = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.pnlSchedules = new System.Windows.Forms.Panel();
             this.btnStudentSched = new FontAwesome.Sharp.IconButton();
             this.btnScheduling = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.pnlAcademicMenu = new System.Windows.Forms.Panel();
             this.btnSmsSetiing = new FontAwesome.Sharp.IconButton();
             this.btnSubject = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.pnlDept = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.btnRooms = new FontAwesome.Sharp.IconButton();
+            this.pnlEmployees = new System.Windows.Forms.Panel();
             this.btnAccountants = new FontAwesome.Sharp.IconButton();
             this.btnTeachers = new FontAwesome.Sharp.IconButton();
             this.btnLibrarians = new FontAwesome.Sharp.IconButton();
             this.btnMngEmployees = new FontAwesome.Sharp.IconButton();
+            this.pnlStudentMenu = new System.Windows.Forms.Panel();
             this.btnBulkStudent = new FontAwesome.Sharp.IconButton();
             this.btnAdmitStudent = new FontAwesome.Sharp.IconButton();
             this.btnStudents = new FontAwesome.Sharp.IconButton();
             this.btnManageSession = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -111,6 +111,29 @@ namespace SchoolManagementSystem
             this.panel4.Size = new System.Drawing.Size(238, 108);
             this.panel4.TabIndex = 5;
             // 
+            // btnSignout
+            // 
+            this.btnSignout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSignout.FlatAppearance.BorderSize = 0;
+            this.btnSignout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSignout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignout.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnSignout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSignout.IconColor = System.Drawing.Color.Black;
+            this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignout.IconSize = 20;
+            this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSignout.Location = new System.Drawing.Point(1191, 59);
+            this.btnSignout.Name = "btnSignout";
+            this.btnSignout.Size = new System.Drawing.Size(163, 31);
+            this.btnSignout.TabIndex = 4;
+            this.btnSignout.Text = "Log out";
+            this.btnSignout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignout.UseVisualStyleBackColor = true;
+            this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,6 +153,27 @@ namespace SchoolManagementSystem
             this.label2.Size = new System.Drawing.Size(326, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "NAME OF SCHOOL HERE";
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnAdmin.IconColor = System.Drawing.Color.Black;
+            this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdmin.IconSize = 20;
+            this.btnAdmin.Location = new System.Drawing.Point(458, 64);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(163, 31);
+            this.btnAdmin.TabIndex = 3;
+            this.btnAdmin.Text = "admin";
+            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdmin.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -195,130 +239,6 @@ namespace SchoolManagementSystem
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(238, 81);
             this.panel5.TabIndex = 57;
-            // 
-            // pnlFeeMenu
-            // 
-            this.pnlFeeMenu.Controls.Add(this.btnFeeStructure);
-            this.pnlFeeMenu.Controls.Add(this.btnFeeCategory);
-            this.pnlFeeMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFeeMenu.Location = new System.Drawing.Point(0, 915);
-            this.pnlFeeMenu.Name = "pnlFeeMenu";
-            this.pnlFeeMenu.Size = new System.Drawing.Size(238, 80);
-            this.pnlFeeMenu.TabIndex = 42;
-            // 
-            // pnlTuitionMenu
-            // 
-            this.pnlTuitionMenu.Controls.Add(this.btnTuitionStructure);
-            this.pnlTuitionMenu.Controls.Add(this.btnTuitionCategory);
-            this.pnlTuitionMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTuitionMenu.Location = new System.Drawing.Point(0, 795);
-            this.pnlTuitionMenu.Name = "pnlTuitionMenu";
-            this.pnlTuitionMenu.Size = new System.Drawing.Size(238, 81);
-            this.pnlTuitionMenu.TabIndex = 54;
-            // 
-            // pnlSchedules
-            // 
-            this.pnlSchedules.Controls.Add(this.btnStudentSched);
-            this.pnlSchedules.Controls.Add(this.btnScheduling);
-            this.pnlSchedules.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSchedules.Location = new System.Drawing.Point(0, 675);
-            this.pnlSchedules.Name = "pnlSchedules";
-            this.pnlSchedules.Size = new System.Drawing.Size(238, 81);
-            this.pnlSchedules.TabIndex = 48;
-            // 
-            // pnlAcademicMenu
-            // 
-            this.pnlAcademicMenu.Controls.Add(this.btnSmsSetiing);
-            this.pnlAcademicMenu.Controls.Add(this.btnSubject);
-            this.pnlAcademicMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAcademicMenu.Location = new System.Drawing.Point(0, 554);
-            this.pnlAcademicMenu.Name = "pnlAcademicMenu";
-            this.pnlAcademicMenu.Size = new System.Drawing.Size(238, 82);
-            this.pnlAcademicMenu.TabIndex = 48;
-            // 
-            // pnlDept
-            // 
-            this.pnlDept.Controls.Add(this.iconButton1);
-            this.pnlDept.Controls.Add(this.iconButton2);
-            this.pnlDept.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDept.Location = new System.Drawing.Point(0, 435);
-            this.pnlDept.Name = "pnlDept";
-            this.pnlDept.Size = new System.Drawing.Size(238, 80);
-            this.pnlDept.TabIndex = 48;
-            // 
-            // pnlEmployees
-            // 
-            this.pnlEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.pnlEmployees.Controls.Add(this.btnAccountants);
-            this.pnlEmployees.Controls.Add(this.btnTeachers);
-            this.pnlEmployees.Controls.Add(this.btnLibrarians);
-            this.pnlEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmployees.Location = new System.Drawing.Point(0, 236);
-            this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(238, 121);
-            this.pnlEmployees.TabIndex = 49;
-            // 
-            // pnlStudentMenu
-            // 
-            this.pnlStudentMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.pnlStudentMenu.Controls.Add(this.btnBulkStudent);
-            this.pnlStudentMenu.Controls.Add(this.btnAdmitStudent);
-            this.pnlStudentMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStudentMenu.Location = new System.Drawing.Point(0, 117);
-            this.pnlStudentMenu.Name = "pnlStudentMenu";
-            this.pnlStudentMenu.Size = new System.Drawing.Size(238, 80);
-            this.pnlStudentMenu.TabIndex = 31;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(238, 65);
-            this.panel3.TabIndex = 0;
-            // 
-            // btnSignout
-            // 
-            this.btnSignout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignout.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSignout.FlatAppearance.BorderSize = 0;
-            this.btnSignout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSignout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignout.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnSignout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btnSignout.IconColor = System.Drawing.Color.Black;
-            this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSignout.IconSize = 20;
-            this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSignout.Location = new System.Drawing.Point(1191, 59);
-            this.btnSignout.Name = "btnSignout";
-            this.btnSignout.Size = new System.Drawing.Size(163, 31);
-            this.btnSignout.TabIndex = 4;
-            this.btnSignout.Text = "Log out";
-            this.btnSignout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSignout.UseVisualStyleBackColor = true;
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnAdmin.IconColor = System.Drawing.Color.Black;
-            this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmin.IconSize = 20;
-            this.btnAdmin.Location = new System.Drawing.Point(458, 64);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(163, 31);
-            this.btnAdmin.TabIndex = 3;
-            this.btnAdmin.Text = "admin";
-            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdmin.UseVisualStyleBackColor = true;
             // 
             // iconButton8
             // 
@@ -390,6 +310,16 @@ namespace SchoolManagementSystem
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton10.UseVisualStyleBackColor = true;
+            // 
+            // pnlFeeMenu
+            // 
+            this.pnlFeeMenu.Controls.Add(this.btnFeeStructure);
+            this.pnlFeeMenu.Controls.Add(this.btnFeeCategory);
+            this.pnlFeeMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFeeMenu.Location = new System.Drawing.Point(0, 915);
+            this.pnlFeeMenu.Name = "pnlFeeMenu";
+            this.pnlFeeMenu.Size = new System.Drawing.Size(238, 80);
+            this.pnlFeeMenu.TabIndex = 42;
             // 
             // btnFeeStructure
             // 
@@ -463,6 +393,16 @@ namespace SchoolManagementSystem
             this.iconButton7.UseVisualStyleBackColor = true;
             this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
+            // pnlTuitionMenu
+            // 
+            this.pnlTuitionMenu.Controls.Add(this.btnTuitionStructure);
+            this.pnlTuitionMenu.Controls.Add(this.btnTuitionCategory);
+            this.pnlTuitionMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTuitionMenu.Location = new System.Drawing.Point(0, 795);
+            this.pnlTuitionMenu.Name = "pnlTuitionMenu";
+            this.pnlTuitionMenu.Size = new System.Drawing.Size(238, 81);
+            this.pnlTuitionMenu.TabIndex = 54;
+            // 
             // btnTuitionStructure
             // 
             this.btnTuitionStructure.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -534,6 +474,16 @@ namespace SchoolManagementSystem
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = true;
             this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click_1);
+            // 
+            // pnlSchedules
+            // 
+            this.pnlSchedules.Controls.Add(this.btnStudentSched);
+            this.pnlSchedules.Controls.Add(this.btnScheduling);
+            this.pnlSchedules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSchedules.Location = new System.Drawing.Point(0, 675);
+            this.pnlSchedules.Name = "pnlSchedules";
+            this.pnlSchedules.Size = new System.Drawing.Size(238, 81);
+            this.pnlSchedules.TabIndex = 48;
             // 
             // btnStudentSched
             // 
@@ -607,6 +557,16 @@ namespace SchoolManagementSystem
             this.iconButton5.UseVisualStyleBackColor = true;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
+            // pnlAcademicMenu
+            // 
+            this.pnlAcademicMenu.Controls.Add(this.btnSmsSetiing);
+            this.pnlAcademicMenu.Controls.Add(this.btnSubject);
+            this.pnlAcademicMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAcademicMenu.Location = new System.Drawing.Point(0, 554);
+            this.pnlAcademicMenu.Name = "pnlAcademicMenu";
+            this.pnlAcademicMenu.Size = new System.Drawing.Size(238, 82);
+            this.pnlAcademicMenu.TabIndex = 48;
+            // 
             // btnSmsSetiing
             // 
             this.btnSmsSetiing.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -678,6 +638,16 @@ namespace SchoolManagementSystem
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // pnlDept
+            // 
+            this.pnlDept.Controls.Add(this.iconButton1);
+            this.pnlDept.Controls.Add(this.iconButton2);
+            this.pnlDept.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDept.Location = new System.Drawing.Point(0, 435);
+            this.pnlDept.Name = "pnlDept";
+            this.pnlDept.Size = new System.Drawing.Size(238, 80);
+            this.pnlDept.TabIndex = 48;
             // 
             // iconButton1
             // 
@@ -775,6 +745,18 @@ namespace SchoolManagementSystem
             this.btnRooms.UseVisualStyleBackColor = true;
             this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
             // 
+            // pnlEmployees
+            // 
+            this.pnlEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.pnlEmployees.Controls.Add(this.btnAccountants);
+            this.pnlEmployees.Controls.Add(this.btnTeachers);
+            this.pnlEmployees.Controls.Add(this.btnLibrarians);
+            this.pnlEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmployees.Location = new System.Drawing.Point(0, 236);
+            this.pnlEmployees.Name = "pnlEmployees";
+            this.pnlEmployees.Size = new System.Drawing.Size(238, 121);
+            this.pnlEmployees.TabIndex = 49;
+            // 
             // btnAccountants
             // 
             this.btnAccountants.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -870,6 +852,17 @@ namespace SchoolManagementSystem
             this.btnMngEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMngEmployees.UseVisualStyleBackColor = true;
             this.btnMngEmployees.Click += new System.EventHandler(this.btnMngEmployees_Click);
+            // 
+            // pnlStudentMenu
+            // 
+            this.pnlStudentMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.pnlStudentMenu.Controls.Add(this.btnBulkStudent);
+            this.pnlStudentMenu.Controls.Add(this.btnAdmitStudent);
+            this.pnlStudentMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStudentMenu.Location = new System.Drawing.Point(0, 117);
+            this.pnlStudentMenu.Name = "pnlStudentMenu";
+            this.pnlStudentMenu.Size = new System.Drawing.Size(238, 80);
+            this.pnlStudentMenu.TabIndex = 31;
             // 
             // btnBulkStudent
             // 
@@ -990,6 +983,14 @@ namespace SchoolManagementSystem
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(238, 65);
+            this.panel3.TabIndex = 0;
             // 
             // Form1
             // 
