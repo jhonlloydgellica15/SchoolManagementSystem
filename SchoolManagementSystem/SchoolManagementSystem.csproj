@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <Reference Include="EonBotzLibrary">
-      <HintPath>..\..\EonBotzLibrary\EonBotzLibrary\bin\Debug\net48\EonBotzLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\source\repos\EonBotzLibrary\EonBotzLibrary\bin\Debug\net48\EonBotzLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
