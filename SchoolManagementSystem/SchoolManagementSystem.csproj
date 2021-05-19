@@ -4,7 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
+    <UserSecretsId>aa5a6980-de5c-4a55-a0fe-d48a1ad4142c</UserSecretsId>
+    <AssemblyOriginatorKeyFile>markeric.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
