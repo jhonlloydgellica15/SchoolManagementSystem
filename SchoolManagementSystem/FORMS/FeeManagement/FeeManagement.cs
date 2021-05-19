@@ -33,7 +33,7 @@ namespace SchoolManagementSystem
 
           
             dgvCategories.Rows.Clear();
-            var values = DBContext.GetContext().Query("categoryFee").Get();
+            var values = DBContext.GetContext().Query("categoryfee").Get();
             
             foreach (var value in values)
             {
