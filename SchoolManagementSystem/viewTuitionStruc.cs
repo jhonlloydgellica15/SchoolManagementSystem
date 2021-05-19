@@ -36,5 +36,10 @@ namespace SchoolManagementSystem
             tui.selectQuery2();
             textBox1.Text = tui.total;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

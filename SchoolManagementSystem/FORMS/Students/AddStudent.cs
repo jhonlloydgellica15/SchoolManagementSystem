@@ -39,6 +39,8 @@ namespace SchoolManagementSystem
             var honorable = (chkHonorable.Checked) ? 1 : 0;
 
 
+            
+
             if (btnAddStudent.Text.Equals("Update"))
             {
                 if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())

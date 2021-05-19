@@ -29,7 +29,7 @@ namespace SchoolManagementSystem
             TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtPlaceofbirth, txtContactNo, txtCitizen, txtReligion, txtAddress };
             if (btnAddTeachers.Text.Equals("Update"))
             {
-                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation()  && Validator.ValidateDate(dtpDateofbirth))
                 {
                     DBContext.GetContext().Query("teachers").Where("teacherId", lblID.Text).Update(new
                     {
@@ -51,7 +51,7 @@ namespace SchoolManagementSystem
             }
             else if (btnAddTeachers.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation()  && Validator.ValidateDate(dtpDateofbirth))
                 {
                     DBContext.GetContext().Query("teachers").Insert(new
                     {

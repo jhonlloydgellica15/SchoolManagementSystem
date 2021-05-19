@@ -410,12 +410,11 @@ namespace SchoolManagementSystem
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblID.Location = new System.Drawing.Point(279, 16);
+            this.lblID.Location = new System.Drawing.Point(199, 12);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(87, 21);
-            this.lblID.TabIndex = 27;
-            this.lblID.Text = "Lastname";
+            this.lblID.Size = new System.Drawing.Size(65, 22);
+            this.lblID.TabIndex = 26;
+            this.lblID.Text = "label5";
             this.lblID.Visible = false;
             // 
             // btnAdmissionForm
@@ -543,8 +542,8 @@ namespace SchoolManagementSystem
         public System.Windows.Forms.TextBox txtMiddlename;
         public System.Windows.Forms.TextBox txtFirstname;
         public System.Windows.Forms.TextBox txtLastname;
-        public System.Windows.Forms.Label lblID;
         public FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblID;
+        public System.Windows.Forms.Label label1;
     }
 }

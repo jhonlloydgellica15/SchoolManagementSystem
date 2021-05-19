@@ -115,7 +115,7 @@ namespace SchoolManagementSystem
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.Location = new System.Drawing.Point(284, 69);
+            this.label1.Location = new System.Drawing.Point(264, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 21);
             this.label1.TabIndex = 2;
@@ -125,7 +125,7 @@ namespace SchoolManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(451, 8);
+            this.label2.Location = new System.Drawing.Point(635, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(326, 32);
             this.label2.TabIndex = 1;
@@ -291,7 +291,7 @@ namespace SchoolManagementSystem
             this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSignout.IconSize = 20;
             this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSignout.Location = new System.Drawing.Point(1008, 62);
+            this.btnSignout.Location = new System.Drawing.Point(1191, 59);
             this.btnSignout.Name = "btnSignout";
             this.btnSignout.Size = new System.Drawing.Size(163, 31);
             this.btnSignout.TabIndex = 4;
@@ -312,7 +312,7 @@ namespace SchoolManagementSystem
             this.btnAdmin.IconColor = System.Drawing.Color.Black;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.IconSize = 20;
-            this.btnAdmin.Location = new System.Drawing.Point(486, 64);
+            this.btnAdmin.Location = new System.Drawing.Point(458, 64);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(163, 31);
             this.btnAdmin.TabIndex = 3;

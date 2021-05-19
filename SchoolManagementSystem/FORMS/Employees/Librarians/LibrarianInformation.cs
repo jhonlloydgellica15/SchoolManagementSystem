@@ -39,13 +39,13 @@ namespace SchoolManagementSystem
             }
         }
 
-        private void dgvLibrarians_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvLibrarians_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var myfrm = new AddLibrarian(this);
             int id = Convert.ToInt32(dgvLibrarians.Rows[dgvLibrarians.CurrentRow.Index].Cells[0].Value);
             var value = DBContext.GetContext().Query("librarians").Where("librarianId", id).First();
 
-            myfrm.lblID.Text = value.id;
+            myfrm.lblID.Text = id.ToString();
             myfrm.txtLastname.Text = value.Lastname;
             myfrm.txtFirstname.Text = value.Firstname;
             myfrm.txtMiddlename.Text = value.Middlename;

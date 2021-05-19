@@ -188,7 +188,7 @@ namespace SchoolManagementSystem
             this.dgvLibrarians.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLibrarians.Size = new System.Drawing.Size(1090, 482);
             this.dgvLibrarians.TabIndex = 2;
-            this.dgvLibrarians.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLibrarians_CellMouseDoubleClick_1);
+            this.dgvLibrarians.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLibrarians_CellMouseDoubleClick);
             // 
             // Column13
             // 

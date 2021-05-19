@@ -32,9 +32,11 @@ namespace SchoolManagementSystem
         private void btnAddSession_Click(object sender, EventArgs e)
         {
             TextBox[] inputs = { txtLastname, txtFirstname, txtMiddlename, txtPlaceofbirth, txtContactNo, txtCitizen, txtReligion, txtAddress };
+
+            
             if (btnAddLibrarian.Text.Equals("Update"))
             {
-                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                if (Validator.isEmpty(inputs) && Validator.UpdateConfirmation())
                 {
                     DBContext.GetContext().Query("librarians").Where("librarianId", lblID.Text).Update(new
                     {
@@ -56,7 +58,7 @@ namespace SchoolManagementSystem
             }
             else if (btnAddLibrarian.Text.Equals("Save"))
             {
-                if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.TextEqual(inputs[5], 11) && Validator.ValidateDate(dtpDateofbirth))
+                if (Validator.isEmpty(inputs) && Validator.AddConfirmation() && Validator.ValidateDate(dtpDateofbirth))
                 {
                     DBContext.GetContext().Query("librarians").Insert(new
                     {

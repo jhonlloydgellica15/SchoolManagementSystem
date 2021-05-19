@@ -50,7 +50,7 @@ namespace SchoolManagementSystem
             int id = Convert.ToInt32(dgvTeachers.Rows[dgvTeachers.CurrentRow.Index].Cells[0].Value);
             var value = DBContext.GetContext().Query("teachers").Where("teacherId", id).First();
 
-            myfrm.lblID.Text = value.id;
+            myfrm.lblID.Text = id.ToString();
             myfrm.txtLastname.Text = value.Lastname;
             myfrm.txtFirstname.Text = value.Firstname;
             myfrm.txtMiddlename.Text = value.Middlename;
