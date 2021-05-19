@@ -16,10 +16,9 @@ namespace SchoolManagementSystem
         [STAThread]
         static void Main()
         {
-          
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+            Application.Run(new teacherSched());
         }
     }
 }

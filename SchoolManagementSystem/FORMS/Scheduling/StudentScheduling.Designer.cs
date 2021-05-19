@@ -306,7 +306,7 @@ namespace SchoolManagementSystem
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(467, 121);
+            this.label7.Location = new System.Drawing.Point(470, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 21);
             this.label7.TabIndex = 15;
@@ -375,7 +375,7 @@ namespace SchoolManagementSystem
             this.btnSearchStudent.IconColor = System.Drawing.Color.White;
             this.btnSearchStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearchStudent.IconSize = 30;
-            this.btnSearchStudent.Location = new System.Drawing.Point(372, 75);
+            this.btnSearchStudent.Location = new System.Drawing.Point(356, 75);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(92, 25);
             this.btnSearchStudent.TabIndex = 27;
@@ -398,13 +398,13 @@ namespace SchoolManagementSystem
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnPrint.IconColor = System.Drawing.Color.White;
             this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPrint.IconSize = 30;
-            this.btnPrint.Location = new System.Drawing.Point(994, 616);
+            this.btnPrint.Location = new System.Drawing.Point(997, 613);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(107, 32);
             this.btnPrint.TabIndex = 28;
