@@ -85,22 +85,6 @@ namespace SchoolManagementSystem
             this.panel4.Size = new System.Drawing.Size(1104, 1);
             this.panel4.TabIndex = 3;
             // 
-            // btnAddNew
-            // 
-            this.btnAddNew.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddNew.IconColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNew.IconSize = 20;
-            this.btnAddNew.Location = new System.Drawing.Point(144, 76);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(95, 23);
-            this.btnAddNew.TabIndex = 2;
-            this.btnAddNew.Text = "Add New";
-            this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNew.UseVisualStyleBackColor = true;
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
