@@ -29,11 +29,12 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAddNew = new FontAwesome.Sharp.IconButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvAcademicYear = new System.Windows.Forms.DataGridView();
@@ -44,7 +45,6 @@ namespace SchoolManagementSystem
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddNew = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -85,6 +85,22 @@ namespace SchoolManagementSystem
             this.panel4.Size = new System.Drawing.Size(1104, 1);
             this.panel4.TabIndex = 3;
             // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddNew.IconColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddNew.IconSize = 20;
+            this.btnAddNew.Location = new System.Drawing.Point(144, 75);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(95, 23);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "Add New";
+            this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -113,14 +129,14 @@ namespace SchoolManagementSystem
             this.dgvAcademicYear.AllowUserToResizeColumns = false;
             this.dgvAcademicYear.AllowUserToResizeRows = false;
             this.dgvAcademicYear.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAcademicYear.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAcademicYear.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAcademicYear.ColumnHeadersHeight = 45;
             this.dgvAcademicYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAcademicYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,14 +145,14 @@ namespace SchoolManagementSystem
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAcademicYear.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAcademicYear.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAcademicYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAcademicYear.EnableHeadersVisualStyles = false;
             this.dgvAcademicYear.Location = new System.Drawing.Point(3, 3);
@@ -168,7 +184,7 @@ namespace SchoolManagementSystem
             this.Column2.HeaderText = "Year";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 61;
+            this.Column2.Width = 63;
             // 
             // Column3
             // 
@@ -176,7 +192,7 @@ namespace SchoolManagementSystem
             this.Column3.HeaderText = "Term";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 63;
+            this.Column3.Width = 64;
             // 
             // Column4
             // 
@@ -206,22 +222,6 @@ namespace SchoolManagementSystem
             this.label1.Size = new System.Drawing.Size(224, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Academic Year Information Page";
-            // 
-            // btnAddNew
-            // 
-            this.btnAddNew.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddNew.IconColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNew.IconSize = 20;
-            this.btnAddNew.Location = new System.Drawing.Point(145, 74);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(95, 27);
-            this.btnAddNew.TabIndex = 2;
-            this.btnAddNew.Text = "Add New";
-            this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNew.UseVisualStyleBackColor = true;
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnAdmin
             // 
