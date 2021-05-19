@@ -57,8 +57,8 @@ namespace SchoolManagementSystem
         private CheckBox[] checkboxcontrol;
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 checkboxcontrol = new CheckBox[] { cbmon, cbtues, cbwed, cbthu, cbfri, cbsat };
 
                 foreach (CheckBox chk in checkboxcontrol)
@@ -94,17 +94,18 @@ namespace SchoolManagementSystem
                 }
                 else if (scheds.timeEnd == dtpTimstart)
                 {
-                    save();
+                    // save();
+                    MessageBox.Show("aa");
                 }
                 else
                 {
                     Validator.AlertDanger("Schedule existed");
                 }
-            }
-            catch(Exception)
-            {
-                Validator.AlertDanger("Please fill up the following fields");
-            }
+           // }
+            //catch(Exception)
+            //{
+            //    Validator.AlertDanger("Please fill up the following fields");
+            //}
             
             scheds.timediff = "";
           

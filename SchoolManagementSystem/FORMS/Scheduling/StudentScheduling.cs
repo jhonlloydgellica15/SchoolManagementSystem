@@ -13,7 +13,7 @@ namespace SchoolManagementSystem
 {
     public partial class StudentScheduling : Form
     {
-
+        string storeID;
         studentSched sched = new studentSched();
         public StudentScheduling()
         {
@@ -47,6 +47,13 @@ namespace SchoolManagementSystem
             foreach (var value in values)
             {
                 cmbSubjects.Items.Add(value.category);
+            }
+            var wew = DBContext.GetContext().Query("student").Get();
+
+
+            foreach (var value in wew)
+            {
+                cmbStudentNo.Items.Add(value.studentId);
             }
         }
         private void btnNew_Click(object sender, EventArgs e)
@@ -111,43 +118,78 @@ namespace SchoolManagementSystem
         {
 
         }
-
+        public string[] wew;
         ReportDataSource rs = new ReportDataSource();
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            List<Schedulings> lst = new List<Schedulings>();
-            lst.Clear();
-            StudentSchedulesReportViewer frm = new StudentSchedulesReportViewer();
-            for (int i = 0; i < dgvStudentSched.Rows.Count; i++)
+            //List<Schedulings> lst = new List<Schedulings>();
+            //lst.Clear();
+            //StudentSchedulesReportViewer frm = new StudentSchedulesReportViewer();
+            //for (int i = 0; i < dgvStudentSched.Rows.Count; i++)
+            //{
+            //    lst.Add(new Schedulings
+            //    {
+            //        studentNo = cmbStudentNo.Text,
+            //        name = txtName.Text,
+            //        course = txtCourse.Text,
+            //        gender = txtGender.Text,
+            //        date = txtDateOfRegistration.Text,
+            //        schedID = dgvStudentSched.Rows[i].Cells[0].Value.ToString(),
+            //        subjectCode = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
+            //        room = dgvStudentSched.Rows[i].Cells[2].FormattedValue.ToString(),
+            //        mergeTime = dgvStudentSched.Rows[i].Cells[3].FormattedValue.ToString() + " " + dgvStudentSched.Rows[i].Cells[4].FormattedValue.ToString() + "-" + dgvStudentSched.Rows[i].Cells[5].FormattedValue.ToString(),
+            //        capacity = dgvStudentSched.Rows[i].Cells[6].Value.ToString(),
+            //        status = dgvStudentSched.Rows[i].Cells[7].Value.ToString(),
+            //        lablec = dgvStudentSched.Rows[i].Cells[8].Value.ToString()
+            //    });
+
+            //    rs.Name = "DataSet1";
+            //    rs.Value = lst;
+
+            //    frm.reportViewer1.LocalReport.DataSources.Clear();
+            //    frm.reportViewer1.LocalReport.DataSources.Add(rs);
+            //    frm.reportViewer1.ZoomMode = ZoomMode.PageWidth;
+            //    frm.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolManagementSystem.Report2.rdlc";
+
+            //}
+            //frm.ShowDialog();
+
+
+
+            int i;
+            for (i = 0; i < dgvStudentSched.Rows.Count; i++)
             {
-                lst.Add(new Schedulings
+
+                wew = new string[] { dgvStudentSched.Rows[i].Cells[0].Value.ToString() };
+
+                foreach (string aa in wew)
                 {
-                    studentNo = cmbStudentNo.Text,
-                    name = txtName.Text,
-                    course = txtCourse.Text,
-                    gender = txtGender.Text,
-                    date = txtDateOfRegistration.Text,
-                    schedID = dgvStudentSched.Rows[i].Cells[0].Value.ToString(),
-                    subjectCode = dgvStudentSched.Rows[i].Cells[1].Value.ToString(),
-                    room = dgvStudentSched.Rows[i].Cells[2].FormattedValue.ToString(),
-                    mergeTime = dgvStudentSched.Rows[i].Cells[3].FormattedValue.ToString() + " " + dgvStudentSched.Rows[i].Cells[4].FormattedValue.ToString() + "-" + dgvStudentSched.Rows[i].Cells[5].FormattedValue.ToString(),
-                    capacity = dgvStudentSched.Rows[i].Cells[6].Value.ToString(),
-                    status = dgvStudentSched.Rows[i].Cells[7].Value.ToString(),
-                    lablec = dgvStudentSched.Rows[i].Cells[8].Value.ToString()
-                });
+                    storeID += (" " + aa);
 
-                rs.Name = "DataSet1";
-                rs.Value = lst;
-
-                frm.reportViewer1.LocalReport.DataSources.Clear();
-                frm.reportViewer1.LocalReport.DataSources.Add(rs);
-                frm.reportViewer1.ZoomMode = ZoomMode.PageWidth;
-                frm.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolManagementSystem.Report2.rdlc";
+                }
 
             }
-            frm.ShowDialog();
+            if (storeID == "")
+            {
+
+            }
+            else
+            {
+
+                DBContext.GetContext().Query("studentSched").Insert(new
+                {
+                    studentID = cmbStudentNo.Text,
+                    schedId = storeID
+                });
+                MessageBox.Show("success");
+                storeID = "";
+            }
         }
+
+
     }
+
+   
 
 
     public class Schedulings
