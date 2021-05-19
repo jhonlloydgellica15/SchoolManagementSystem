@@ -25,6 +25,7 @@ namespace SchoolManagementSystem
             this.teachDgv = teachDg;
         }
 
+    
         public void aa()
         {
             var values = DBContext.GetContext().Query("tuitioncategory").Get();
@@ -80,6 +81,11 @@ namespace SchoolManagementSystem
             dgvSched.SelectedRows[0].Cells[2].Value.ToString(), dgvSched.SelectedRows[0].Cells[3].Value.ToString(), dgvSched.SelectedRows[0].Cells[4].Value,
             dgvSched.SelectedRows[0].Cells[5].Value, dgvSched.SelectedRows[0].Cells[6].Value, dgvSched.SelectedRows[0].Cells[7].Value.ToString(),
             dgvSched.SelectedRows[0].Cells[8].Value.ToString(), dgvSched.SelectedRows[0].Cells[9].Value.ToString());
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

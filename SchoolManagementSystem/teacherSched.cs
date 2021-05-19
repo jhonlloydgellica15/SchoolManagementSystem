@@ -13,14 +13,14 @@ namespace SchoolManagementSystem
 {
     public partial class teacherSched : Form
     {
-        string num1 ="";
+        string num1 = "";
         string storeID;
-     string   units;
-        public teacherSched( )
+        string units;
+        public teacherSched()
         {
-     
+
             InitializeComponent();
-       
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace SchoolManagementSystem
 
             foreach (var value in values)
             {
-                comboBox1.Items.Add(value.teacherId);
+                cmbTeacher.Items.Add(value.teacherId);
             }
         }
         public string[] wew;
@@ -46,20 +46,19 @@ namespace SchoolManagementSystem
 
         private void btnPrint_Click_1(object sender, EventArgs e)
         {
-            
             int i;
-             for (i = 0; i < dgvStudentSched.Rows.Count; i++)
+            for (i = 0; i < dgvStudentSched.Rows.Count; i++)
+            {
+
+                wew = new string[] { dgvStudentSched.Rows[i].Cells[0].Value.ToString() };
+
+                foreach (string aa in wew)
                 {
-
-                    wew = new string[] { dgvStudentSched.Rows[i].Cells[0].Value.ToString() };
-
-                    foreach (string aa in wew)
-                    {
-                    storeID += (" "+aa);
+                    storeID += (" " + aa);
 
                 }
 
-                }
+            }
             if (storeID == "")
             {
 
@@ -69,13 +68,24 @@ namespace SchoolManagementSystem
 
                 DBContext.GetContext().Query("teachersched").Insert(new
                 {
-                    teacherid = comboBox1.Text,
-                    schedid =storeID
-                }) ;
+                    teacherid = cmbTeacher.Text,
+                    schedid = storeID
+                });
                 MessageBox.Show("success");
                 storeID = "";
             }
         }
-    
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var values = DBContext.GetContext().Query("teachers").Where("teacherId", cmbTeacher.Text).Get();
+
+            foreach (var value in values)
+            {
+                txtName.Text = $"{value.Firstname} {value.Lastname}";
+                txtGender.Text = value.Gender;
+                txtDateOfRegistration.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            }
         }
     }
+}
